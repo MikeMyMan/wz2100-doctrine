@@ -158,7 +158,11 @@ If someone is pushing cyborgs at you, the answer is machineguns, and you already
 
 ## 7. Scavengers are a faction now
 
-If you leave scavengers on, expect a real third party rather than scenery:
+**This section needs the optional scavenger component.** It patches *Ultimate Ultimate
+Scavengers 2* — install that mod, then run `scav/patch_uuscav2.py` from this download. House
+scavengers (the last item below) work without it; everything else in this section does not.
+
+With it, expect a real third party rather than scenery:
 
 - They **fortify their own territory** — bunkers, gun towers, mortar pits and rocket pits
   around their derricks, factories and generators, four emplacements per site.

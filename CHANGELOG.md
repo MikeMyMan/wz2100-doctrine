@@ -42,6 +42,13 @@ First public release.
 
 ### Scavengers
 
+Shipped as a **patch** rather than a file: the behaviour below modifies *Ultimate Ultimate
+Scavengers 2*, a third-party mod, so `scav/patch_uuscav2.py` applies DOCTRINE's 368 lines of
+changes to a copy the player supplies. It verifies all 23 changes before writing anything,
+backs the original up, is a no-op if already applied, and refuses a different release of the
+mod outright. Output is byte-identical to the build used in testing. House scavengers live in
+`doctrine.js` and need no component.
+
 - Promoted from scenery to a faction: staged escalation through four phases of bodies and
   weapons, research parity with the other players, and a production ceiling that keeps early
   pressure without the late exponential.

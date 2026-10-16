@@ -56,10 +56,16 @@ exploit, not a flat +X% on both sides.
 machineguns and mortars and shrug off anti-tank fire. They cannot flatten a base: their
 weapons do 45–60% to buildings, so they stay an anti-unit force.
 
-**Scavengers are a faction, not scenery.** They build bunkers and towers around their
-derricks, field infantry squads, run suicide bomb trucks in four grades, put helicopters up
-late, and research alongside everyone else. Flatten an occupied house and its residents come
-out shooting.
+**Scavengers are a faction, not scenery.** With the optional scavenger component they build
+bunkers and towers around their derricks, field infantry squads of three, run suicide bomb
+trucks in four grades, put helicopters up late, and research alongside everyone else.
+Flatten an occupied house and its residents come out shooting — that part works regardless.
+
+> **The scavenger component is a patch, not a download.** It changes *Ultimate Ultimate
+> Scavengers 2*, which is somebody else's mod, so DOCTRINE ships the changes rather than the
+> file. Install that mod yourself, then run `scav/patch_uuscav2.py` — it verifies all 23
+> changes against your copy, backs it up, and rewrites it in place. Skip it and you get the
+> game's own scavengers with everything else in DOCTRINE unchanged.
 
 **Every AI plays by these rules.** Nexus, SemperFi, Cobra, BoneCrusher, NullBot, Hover and
 Turtle all run the DOCTRINE research engine, pick a weapon family that matches their own

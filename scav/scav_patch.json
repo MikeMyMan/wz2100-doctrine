@@ -1,0 +1,525 @@
+{
+ "baseline_lines": 329,
+ "hunks": [
+  {
+   "at": 3,
+   "remove": [],
+   "insert": [
+    " *",
+    " * DOCTRINE PATCH: the NEXUS Tank (ScavNEXUStrack + ScavNEXUSlink) captures your",
+    " * units and buildings outright, has 225 HP and 14 kinetic armour — 3.5x a Viper",
+    " * body — and cost the scavs only 29 power to field. With nothing but starting",
+    " * MGs there is no answer to it, so it is now held back until NEXUS_TANK_AFTER.",
+    " * Before that the same factory slot builds an ordinary scav tank instead."
+   ]
+  },
+  {
+   "at": 4,
+   "remove": [],
+   "insert": [
+    "const NEXUS_TANK_AFTER = 20 * 60 * 1000;   // ms of game time — 20 minutes",
+    "",
+    "/* DOCTRINE PATCH 2: production ceiling.",
+    "   Stock uuscav2 allows 16 scavenger factories and 8 VTOL factories, each of",
+    "   which builds whenever idle on a 1-second timer. Measured on a headless",
+    "   4-AI run that compounds into 138 scav units by 7 minutes and 240 by 8,",
+    "   and every AI was dead by 9:40 with an army of 0-3 tanks. The same map",
+    "   without this mod: AIs reached 9-13 tanks, held 4-6 derricks each and were",
+    "   all still alive at 19 minutes against 167 scavengers.",
+    "   So the scavengers were not \"formidable\", they were terminal. These caps",
+    "   keep the early pressure — the factory ceiling is not reached for several",
+    "   minutes — while stopping the late exponential.  */",
+    "/* DOCTRINE PATCH 3: staged escalation.",
+    "   Stock uuscav2 rolls a random body and a random weapon from the FULL arsenal",
+    "   from the first second of the game, so AT rockets, flamers and cannon",
+    "   half-tracks can show up before a player has a second structure standing, and",
+    "   VTOLs arrive at six minutes. The scavengers now climb a ladder instead:",
+    "",
+    "     0:00-2:00   holding back. Economy only -- trucks, sensors, derricks. No",
+    "                 combat units, and no offensive orders at all.",
+    "     2:00-3:30   still economy, but the hold on attacking is lifted so anything",
+    "                 already fielded (and the map's pre-placed scavengers) reacts.",
+    "     3:30-6:00   light: infantry and MG buggies/trikes/jeeps.",
+    "     6:00-10:00  medium: adds cannons and basic rockets on heavier bodies.",
+    "     10:00+      heavy: AT rockets, flamers, 3x-cannon heavy tanks.",
+    "     15:00+      air: VTOL factories and helicopters.",
+    "",
+    "   The NEXUS capture tank stays on its own 20-minute timer above.  */",
+    "const SCAV_T_HOLD   = 120e3;   // no offensive orders before this",
+    "const SCAV_T_LIGHT  = 210e3;   // first combat units",
+    "const SCAV_T_MEDIUM = 360e3;   // cannons and basic rockets",
+    "const SCAV_T_HEAVY  = 600e3;   // AT rockets, flamers, heavy tanks",
+    "const SCAV_T_AIR    = 900e3;   // VTOL factories and helicopters (15 min)",
+    "const SCAV_T_AIR2   = 1200e3;  // heavy napalm bombs (20 min)",
+    "const SCAV_T_BOMBER = 600e3;   // suicide bomb trucks (10 min)",
+    "",
+    "/* The blast a scavenger bomb truck leaves behind.",
+    "",
+    "   There is no data field that attaches an explosion to a droid -- the scavenger",
+    "   power generator's famous detonation is engine-side, keyed off the structure",
+    "   TYPE, and cannot be borrowed. What the scripting API does give us is",
+    "   fireWeaponAtLoc(weapon, x, y, player), the same call the campaign uses to",
+    "   bring down the LasSat: it plays the weapon's real explosion and applies its",
+    "   real damage at a point, in tile coordinates.",
+    "",
+    "   Bomb2-VTOL-HvHE is the one that behaves like a bomb: 500 on the point of",
+    "   impact and 300 splash out to 256 (two tiles). The incendiary bombs look the",
+    "   part but have radius 0 -- they would have gone off with no blast at all. */",
+    "const SCAV_BLAST = \"Bomb2-VTOL-HvHE\";",
+    "",
+    "/* A vehicle with three turrets engages at ONE distance, so mixing a 2304-range",
+    "   mortar with a 384-range flamer means two of the three barrels are decoration.",
+    "   There is no scripting call to force an engagement range, so instead every",
+    "   turret on a multi-slot vehicle is drawn from the SAME range band -- then",
+    "   whatever distance it fights at, all three weapons reach.",
+    "",
+    "   Bands are keyed off longRange: flamer 384, the general-purpose guns 960,",
+    "   mortar 2304. */",
+    "const SCAV_BANDS = {",
+    "\tshort:  [\"BabaFlame\"],",
+    "\tmedium: [\"BaBaMG\",\"BJeepMG\",\"bTrikeMG\",\"BuggyMG\",\"BusCannon\",\"BaBaCannon\",",
+    "\t         \"BabaRocket\",\"BabaPitRocket\",\"BabaPitRocketAT\"],",
+    "\tlong:   [\"Mortar1Mk1\"],",
+    "};",
+    "",
+    "/* Pick a band that this phase can actually field, then three turrets from it. */",
+    "function scavBandFor(weapList) {",
+    "\tconst names = [\"medium\",\"short\",\"long\"];",
+    "\tconst usable = [];",
+    "\tfor (var b = 0; b < names.length; ++b) {",
+    "\t\tconst pool = SCAV_BANDS[names[b]].filter(function (x) {",
+    "\t\t\treturn weapList.indexOf(x) >= 0;",
+    "\t\t});",
+    "\t\tif (pool.length) usable.push(pool);",
+    "\t}",
+    "\tif (!usable.length) return null;",
+    "\treturn usable[Math.floor(Math.random() * usable.length)];",
+    "}",
+    "const SCAV_BOMBER_NAME = \"Bomb Truck\";",
+    "/* Its gun reaches 224 -- shorter than the 256 blast it carries -- so it has",
+    "   to drive into the kill zone before it can shoot at all. With BaBaMG (960)",
+    "   it simply parked at machinegun range and never detonated on anything. */",
+    "const SCAV_BOMBER_GUN = \"BaBaMG-Pointblank\";",
+    "",
+    "/* Bomb trucks come in three grades rather than one. A suicide truck only pays",
+    "   off if it REACHES something, and the stock ice van (136hp) died on the run-in",
+    "   now that its gun reaches only 40. ScavBomberBody is a reinforced van built by",
+    "   the mod for this one job (340hp, armour 8) so buffing it does not also buff",
+    "   every technical sharing the ice van; the later grades trade a little of that",
+    "   toughness for the heavier chassis the scavengers earn over the game. */",
+    "const SCAV_BOMBERS = [",
+    "\t[],",
+    "\t// 3:30 -- the improvised one: a van with a bomb in the back",
+    "\t[{body:\"ScavBomberBody\", name:\"Bomb Truck\"}],",
+    "\t// 6:00 -- purpose-built, and a bus packed with scrap",
+    "\t[{body:\"ScavBomberBody\", name:\"Bomb Truck\"},",
+    "\t {body:\"BusBody\",        name:\"Bomb Bus\"}],",
+    "\t// 10:00 -- the heavy ones",
+    "\t[{body:\"ScavBomberBody\", name:\"Bomb Truck\"},",
+    "\t {body:\"BusBody\",        name:\"Bomb Bus\"},",
+    "\t {body:\"FireBody\",       name:\"Bomb Tanker\"},",
+    "\t {body:\"ScavTruckBody\",  name:\"Bomb Rig\"}],",
+    "];",
+    "",
+    "/* Every bomber name, so eventDestroyed knows what detonates. */",
+    "const SCAV_BOMBER_NAMES = (function () {",
+    "\tconst seen = {};",
+    "\tfor (var i = 0; i < SCAV_BOMBERS.length; ++i) {",
+    "\t\tfor (var j = 0; j < SCAV_BOMBERS[i].length; ++j) { seen[SCAV_BOMBERS[i][j].name] = true; }",
+    "\t}",
+    "\treturn seen;",
+    "})();",
+    "",
+    "function scavPhase() {",
+    "\tif (gameTime < SCAV_T_LIGHT)  { return 0; }",
+    "\tif (gameTime < SCAV_T_MEDIUM) { return 1; }",
+    "\tif (gameTime < SCAV_T_HEAVY)  { return 2; }",
+    "\treturn 3;",
+    "}",
+    "",
+    "/* Emplacements the scavengers picket their own oil and outposts with, phased",
+    "   the same way their vehicles are. Gun towers are dirt cheap (75 build points)",
+    "   so the opening picket costs them almost nothing; the rocket pits are held",
+    "   back until they have earned the right to field AT. */",
+    "const SCAV_PICKETS = [",
+    "\t[\"bbaatow\"],",
+    "\t// Bunkers from the second phase, and listed twice from the third: they are",
+    "\t// the toughest thing the scavengers can plant (600hp, BUNKER class, so",
+    "\t// artillery does only 45% to them) and a dug-in derrick should mostly be",
+    "\t// bunkers rather than open towers.",
+    "\t[\"bbaatow\",\"A0BaBaBunker\",\"A0CannonTower\"],",
+    "\t[\"bbaatow\",\"A0CannonTower\",\"A0BaBaMortarPit\",\"A0BaBaBunker\",\"A0BaBaBunker\"],",
+    "\t[\"A0CannonTower\",\"A0BaBaMortarPit\",\"A0BaBaBunker\",\"A0BaBaBunker\",",
+    "\t \"A0BaBaRocketPit\",\"A0BaBaRocketPitAT\",\"A0BaBaFlameTower\"],",
+    "];",
+    "",
+    "/* How many emplacements may stand within PICKET_RADIUS of one derrick or",
+    "   outpost. Two is a picket; more is the carpet we removed earlier. */",
+    "/* Raised from 2. Two emplacements is a token; four is a position worth",
+    "   attacking around, which is what \"fortify the derricks\" has to mean. */",
+    "const SCAV_PICKET_PER_SITE = 4;",
+    "const SCAV_PICKET_RADIUS   = 5;",
+    "",
+    "const SCAV_BODIES = [",
+    "\t[],",
+    "\t// 3:30 — the junkyard tier: thin, cheap, slow to assemble",
+    "\t[\"B3body-sml-buggy01\",\"B4body-sml-trike01\",\"B2JeepBody\"],",
+    "\t// 6:00 — the light \"-Ultimate\" shells arrive: a little tougher and roughly",
+    "\t// four times quicker to build, plus the rocket-buggy chassis",
+    "\t[\"B3body-sml-buggy01\",\"B4body-sml-trike01\",\"B2JeepBody\",\"BusBody\",",
+    "\t \"ScavIcevanBody\",\"ScavCamperBody\",\"B2tractor\",\"B3bodyRKbuggy01\",",
+    "\t \"B4body-sml-trike01-Ultimate\",\"B3body-sml-buggy01-Ultimate\"],",
+    "\t// 10:00 — the heavy shells, and the wheeled NEXUS body (180hp, armour 10)",
+    "\t[\"ScavIcevanBody\",\"ScavCamperBody\",\"B2tractor\",\"FireBody\",\"BusBody\",",
+    "\t \"B2JeepBody\",\"B2RKJeepBody\",\"B3body-sml-buggy01\",\"B4body-sml-trike01\",",
+    "\t \"B2JeepBody-Ultimate\",\"B2RKJeepBody-Ultimate\",\"B3bodyRKbuggy01-Ultimate\",",
+    "\t \"ScavNEXUSbody\"],",
+    "];",
+    "",
+    "const SCAV_WEAPONS = [",
+    "\t[],",
+    "\t[\"BaBaMG\",\"BJeepMG\",\"bTrikeMG\",\"BuggyMG\"],",
+    "\t[\"BaBaMG\",\"BJeepMG\",\"BuggyMG\",\"BusCannon\",\"BabaRocket\",\"BabaPitRocket\",",
+    "\t \"BaBaCannon\"],",
+    "\t[\"BabaPitRocketAT\",\"BabaFlame\",\"BabaRocket\",\"BusCannon\",\"BJeepMG\",\"BaBaMG\",",
+    "\t \"BaBaCannon\",\"Mortar1Mk1\"],",
+    "];",
+    "",
+    "const SCAV_MAX_FACTORIES  = 4;",
+    "const SCAV_MAX_VFACTORIES = 3;",
+    "",
+    "/* ...and a ceiling on emplacements. Capping only the units displaced the",
+    "   problem rather than fixing it: the trucks, no longer feeding factories,",
+    "   poured everything into the loop's fallback branch instead and put up 270",
+    "   mortar pits and cannon towers by 12 minutes. */",
+    "/* Raised from 24 to carry the deeper pickets. Note the counter below now",
+    "   counts EVERY defence the scavengers own -- it used to count only mortar",
+    "   pits and cannon towers, so bunkers, gun towers, rocket pits and flame",
+    "   towers were all invisible to this ceiling and effectively unlimited. */",
+    "const SCAV_MAX_EMPLACEMENTS = 44;",
+    "",
+    "/* Total fielded combat units, ramped so the early rush is undiminished and the",
+    "   plateau lands a little above vanilla ultimate scavengers rather than 3x it. */",
+    "/* How much of the unit ceiling the scavengers give to infantry. */",
+    "const SCAV_INFANTRY_SHARE = 0.6;",
+    "",
+    "/* ...and the most of the unit ceiling that may be helicopters. VTOLs are",
+    "   counted by enumDroid(me, DROID_WEAPON) exactly like tanks, so without a",
+    "   separate ceiling the air arm just outbid the ground arm for the same slots:",
+    "   the VTOL factories need only 150 power to run where the ground factories",
+    "   need 250. Capping the air share puts the land army back. */",
+    "const SCAV_AIR_SHARE = 0.25;",
+    "",
+    "function scavUnitCeiling() {",
+    "\tvar mins = gameTime / 60000;",
+    "\tvar cap = 12 + mins * 3;",
+    "\treturn cap > 70 ? 70 : cap;",
+    "}"
+   ]
+  },
+  {
+   "at": 180,
+   "remove": [],
+   "insert": [
+    "\t// Hard floor first: no scavenger air before SCAV_T_AIR, whatever the tech",
+    "\t// level or base setting says. Stock allowed VTOL factories from 6:00 (and",
+    "\t// immediately at tech level 2+), which is well before a player has AA.",
+    "\tif (gameTime < SCAV_T_AIR) return false"
+   ]
+  },
+  {
+   "at": 192,
+   "remove": [],
+   "insert": [
+    "/* factory id -> how many more infantry this factory still owes. Scavengers",
+    "   turn out squads, not individuals: one roll books THREE bodies and the",
+    "   factory delivers them back to back before it considers anything else. */",
+    "var uusPair={}",
+    "const SCAV_SQUAD = 3;",
+    "",
+    "/* Anything the scavengers own that is supposed to go off when it dies.",
+    "   Bomb trucks are the obvious case; their power generators are the other, and",
+    "   both want the same treatment, so they share one handler. */",
+    "eventDestroyed = function (obj) {",
+    "\tif (!obj || obj.player !== me) return",
+    "\tvar blast = false",
+    "\tif (obj.type === DROID && SCAV_BOMBER_NAMES[obj.name] === true) blast = true",
+    "\telse if (obj.type === STRUCTURE && obj.stattype === POWER_GEN) blast = true",
+    "\tif (!blast) return",
+    "\ttry { fireWeaponAtLoc(SCAV_BLAST, obj.x, obj.y, me) } catch (e) { }",
+    "}",
+    "",
+    "/* rules/setup/scavengers.js hands the scavenger player a fixed component list.",
+    "   Three things we now want are missing from it, so they are enabled once here:",
+    "   the Ultimate INFANTRY shell (the vehicle Ultimates are already on the list,",
+    "   the infantry one is not), and the two incendiary bombs for the choppers.",
+    "   The scavenger walls are likewise not in their enabled-structure list. */",
+    "var uusExtrasDone = false",
+    "function uusEnableExtras() {",
+    "\tif (uusExtrasDone) return",
+    "\tuusExtrasDone = true",
+    "\tconst COMPONENTS = [\"B1BaBaPerson01-Ultimate\",\"Bomb3-VTOL-LtINC\",\"Bomb4-VTOL-HvyINC\",",
+    "\t\tSCAV_BLAST, SCAV_BOMBER_GUN, \"ScavBomberBody\"]",
+    "\tfor (var c = 0; c < COMPONENTS.length; ++c) makeComponentAvailable(COMPONENTS[c], me)",
+    "\tconst STRUCTS = [\"A0BaBaHorizontalWall\",\"A0BabaCornerWall\"]",
+    "\tfor (var t = 0; t < STRUCTS.length; ++t) enableStructure(STRUCTS[t], me)",
+    "}",
+    ""
+   ]
+  },
+  {
+   "at": 193,
+   "remove": [],
+   "insert": [
+    "\tuusEnableExtras()"
+   ]
+  },
+  {
+   "at": 230,
+   "remove": [],
+   "insert": [
+    "\t\tconst nempl=enumStruct(me).filter(o=>o.stattype===DEFENSE).length"
+   ]
+  },
+  {
+   "at": 232,
+   "remove": [],
+   "insert": [
+    "\t\t\t\t// Picket our OWN derricks and outposts first. Stock uuscav2 only",
+    "\t\t\t\t// ever emplaced next to ENEMY oil (protectCloseDerrick) -- its own",
+    "\t\t\t\t// wells stood bare all game. Runs from the first minute; the type",
+    "\t\t\t\t// available climbs with the phase.",
+    "\t\t\t\tconst picketList=SCAV_PICKETS[scavPhase()]",
+    "\t\t\t\tconst mine=enumStruct(me,\"A0ResourceExtractor\")",
+    "\t\t\t\t\t.concat(enumStruct(me,\"A0BaBaFactory\"))",
+    "\t\t\t\t\t.concat(enumStruct(me,\"A0BaBaPowerGenerator\"))",
+    "\t\t\t\tvar picketSite=null",
+    "\t\t\t\tfor (var pi=0; pi<mine.length; ++pi) {",
+    "\t\t\t\t\tconst ms=mine[pi]",
+    "\t\t\t\t\tif (enumRange(ms.x,ms.y,SCAV_PICKET_RADIUS,me,false)",
+    "\t\t\t\t\t\t\t.filter(o=>o.type===STRUCTURE && o.stattype===DEFENSE)",
+    "\t\t\t\t\t\t\t.length < SCAV_PICKET_PER_SITE) { picketSite=ms; break }",
+    "\t\t\t\t}",
+    "\t\t\t\tif (picketSite!==null && nempl<SCAV_MAX_EMPLACEMENTS && picketList.length>0) {",
+    "\t\t\t\t\tconst pick=picketList[Math.floor(Math.random()*picketList.length)]",
+    "\t\t\t\t\tconst ppos=pickStructLocation(i,pick,picketSite.x,picketSite.y,2)",
+    "\t\t\t\t\tif (ppos) { return orderDroidBuild(i,DORDER_BUILD,pick,ppos.x,ppos.y) }",
+    "\t\t\t\t}",
+    ""
+   ]
+  },
+  {
+   "at": 233,
+   "remove": [
+    "\t\t\t\t(factorys.length<16 && !nearbyFactory(i.x,i.y))?\"A0BaBaFactory\":",
+    "\t\t\t\t(haveVtol() && vfactorys.length<8 && Math.random()<.1)?\"A0BaBaVtolFactory\":"
+   ],
+   "insert": [
+    "\t\t\t\t(factorys.length<SCAV_MAX_FACTORIES && !nearbyFactory(i.x,i.y))?\"A0BaBaFactory\":",
+    "\t\t\t\t(haveVtol() && vfactorys.length<SCAV_MAX_VFACTORIES && Math.random()<.1)?\"A0BaBaVtolFactory\":"
+   ]
+  },
+  {
+   "at": 236,
+   "remove": [],
+   "insert": [
+    "\t\t\t\tnempl>=SCAV_MAX_EMPLACEMENTS?null:"
+   ]
+  },
+  {
+   "at": 237,
+   "remove": [
+    "\t\t\t\t"
+   ],
+   "insert": [
+    "",
+    "\t\t\t\tif (struct===null) { return }   // emplacement ceiling reached",
+    ""
+   ]
+  },
+  {
+   "at": 241,
+   "remove": [],
+   "insert": [
+    "\t\t\t\t\tif (!pos) { return } // no legal site near this truck this tick"
+   ]
+  },
+  {
+   "at": 248,
+   "remove": [],
+   "insert": [
+    "\t\t\t\tif (!nx) { nx={x:x+1,y:y} } // off the flow field: any direction will do"
+   ]
+  },
+  {
+   "at": 267,
+   "remove": [
+    "\t\tvar body=[",
+    "\t\t\t\"ScavIcevanBody\",\"ScavCamperBody\",\"B2tractor\",\"FireBody\",\"BusBody\",",
+    "\t\t\t\"B2JeepBody\",\"B2RKJeepBody\",\"B3body-sml-buggy01\",\"B4body-sml-trike01\",",
+    "\t\t\t][Math.floor(Math.random()*9)]",
+    "\t\tvar weapon=[\"BabaPitRocketAT\",\"BabaFlame\",\"BabaRocket\",\"BusCannon\",\"BJeepMG\",\"BaBaMG\"][Math.floor(Math.random()*6)]"
+   ],
+   "insert": [
+    "\t\tconst phase=scavPhase()",
+    "\t\t// Tiers accumulate rather than replace: everything ever unlocked stays",
+    "\t\t// in the pool, with the newest tier entered twice so it dominates the",
+    "\t\t// roll. High-tier scavs keep fielding trikes and MG infantry alongside",
+    "\t\t// the heavy kit instead of abruptly abandoning them.",
+    "\t\tfunction scavMix(lists){",
+    "\t\t\tvar pool=[]",
+    "\t\t\tfor (var pt=1; pt<=phase; ++pt) {",
+    "\t\t\t\tpool=pool.concat(lists[pt])",
+    "\t\t\t\tif (pt===phase) pool=pool.concat(lists[pt])",
+    "\t\t\t}",
+    "\t\t\treturn pool",
+    "\t\t}",
+    "\t\tconst bodyList=scavMix(SCAV_BODIES), weapList=scavMix(SCAV_WEAPONS)",
+    "\t\tvar body=bodyList.length?bodyList[Math.floor(Math.random()*bodyList.length)]:\"B3body-sml-buggy01\"",
+    "\t\tvar weapon=weapList.length?weapList[Math.floor(Math.random()*weapList.length)]:\"BaBaMG\""
+   ]
+  },
+  {
+   "at": 273,
+   "remove": [],
+   "insert": [
+    "\t\tconst atCap=(tanks.length+persons.length)>=scavUnitCeiling()"
+   ]
+  },
+  {
+   "at": 275,
+   "remove": [],
+   "insert": [
+    "\t\t\tif (atCap && m<trucks.length && m<sensors.length) return",
+    "\t\t\t// Infantry come in PAIRS: the roll below builds the first and flags",
+    "\t\t\t// the factory, and its next idle tick builds the twin before",
+    "\t\t\t// anything else is considered.",
+    "\t\t\t// Infantry are the BULK of the horde, not the whole of it. An absolute",
+    "\t\t\t// floor was a mistake: it read 8+6/min capped at 70 while the total",
+    "\t\t\t// unit ceiling is 60, so it could never be satisfied and the ground",
+    "\t\t\t// factories built infantry and nothing else -- measured at zero tanks",
+    "\t\t\t// and zero bomb trucks across a 55-minute game. It is a SHARE of the",
+    "\t\t\t// ceiling now, and even under that share one tick in three still goes",
+    "\t\t\t// to vehicles, so armour always keeps trickling out.",
+    "\t\t\tconst infFloor=Math.floor(scavUnitCeiling()*SCAV_INFANTRY_SHARE)",
+    "\t\t\tif (persons.length<infFloor && Math.random()<.7) {",
+    "\t\t\t\tuusPair[i.id]=SCAV_SQUAD-1",
+    "\t\t\t\treturn buildDroid(i,\"Person\",",
+    "\t\t\t\t\t(gameTime >= SCAV_T_MEDIUM) ? \"B1BaBaPerson01-Ultimate\" : \"B1BaBaPerson01\",",
+    "\t\t\t\t\t\"BaBaLegs\",0,0,\"BaBaMG\")",
+    "\t\t\t}",
+    "\t\t\tif (uusPair[i.id]>0) {",
+    "\t\t\t\tuusPair[i.id]--",
+    "\t\t\t\tif (uusPair[i.id]<=0) delete uusPair[i.id]",
+    "\t\t\t\treturn buildDroid(i,\"Person\",",
+    "\t\t\t\t\t(gameTime >= SCAV_T_MEDIUM) ? \"B1BaBaPerson01-Ultimate\" : \"B1BaBaPerson01\",",
+    "\t\t\t\t\t\"BaBaLegs\",0,0,\"BaBaMG\")",
+    "\t\t\t}"
+   ]
+  },
+  {
+   "at": 277,
+   "remove": [
+    "\t\t\telse if (Math.random()<.8) return buildDroid(i,\"Person\",\"B1BaBaPerson01\",\"BaBaLegs\",0,0,\"BaBaMG\")",
+    "\t\t\telse if (Math.random()<.5) return buildDroid(i,\"Heavy Tank\",\"ScavTruckBody\",\"BaBaProp\",0,0,\"BusCannon\",\"BusCannon\",\"BusCannon\")\t"
+   ],
+   "insert": [
+    "\t\t\t// Infantry come FIRST and never stop. Scavengers are people before they",
+    "\t\t\t// are vehicles: below the running floor below, a factory builds nothing",
+    "\t\t\t// else -- not trucks, not sensors -- and the floor climbs all game, so",
+    "\t\t\t// the horde keeps growing rather than plateauing early.",
+    "\t\t\t// Only the WHEELED arsenal stays phase-gated; in phase 0 anything that",
+    "\t\t\t// is not infantry becomes another truck, funding the early expansion.",
+    "\t\t\telse if (Math.random()<.8) {",
+    "\t\t\t\tuusPair[i.id]=SCAV_SQUAD-1",
+    "\t\t\t\treturn buildDroid(i,\"Person\",",
+    "\t\t\t\t\t(gameTime >= SCAV_T_MEDIUM) ? \"B1BaBaPerson01-Ultimate\" : \"B1BaBaPerson01\",",
+    "\t\t\t\t\t\"BaBaLegs\",0,0,\"BaBaMG\")",
+    "\t\t\t}",
+    "\t\t\telse if (phase===0) return (trucks.length<10) ? buildDroid(i,\"Truck\",\"B2crane2\",\"BaBaProp\",0,0,\"scavCrane2\") : false",
+    "\t\t\telse if (phase>=3 && gameTime >= SCAV_T_BOMBER && Math.random()<.18) {",
+    "\t\t\t\tconst bombers=SCAV_BOMBERS[scavPhase()]",
+    "\t\t\t\tif (bombers && bombers.length) {",
+    "\t\t\t\t\tconst bt=bombers[Math.floor(Math.random()*bombers.length)]",
+    "\t\t\t\t\treturn buildDroid(i,bt.name,bt.body,\"BaBaProp\",0,0,SCAV_BOMBER_GUN)",
+    "\t\t\t\t}",
+    "\t\t\t}",
+    "\t\t\telse if (phase>=3 && Math.random()<.5) {",
+    "\t\t\t\t// all three turrets from one range band -- see SCAV_BANDS",
+    "\t\t\t\tconst band=scavBandFor(weapList)",
+    "\t\t\t\tif (band) {",
+    "\t\t\t\t\tconst w1=band[Math.floor(Math.random()*band.length)]",
+    "\t\t\t\t\tconst w2=band[Math.floor(Math.random()*band.length)]",
+    "\t\t\t\t\tconst w3=band[Math.floor(Math.random()*band.length)]",
+    "\t\t\t\t\treturn buildDroid(i,\"Heavy Tank\",\"ScavTruckBody\",\"BaBaProp\",0,0,w1,w2,w3)",
+    "\t\t\t\t}",
+    "\t\t\t}"
+   ]
+  },
+  {
+   "at": 280,
+   "remove": [],
+   "insert": [
+    "\t\t\telse if (gameTime < NEXUS_TANK_AFTER) {",
+    "\t\t\t\t// too early for the capture unit — build a normal tank instead",
+    "\t\t\t\treturn buildDroid(i,\"Tank\",body,\"BaBaProp\",0,0,weapon)",
+    "\t\t\t}"
+   ]
+  },
+  {
+   "at": 288,
+   "remove": [],
+   "insert": [
+    "\t\tconst atCapV=(tanks.length+persons.length)>=scavUnitCeiling()",
+    "\t\tconst airborne=tanks.filter(i=>isVTOL(i)).length",
+    "\t\tconst airCap=Math.floor(scavUnitCeiling()*SCAV_AIR_SHARE)"
+   ]
+  },
+  {
+   "at": 289,
+   "remove": [],
+   "insert": [
+    "\t\t\tif (atCapV) return",
+    "\t\t\tif (airborne>=airCap) return   // the air arm has had its share"
+   ]
+  },
+  {
+   "at": 290,
+   "remove": [],
+   "insert": [
+    "\t\t\tconst bombs=[]",
+    "\t\t\tif (gameTime >= SCAV_T_AIR2)   bombs.push(\"Bomb4-VTOL-HvyINC\")",
+    "\t\t\tif (gameTime >= SCAV_T_AIR + 120e3) bombs.push(\"Bomb3-VTOL-LtINC\")",
+    "\t\t\tif (bombs.length && Math.random()<.35) {",
+    "\t\t\t\treturn buildDroid(i,\"Napalm Helicopter\",\"HeavyChopper\",\"Helicopter\",0,0,",
+    "\t\t\t\t\tbombs[Math.floor(Math.random()*bombs.length)])",
+    "\t\t\t}"
+   ]
+  },
+  {
+   "at": 309,
+   "remove": [],
+   "insert": [
+    "\t// Holding back: for the opening SCAV_T_HOLD the scavengers do not go",
+    "\t// looking for anyone. They still defend themselves (the engine handles",
+    "\t// that) and still collect oil drums above.",
+    "\tconst holding=gameTime<SCAV_T_HOLD",
+    ""
+   ]
+  },
+  {
+   "at": 310,
+   "remove": [],
+   "insert": [
+    "\t\tif (holding) return"
+   ]
+  },
+  {
+   "at": 316,
+   "remove": [],
+   "insert": [
+    "\t\tif (holding && !isVTOL(i)) return"
+   ]
+  }
+ ]
+}

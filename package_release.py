@@ -167,6 +167,18 @@ def main() -> None:
         if out != txt:
             md.write_text(out, encoding="utf-8")
 
+    # The scavenger component ships as a patch the player applies to their own
+    # copy of uuscav2.wz -- DOCTRINE's changes, not the third-party file.
+    scav_src = ROOT / "scav"
+    scav_dst = DIST / "scav"
+    scav_dst.mkdir(parents=True, exist_ok=True)
+    for f in ("patch_uuscav2.py", "scav_patch.json"):
+        if not (scav_src / f).exists():
+            fail(f"scavenger patch incomplete: scav/{f} is missing")
+        shutil.copy2(scav_src / f, scav_dst / f)
+    print(f"    scav patch: {len(json.loads((scav_src / 'scav_patch.json')
+          .read_text(encoding='utf-8'))['hunks'])} hunks")
+
     (DIST / "README-DIST.md").write_text(DIST_NOTES, encoding="utf-8")
 
     # Every relative link in a shipped document must resolve inside dist/.
@@ -238,27 +250,26 @@ docs/             design specification, build architecture, tuning reference,
                   the full 32-round playtest record and the stat diff
 ```
 
-## What is deliberately NOT in here
+## The scavenger component
 
-**The scavenger component.** DOCTRINE's scavenger escalation lives in a separate archive
-(`uuscav2.wz`) derived from the third-party mod *Ultimate Ultimate Scavengers 2*. That mod is
-not part of Warzone 2100 -- it shares roughly 1.4% of its content with the game's own
-`ultimateScavengers.js` -- and its licence and author have not been established.
+DOCTRINE's scavenger escalation — staged phases, fortified derricks, infantry squads, four
+grades of suicide bomb truck, the capped air arm — modifies **Ultimate Ultimate Scavengers 2**,
+which is somebody else's mod with no established licence or author. So this download ships
+*the changes*, not the file.
 
-Redistributing a modified copy of someone else's mod without knowing its licence is not
-something to do by default. Resolve one of these first:
+```
+1. install Ultimate Ultimate Scavengers 2 yourself (uuscav2.wz in mods/4.7.0/autoload/)
+2. py -X utf8 scav/patch_uuscav2.py
+```
 
-1. **Identify the author and licence.** If it is GPL-2.0-or-later like Warzone 2100 itself,
-   the modified copy can ship with attribution and a note of changes.
-2. **Ask the author's permission** and record it.
-3. **Ship the changes as a patch** rather than a derived file -- a script that transforms a
-   copy of `uuscav2.wz` the player already has.
-4. **Reimplement** the scavenger behaviour against the game's own `ultimateScavengers.js`,
-   which is GPL and part of Warzone 2100.
+The script finds the mod in your autoload folder, verifies all 23 changes against your copy,
+backs it up as `uuscav2.wz.original`, and rewrites the archive in place. It writes nothing
+unless every change verifies, is a no-op if already applied, and refuses a different release
+of the mod rather than corrupting it. 368 of the lines it adds are DOCTRINE's own; 10 lines of
+the original are quoted purely so it can confirm it is patching what it thinks it is.
 
-Until then the mod plays correctly on the game's own scavenger settings; only the
-DOCTRINE-specific scavenger escalation is absent. Note that `GAMEPLAY.md` section 7 describes
-that escalation, so trim it if you publish without the component.
+**Without it**, the game's own scavengers are used and everything else in DOCTRINE is
+unaffected. House scavengers work either way — they live in DOCTRINE's own runtime script.
 
 ## Before you publish
 
