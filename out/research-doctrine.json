@@ -1,0 +1,8474 @@
+{
+ "R-Comp-CommandTurret01": {
+  "iconID": "IMAGE_RES_COMPUTERTECH",
+  "id": "R-Comp-CommandTurret01",
+  "name": "Command Turret",
+  "requiredResearch": [
+   "R-Struc-CommandRelay"
+  ],
+  "researchPoints": 600,
+  "researchPower": 18,
+  "resultComponents": [
+   "CommandBrain01",
+   "CommandTurret1"
+  ]
+ },
+ "R-Comp-CommandTurret02": {
+  "iconID": "IMAGE_RES_COMPUTERTECH",
+  "id": "R-Comp-CommandTurret02",
+  "name": "Command Turret Upgrade",
+  "requiredResearch": [
+   "R-Sys-Debrief01",
+   "R-Sys-Sensor-Upgrade02"
+  ],
+  "researchPoints": 2500,
+  "researchPower": 90,
+  "results": [
+   {
+    "class": "Brain",
+    "parameter": "BaseCommandLimit",
+    "value": 20
+   },
+   {
+    "class": "Brain",
+    "parameter": "CommandLimitByLevel",
+    "value": 50
+   },
+   {
+    "class": "Brain",
+    "filterParameter": "Id",
+    "filterValue": "CommandBrain01",
+    "parameter": "RankThresholds",
+    "value": -10
+   },
+   {
+    "class": "Brain",
+    "filterParameter": "Id",
+    "filterValue": "CommandBrain01",
+    "parameter": "HitPoints",
+    "value": 20
+   }
+  ]
+ },
+ "R-Comp-CommandTurret03": {
+  "iconID": "IMAGE_RES_COMPUTERTECH",
+  "id": "R-Comp-CommandTurret03",
+  "name": "Distributed Command",
+  "requiredResearch": [
+   "R-Sys-DataCore"
+  ],
+  "researchPoints": 9000,
+  "researchPower": 300,
+  "results": [
+   {
+    "class": "Brain",
+    "parameter": "BaseCommandLimit",
+    "value": 30
+   },
+   {
+    "class": "Brain",
+    "filterParameter": "Id",
+    "filterValue": "CommandBrain01",
+    "parameter": "RankThresholds",
+    "value": -15
+   },
+   {
+    "class": "Brain",
+    "filterParameter": "Id",
+    "filterValue": "CommandBrain01",
+    "parameter": "HitPoints",
+    "value": 30
+   }
+  ]
+ },
+ "R-Cred-AA-Tier2": {
+  "iconID": "IMAGE_RES_COMPUTERTECH",
+  "id": "R-Cred-AA-Tier2",
+  "name": "AA Gun Doctrine Review II",
+  "researchPoints": 10,
+  "researchPower": 1
+ },
+ "R-Cred-AA-Tier3": {
+  "iconID": "IMAGE_RES_COMPUTERTECH",
+  "id": "R-Cred-AA-Tier3",
+  "name": "AA Gun Doctrine Review III",
+  "researchPoints": 10,
+  "researchPower": 1
+ },
+ "R-Cred-AA-Tier4": {
+  "iconID": "IMAGE_RES_COMPUTERTECH",
+  "id": "R-Cred-AA-Tier4",
+  "name": "AA Gun Doctrine Review IV",
+  "researchPoints": 10,
+  "researchPower": 1
+ },
+ "R-Cred-Breadth02": {
+  "iconID": "IMAGE_RES_COMPUTERTECH",
+  "id": "R-Cred-Breadth02",
+  "name": "Combined Arms Doctrine 2",
+  "researchPoints": 10,
+  "researchPower": 1
+ },
+ "R-Cred-Breadth03": {
+  "iconID": "IMAGE_RES_COMPUTERTECH",
+  "id": "R-Cred-Breadth03",
+  "name": "Combined Arms Doctrine 3",
+  "researchPoints": 10,
+  "researchPower": 1
+ },
+ "R-Cred-Breadth04": {
+  "iconID": "IMAGE_RES_COMPUTERTECH",
+  "id": "R-Cred-Breadth04",
+  "name": "Combined Arms Doctrine 4",
+  "researchPoints": 10,
+  "researchPower": 1
+ },
+ "R-Cred-Breadth05": {
+  "iconID": "IMAGE_RES_COMPUTERTECH",
+  "id": "R-Cred-Breadth05",
+  "name": "Combined Arms Doctrine 5",
+  "researchPoints": 10,
+  "researchPower": 1
+ },
+ "R-Cred-Cannon-Tier2": {
+  "iconID": "IMAGE_RES_COMPUTERTECH",
+  "id": "R-Cred-Cannon-Tier2",
+  "name": "Cannon Doctrine Review II",
+  "researchPoints": 10,
+  "researchPower": 1
+ },
+ "R-Cred-Cannon-Tier3": {
+  "iconID": "IMAGE_RES_COMPUTERTECH",
+  "id": "R-Cred-Cannon-Tier3",
+  "name": "Cannon Doctrine Review III",
+  "researchPoints": 10,
+  "researchPower": 1
+ },
+ "R-Cred-Cannon-Tier4": {
+  "iconID": "IMAGE_RES_COMPUTERTECH",
+  "id": "R-Cred-Cannon-Tier4",
+  "name": "Cannon Doctrine Review IV",
+  "researchPoints": 10,
+  "researchPower": 1
+ },
+ "R-Cred-EMP-Tier2": {
+  "iconID": "IMAGE_RES_COMPUTERTECH",
+  "id": "R-Cred-EMP-Tier2",
+  "name": "EMP Doctrine Review II",
+  "researchPoints": 10,
+  "researchPower": 1
+ },
+ "R-Cred-EMP-Tier3": {
+  "iconID": "IMAGE_RES_COMPUTERTECH",
+  "id": "R-Cred-EMP-Tier3",
+  "name": "EMP Doctrine Review III",
+  "researchPoints": 10,
+  "researchPower": 1
+ },
+ "R-Cred-EMP-Tier4": {
+  "iconID": "IMAGE_RES_COMPUTERTECH",
+  "id": "R-Cred-EMP-Tier4",
+  "name": "EMP Doctrine Review IV",
+  "researchPoints": 10,
+  "researchPower": 1
+ },
+ "R-Cred-Flamer-Tier2": {
+  "iconID": "IMAGE_RES_COMPUTERTECH",
+  "id": "R-Cred-Flamer-Tier2",
+  "name": "Flamer Doctrine Review II",
+  "researchPoints": 10,
+  "researchPower": 1
+ },
+ "R-Cred-Flamer-Tier3": {
+  "iconID": "IMAGE_RES_COMPUTERTECH",
+  "id": "R-Cred-Flamer-Tier3",
+  "name": "Flamer Doctrine Review III",
+  "researchPoints": 10,
+  "researchPower": 1
+ },
+ "R-Cred-Flamer-Tier4": {
+  "iconID": "IMAGE_RES_COMPUTERTECH",
+  "id": "R-Cred-Flamer-Tier4",
+  "name": "Flamer Doctrine Review IV",
+  "researchPoints": 10,
+  "researchPower": 1
+ },
+ "R-Cred-Howitzer-Tier2": {
+  "iconID": "IMAGE_RES_COMPUTERTECH",
+  "id": "R-Cred-Howitzer-Tier2",
+  "name": "Howitzer Doctrine Review II",
+  "researchPoints": 10,
+  "researchPower": 1
+ },
+ "R-Cred-Howitzer-Tier3": {
+  "iconID": "IMAGE_RES_COMPUTERTECH",
+  "id": "R-Cred-Howitzer-Tier3",
+  "name": "Howitzer Doctrine Review III",
+  "researchPoints": 10,
+  "researchPower": 1
+ },
+ "R-Cred-Howitzer-Tier4": {
+  "iconID": "IMAGE_RES_COMPUTERTECH",
+  "id": "R-Cred-Howitzer-Tier4",
+  "name": "Howitzer Doctrine Review IV",
+  "researchPoints": 10,
+  "researchPower": 1
+ },
+ "R-Cred-Laser-Tier2": {
+  "iconID": "IMAGE_RES_COMPUTERTECH",
+  "id": "R-Cred-Laser-Tier2",
+  "name": "Energy Doctrine Review II",
+  "researchPoints": 10,
+  "researchPower": 1
+ },
+ "R-Cred-Laser-Tier3": {
+  "iconID": "IMAGE_RES_COMPUTERTECH",
+  "id": "R-Cred-Laser-Tier3",
+  "name": "Energy Doctrine Review III",
+  "researchPoints": 10,
+  "researchPower": 1
+ },
+ "R-Cred-Laser-Tier4": {
+  "iconID": "IMAGE_RES_COMPUTERTECH",
+  "id": "R-Cred-Laser-Tier4",
+  "name": "Energy Doctrine Review IV",
+  "researchPoints": 10,
+  "researchPower": 1
+ },
+ "R-Cred-MG-Tier2": {
+  "iconID": "IMAGE_RES_COMPUTERTECH",
+  "id": "R-Cred-MG-Tier2",
+  "name": "Machinegun Doctrine Review II",
+  "researchPoints": 10,
+  "researchPower": 1
+ },
+ "R-Cred-MG-Tier3": {
+  "iconID": "IMAGE_RES_COMPUTERTECH",
+  "id": "R-Cred-MG-Tier3",
+  "name": "Machinegun Doctrine Review III",
+  "researchPoints": 10,
+  "researchPower": 1
+ },
+ "R-Cred-MG-Tier4": {
+  "iconID": "IMAGE_RES_COMPUTERTECH",
+  "id": "R-Cred-MG-Tier4",
+  "name": "Machinegun Doctrine Review IV",
+  "researchPoints": 10,
+  "researchPower": 1
+ },
+ "R-Cred-Missile-Tier2": {
+  "iconID": "IMAGE_RES_COMPUTERTECH",
+  "id": "R-Cred-Missile-Tier2",
+  "name": "Missile Doctrine Review II",
+  "researchPoints": 10,
+  "researchPower": 1
+ },
+ "R-Cred-Missile-Tier3": {
+  "iconID": "IMAGE_RES_COMPUTERTECH",
+  "id": "R-Cred-Missile-Tier3",
+  "name": "Missile Doctrine Review III",
+  "researchPoints": 10,
+  "researchPower": 1
+ },
+ "R-Cred-Missile-Tier4": {
+  "iconID": "IMAGE_RES_COMPUTERTECH",
+  "id": "R-Cred-Missile-Tier4",
+  "name": "Missile Doctrine Review IV",
+  "researchPoints": 10,
+  "researchPower": 1
+ },
+ "R-Cred-Mortar-Tier2": {
+  "iconID": "IMAGE_RES_COMPUTERTECH",
+  "id": "R-Cred-Mortar-Tier2",
+  "name": "Mortar Doctrine Review II",
+  "researchPoints": 10,
+  "researchPower": 1
+ },
+ "R-Cred-Mortar-Tier3": {
+  "iconID": "IMAGE_RES_COMPUTERTECH",
+  "id": "R-Cred-Mortar-Tier3",
+  "name": "Mortar Doctrine Review III",
+  "researchPoints": 10,
+  "researchPower": 1
+ },
+ "R-Cred-Mortar-Tier4": {
+  "iconID": "IMAGE_RES_COMPUTERTECH",
+  "id": "R-Cred-Mortar-Tier4",
+  "name": "Mortar Doctrine Review IV",
+  "researchPoints": 10,
+  "researchPower": 1
+ },
+ "R-Cred-Rail-Tier2": {
+  "iconID": "IMAGE_RES_COMPUTERTECH",
+  "id": "R-Cred-Rail-Tier2",
+  "name": "Rail Doctrine Review II",
+  "researchPoints": 10,
+  "researchPower": 1
+ },
+ "R-Cred-Rail-Tier3": {
+  "iconID": "IMAGE_RES_COMPUTERTECH",
+  "id": "R-Cred-Rail-Tier3",
+  "name": "Rail Doctrine Review III",
+  "researchPoints": 10,
+  "researchPower": 1
+ },
+ "R-Cred-Rail-Tier4": {
+  "iconID": "IMAGE_RES_COMPUTERTECH",
+  "id": "R-Cred-Rail-Tier4",
+  "name": "Rail Doctrine Review IV",
+  "researchPoints": 10,
+  "researchPower": 1
+ },
+ "R-Cred-Rocket-Tier2": {
+  "iconID": "IMAGE_RES_COMPUTERTECH",
+  "id": "R-Cred-Rocket-Tier2",
+  "name": "Rocket Doctrine Review II",
+  "researchPoints": 10,
+  "researchPower": 1
+ },
+ "R-Cred-Rocket-Tier3": {
+  "iconID": "IMAGE_RES_COMPUTERTECH",
+  "id": "R-Cred-Rocket-Tier3",
+  "name": "Rocket Doctrine Review III",
+  "researchPoints": 10,
+  "researchPower": 1
+ },
+ "R-Cred-Rocket-Tier4": {
+  "iconID": "IMAGE_RES_COMPUTERTECH",
+  "id": "R-Cred-Rocket-Tier4",
+  "name": "Rocket Doctrine Review IV",
+  "researchPoints": 10,
+  "researchPower": 1
+ },
+ "R-Cyborg-Hvywpn-A-T": {
+  "iconID": "IMAGE_RES_CYBORGTECH",
+  "id": "R-Cyborg-Hvywpn-A-T",
+  "name": "Super Scourge Cyborg",
+  "requiredResearch": [
+   "R-Cyborg-Metals04",
+   "R-Wpn-Missile2A-T"
+  ],
+  "researchPoints": 5000,
+  "researchPower": 156,
+  "resultComponents": [
+   "Cyb-Hvywpn-A-T"
+  ]
+ },
+ "R-Cyborg-Hvywpn-Acannon": {
+  "iconID": "IMAGE_RES_CYBORGTECH",
+  "id": "R-Cyborg-Hvywpn-Acannon",
+  "name": "Super Auto-Cannon Cyborg",
+  "requiredResearch": [
+   "R-Wpn-Cannon5",
+   "R-Cyborg-Hvywpn-Mcannon"
+  ],
+  "researchPoints": 4000,
+  "researchPower": 125,
+  "resultComponents": [
+   "Cyb-Hvywpn-Acannon"
+  ]
+ },
+ "R-Cyborg-Hvywpn-HPV": {
+  "iconID": "IMAGE_RES_CYBORGTECH",
+  "id": "R-Cyborg-Hvywpn-HPV",
+  "name": "Super HVC Cyborg",
+  "requiredResearch": [
+   "R-Cyborg-Hvywpn-Mcannon",
+   "R-Wpn-Cannon4AMk1"
+  ],
+  "researchPoints": 4000,
+  "researchPower": 125,
+  "resultComponents": [
+   "Cyb-Hvywpn-HPV"
+  ]
+ },
+ "R-Cyborg-Hvywpn-Mcannon": {
+  "iconID": "IMAGE_RES_CYBORGTECH",
+  "id": "R-Cyborg-Hvywpn-Mcannon",
+  "name": "Super Heavy-Gunner",
+  "requiredResearch": [
+   "R-Cyborg-Metals04",
+   "R-Wpn-Cannon2Mk1"
+  ],
+  "researchPoints": 4000,
+  "researchPower": 125,
+  "resultComponents": [
+   "Cyb-Hvywpn-Mcannon"
+  ]
+ },
+ "R-Cyborg-Hvywpn-PulseLsr": {
+  "iconID": "IMAGE_RES_CYBORGTECH",
+  "id": "R-Cyborg-Hvywpn-PulseLsr",
+  "name": "Super Pulse Laser Cyborg",
+  "requiredResearch": [
+   "R-Cyborg-Metals04",
+   "R-Wpn-Laser02"
+  ],
+  "researchPoints": 5000,
+  "researchPower": 156,
+  "resultComponents": [
+   "Cyb-Hvywpn-PulseLsr"
+  ]
+ },
+ "R-Cyborg-Hvywpn-RailGunner": {
+  "iconID": "IMAGE_RES_CYBORGTECH",
+  "id": "R-Cyborg-Hvywpn-RailGunner",
+  "name": "Super Rail-Gunner",
+  "requiredResearch": [
+   "R-Cyborg-Metals04",
+   "R-Wpn-RailGun02"
+  ],
+  "researchPoints": 5500,
+  "researchPower": 171,
+  "resultComponents": [
+   "Cyb-Hvywpn-RailGunner"
+  ]
+ },
+ "R-Cyborg-Hvywpn-TK": {
+  "iconID": "IMAGE_RES_CYBORGTECH",
+  "id": "R-Cyborg-Hvywpn-TK",
+  "name": "Super Tank-Killer Cyborg",
+  "requiredResearch": [
+   "R-Cyborg-Metals04",
+   "R-Wpn-Rocket07-Tank-Killer"
+  ],
+  "researchPoints": 4000,
+  "researchPower": 125,
+  "resultComponents": [
+   "Cyb-Hvywpn-TK"
+  ]
+ },
+ "R-Field-ChassisHeavy-Handling01": {
+  "iconID": "IMAGE_RES_VEHICLETECH",
+  "id": "R-Field-ChassisHeavy-Handling01",
+  "name": "Heavy Chassis Handling I",
+  "requiredResearch": [
+   "R-Sys-Debrief01"
+  ],
+  "researchPoints": 900,
+  "researchPower": 30,
+  "results": [
+   {
+    "class": "Body",
+    "filterParameter": "Id",
+    "filterValue": "Body10MBT",
+    "parameter": "Power",
+    "value": 10
+   },
+   {
+    "class": "Body",
+    "filterParameter": "Id",
+    "filterValue": "Body11ABT",
+    "parameter": "Power",
+    "value": 10
+   },
+   {
+    "class": "Body",
+    "filterParameter": "Id",
+    "filterValue": "Body12SUP",
+    "parameter": "Power",
+    "value": 10
+   },
+   {
+    "class": "Body",
+    "filterParameter": "Id",
+    "filterValue": "Body13SUP",
+    "parameter": "Power",
+    "value": 10
+   },
+   {
+    "class": "Body",
+    "filterParameter": "Id",
+    "filterValue": "Body14SUP",
+    "parameter": "Power",
+    "value": 10
+   },
+   {
+    "class": "Body",
+    "filterParameter": "Id",
+    "filterValue": "Body9REC",
+    "parameter": "Power",
+    "value": 10
+   }
+  ]
+ },
+ "R-Field-ChassisHeavy-Handling02": {
+  "iconID": "IMAGE_RES_VEHICLETECH",
+  "id": "R-Field-ChassisHeavy-Handling02",
+  "name": "Heavy Chassis Handling II",
+  "requiredResearch": [
+   "R-Field-ChassisHeavy-Handling01"
+  ],
+  "researchPoints": 2400,
+  "researchPower": 85,
+  "results": [
+   {
+    "class": "Body",
+    "filterParameter": "Id",
+    "filterValue": "Body10MBT",
+    "parameter": "Power",
+    "value": 11
+   },
+   {
+    "class": "Body",
+    "filterParameter": "Id",
+    "filterValue": "Body11ABT",
+    "parameter": "Power",
+    "value": 11
+   },
+   {
+    "class": "Body",
+    "filterParameter": "Id",
+    "filterValue": "Body12SUP",
+    "parameter": "Power",
+    "value": 11
+   },
+   {
+    "class": "Body",
+    "filterParameter": "Id",
+    "filterValue": "Body13SUP",
+    "parameter": "Power",
+    "value": 11
+   },
+   {
+    "class": "Body",
+    "filterParameter": "Id",
+    "filterValue": "Body14SUP",
+    "parameter": "Power",
+    "value": 11
+   },
+   {
+    "class": "Body",
+    "filterParameter": "Id",
+    "filterValue": "Body9REC",
+    "parameter": "Power",
+    "value": 11
+   }
+  ]
+ },
+ "R-Field-ChassisHeavy-Handling03": {
+  "iconID": "IMAGE_RES_VEHICLETECH",
+  "id": "R-Field-ChassisHeavy-Handling03",
+  "name": "Heavy Chassis Handling III",
+  "requiredResearch": [
+   "R-Field-ChassisHeavy-Handling02"
+  ],
+  "researchPoints": 5200,
+  "researchPower": 190,
+  "results": [
+   {
+    "class": "Body",
+    "filterParameter": "Id",
+    "filterValue": "Body10MBT",
+    "parameter": "Power",
+    "value": 12
+   },
+   {
+    "class": "Body",
+    "filterParameter": "Id",
+    "filterValue": "Body11ABT",
+    "parameter": "Power",
+    "value": 12
+   },
+   {
+    "class": "Body",
+    "filterParameter": "Id",
+    "filterValue": "Body12SUP",
+    "parameter": "Power",
+    "value": 12
+   },
+   {
+    "class": "Body",
+    "filterParameter": "Id",
+    "filterValue": "Body13SUP",
+    "parameter": "Power",
+    "value": 12
+   },
+   {
+    "class": "Body",
+    "filterParameter": "Id",
+    "filterValue": "Body14SUP",
+    "parameter": "Power",
+    "value": 12
+   },
+   {
+    "class": "Body",
+    "filterParameter": "Id",
+    "filterValue": "Body9REC",
+    "parameter": "Power",
+    "value": 12
+   }
+  ]
+ },
+ "R-Field-ChassisLight-Handling01": {
+  "iconID": "IMAGE_RES_VEHICLETECH",
+  "id": "R-Field-ChassisLight-Handling01",
+  "name": "Light Chassis Handling I",
+  "requiredResearch": [
+   "R-Sys-Debrief01"
+  ],
+  "researchPoints": 900,
+  "researchPower": 30,
+  "results": [
+   {
+    "class": "Body",
+    "filterParameter": "Id",
+    "filterValue": "Body1REC",
+    "parameter": "Power",
+    "value": 10
+   },
+   {
+    "class": "Body",
+    "filterParameter": "Id",
+    "filterValue": "Body2SUP",
+    "parameter": "Power",
+    "value": 10
+   },
+   {
+    "class": "Body",
+    "filterParameter": "Id",
+    "filterValue": "Body3MBT",
+    "parameter": "Power",
+    "value": 10
+   },
+   {
+    "class": "Body",
+    "filterParameter": "Id",
+    "filterValue": "Body4ABT",
+    "parameter": "Power",
+    "value": 10
+   }
+  ]
+ },
+ "R-Field-ChassisLight-Handling02": {
+  "iconID": "IMAGE_RES_VEHICLETECH",
+  "id": "R-Field-ChassisLight-Handling02",
+  "name": "Light Chassis Handling II",
+  "requiredResearch": [
+   "R-Field-ChassisLight-Handling01"
+  ],
+  "researchPoints": 2400,
+  "researchPower": 85,
+  "results": [
+   {
+    "class": "Body",
+    "filterParameter": "Id",
+    "filterValue": "Body1REC",
+    "parameter": "Power",
+    "value": 11
+   },
+   {
+    "class": "Body",
+    "filterParameter": "Id",
+    "filterValue": "Body2SUP",
+    "parameter": "Power",
+    "value": 11
+   },
+   {
+    "class": "Body",
+    "filterParameter": "Id",
+    "filterValue": "Body3MBT",
+    "parameter": "Power",
+    "value": 11
+   },
+   {
+    "class": "Body",
+    "filterParameter": "Id",
+    "filterValue": "Body4ABT",
+    "parameter": "Power",
+    "value": 11
+   }
+  ]
+ },
+ "R-Field-ChassisLight-Handling03": {
+  "iconID": "IMAGE_RES_VEHICLETECH",
+  "id": "R-Field-ChassisLight-Handling03",
+  "name": "Light Chassis Handling III",
+  "requiredResearch": [
+   "R-Field-ChassisLight-Handling02"
+  ],
+  "researchPoints": 5200,
+  "researchPower": 190,
+  "results": [
+   {
+    "class": "Body",
+    "filterParameter": "Id",
+    "filterValue": "Body1REC",
+    "parameter": "Power",
+    "value": 12
+   },
+   {
+    "class": "Body",
+    "filterParameter": "Id",
+    "filterValue": "Body2SUP",
+    "parameter": "Power",
+    "value": 12
+   },
+   {
+    "class": "Body",
+    "filterParameter": "Id",
+    "filterValue": "Body3MBT",
+    "parameter": "Power",
+    "value": 12
+   },
+   {
+    "class": "Body",
+    "filterParameter": "Id",
+    "filterValue": "Body4ABT",
+    "parameter": "Power",
+    "value": 12
+   }
+  ]
+ },
+ "R-Field-ChassisMedium-Handling01": {
+  "iconID": "IMAGE_RES_VEHICLETECH",
+  "id": "R-Field-ChassisMedium-Handling01",
+  "name": "Medium Chassis Handling I",
+  "requiredResearch": [
+   "R-Sys-Debrief01"
+  ],
+  "researchPoints": 900,
+  "researchPower": 30,
+  "results": [
+   {
+    "class": "Body",
+    "filterParameter": "Id",
+    "filterValue": "Body5REC",
+    "parameter": "Power",
+    "value": 10
+   },
+   {
+    "class": "Body",
+    "filterParameter": "Id",
+    "filterValue": "Body6SUPP",
+    "parameter": "Power",
+    "value": 10
+   },
+   {
+    "class": "Body",
+    "filterParameter": "Id",
+    "filterValue": "Body7ABT",
+    "parameter": "Power",
+    "value": 10
+   },
+   {
+    "class": "Body",
+    "filterParameter": "Id",
+    "filterValue": "Body8MBT",
+    "parameter": "Power",
+    "value": 10
+   }
+  ]
+ },
+ "R-Field-ChassisMedium-Handling02": {
+  "iconID": "IMAGE_RES_VEHICLETECH",
+  "id": "R-Field-ChassisMedium-Handling02",
+  "name": "Medium Chassis Handling II",
+  "requiredResearch": [
+   "R-Field-ChassisMedium-Handling01"
+  ],
+  "researchPoints": 2400,
+  "researchPower": 85,
+  "results": [
+   {
+    "class": "Body",
+    "filterParameter": "Id",
+    "filterValue": "Body5REC",
+    "parameter": "Power",
+    "value": 11
+   },
+   {
+    "class": "Body",
+    "filterParameter": "Id",
+    "filterValue": "Body6SUPP",
+    "parameter": "Power",
+    "value": 11
+   },
+   {
+    "class": "Body",
+    "filterParameter": "Id",
+    "filterValue": "Body7ABT",
+    "parameter": "Power",
+    "value": 11
+   },
+   {
+    "class": "Body",
+    "filterParameter": "Id",
+    "filterValue": "Body8MBT",
+    "parameter": "Power",
+    "value": 11
+   }
+  ]
+ },
+ "R-Field-ChassisMedium-Handling03": {
+  "iconID": "IMAGE_RES_VEHICLETECH",
+  "id": "R-Field-ChassisMedium-Handling03",
+  "name": "Medium Chassis Handling III",
+  "requiredResearch": [
+   "R-Field-ChassisMedium-Handling02"
+  ],
+  "researchPoints": 5200,
+  "researchPower": 190,
+  "results": [
+   {
+    "class": "Body",
+    "filterParameter": "Id",
+    "filterValue": "Body5REC",
+    "parameter": "Power",
+    "value": 12
+   },
+   {
+    "class": "Body",
+    "filterParameter": "Id",
+    "filterValue": "Body6SUPP",
+    "parameter": "Power",
+    "value": 12
+   },
+   {
+    "class": "Body",
+    "filterParameter": "Id",
+    "filterValue": "Body7ABT",
+    "parameter": "Power",
+    "value": 12
+   },
+   {
+    "class": "Body",
+    "filterParameter": "Id",
+    "filterValue": "Body8MBT",
+    "parameter": "Power",
+    "value": 12
+   }
+  ]
+ },
+ "R-Sig-Cannon1Mk1": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Sig-Cannon1Mk1",
+  "name": "Light Cannon: Veteran Crews",
+  "requiredResearch": [
+   "R-Wpn-Cannon-Accuracy02"
+  ],
+  "researchPoints": 900,
+  "researchPower": 45,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Cannon1Mk1",
+    "parameter": "HitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Cannon1Mk1",
+    "parameter": "ShortHitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Cannon1Mk1",
+    "parameter": "FirePause",
+    "value": -20
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Cannon1Mk1",
+    "parameter": "ReloadTime",
+    "value": -20
+   }
+  ]
+ },
+ "R-Sig-Cannon2A-TMk1": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Sig-Cannon2A-TMk1",
+  "name": "Medium Cannon: Veteran Crews",
+  "requiredResearch": [
+   "R-Wpn-Cannon-Accuracy02"
+  ],
+  "researchPoints": 900,
+  "researchPower": 45,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Cannon2A-TMk1",
+    "parameter": "HitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Cannon2A-TMk1",
+    "parameter": "ShortHitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Cannon2A-TMk1",
+    "parameter": "FirePause",
+    "value": -20
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Cannon2A-TMk1",
+    "parameter": "ReloadTime",
+    "value": -20
+   }
+  ]
+ },
+ "R-Sig-Cannon375mmMk1": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Sig-Cannon375mmMk1",
+  "name": "Heavy Cannon: Veteran Crews",
+  "requiredResearch": [
+   "R-Wpn-Cannon-Accuracy02"
+  ],
+  "researchPoints": 900,
+  "researchPower": 45,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Cannon375mmMk1",
+    "parameter": "HitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Cannon375mmMk1",
+    "parameter": "ShortHitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Cannon375mmMk1",
+    "parameter": "FirePause",
+    "value": -20
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Cannon375mmMk1",
+    "parameter": "ReloadTime",
+    "value": -20
+   }
+  ]
+ },
+ "R-Sig-Cannon4AUTOMk1": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Sig-Cannon4AUTOMk1",
+  "name": "Hyper Velocity Cannon: Veteran Crews",
+  "requiredResearch": [
+   "R-Wpn-Cannon-Accuracy02"
+  ],
+  "researchPoints": 900,
+  "researchPower": 45,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Cannon4AUTOMk1",
+    "parameter": "HitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Cannon4AUTOMk1",
+    "parameter": "ShortHitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Cannon4AUTOMk1",
+    "parameter": "FirePause",
+    "value": -20
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Cannon4AUTOMk1",
+    "parameter": "ReloadTime",
+    "value": -20
+   }
+  ]
+ },
+ "R-Sig-Cannon5VulcanMk1": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Sig-Cannon5VulcanMk1",
+  "name": "Assault Cannon: Veteran Crews",
+  "requiredResearch": [
+   "R-Wpn-Cannon-Accuracy02"
+  ],
+  "researchPoints": 900,
+  "researchPower": 45,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Cannon5VulcanMk1",
+    "parameter": "HitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Cannon5VulcanMk1",
+    "parameter": "ShortHitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Cannon5VulcanMk1",
+    "parameter": "FirePause",
+    "value": -20
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Cannon5VulcanMk1",
+    "parameter": "ReloadTime",
+    "value": -20
+   }
+  ]
+ },
+ "R-Sig-Cannon6TwinAslt": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Sig-Cannon6TwinAslt",
+  "name": "Twin Assault Cannon: Veteran Crews",
+  "requiredResearch": [
+   "R-Wpn-Cannon-Accuracy02"
+  ],
+  "researchPoints": 900,
+  "researchPower": 45,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Cannon6TwinAslt",
+    "parameter": "HitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Cannon6TwinAslt",
+    "parameter": "ShortHitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Cannon6TwinAslt",
+    "parameter": "FirePause",
+    "value": -20
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Cannon6TwinAslt",
+    "parameter": "ReloadTime",
+    "value": -20
+   }
+  ]
+ },
+ "R-Sig-EMP-Cannon": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Sig-EMP-Cannon",
+  "name": "EMP Cannon: Veteran Crews",
+  "requiredResearch": [
+   "R-Wpn-EMP-Accuracy02"
+  ],
+  "researchPoints": 900,
+  "researchPower": 45,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "EMP-Cannon",
+    "parameter": "HitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "EMP-Cannon",
+    "parameter": "ShortHitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "EMP-Cannon",
+    "parameter": "FirePause",
+    "value": -20
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "EMP-Cannon",
+    "parameter": "ReloadTime",
+    "value": -20
+   }
+  ]
+ },
+ "R-Sig-Flame1Mk1": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Sig-Flame1Mk1",
+  "name": "Flamer: Veteran Crews",
+  "requiredResearch": [
+   "R-Wpn-Flamer-Accuracy02"
+  ],
+  "researchPoints": 900,
+  "researchPower": 45,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Flame1Mk1",
+    "parameter": "HitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Flame1Mk1",
+    "parameter": "ShortHitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Flame1Mk1",
+    "parameter": "FirePause",
+    "value": -20
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Flame1Mk1",
+    "parameter": "ReloadTime",
+    "value": -20
+   }
+  ]
+ },
+ "R-Sig-Flame2": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Sig-Flame2",
+  "name": "Inferno: Veteran Crews",
+  "requiredResearch": [
+   "R-Wpn-Flamer-Accuracy02"
+  ],
+  "researchPoints": 900,
+  "researchPower": 45,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Flame2",
+    "parameter": "HitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Flame2",
+    "parameter": "ShortHitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Flame2",
+    "parameter": "FirePause",
+    "value": -20
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Flame2",
+    "parameter": "ReloadTime",
+    "value": -20
+   }
+  ]
+ },
+ "R-Sig-HeavyLaser": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Sig-HeavyLaser",
+  "name": "Heavy Laser: Veteran Crews",
+  "requiredResearch": [
+   "R-Wpn-Laser-Accuracy02"
+  ],
+  "researchPoints": 900,
+  "researchPower": 45,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "HeavyLaser",
+    "parameter": "HitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "HeavyLaser",
+    "parameter": "ShortHitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "HeavyLaser",
+    "parameter": "FirePause",
+    "value": -20
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "HeavyLaser",
+    "parameter": "ReloadTime",
+    "value": -20
+   }
+  ]
+ },
+ "R-Sig-Howitzer-Incendiary": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Sig-Howitzer-Incendiary",
+  "name": "Incendiary Howitzer: Veteran Crews",
+  "requiredResearch": [
+   "R-Wpn-Howitzer-Accuracy02"
+  ],
+  "researchPoints": 900,
+  "researchPower": 45,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Howitzer-Incendiary",
+    "parameter": "HitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Howitzer-Incendiary",
+    "parameter": "ShortHitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Howitzer-Incendiary",
+    "parameter": "FirePause",
+    "value": -20
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Howitzer-Incendiary",
+    "parameter": "ReloadTime",
+    "value": -20
+   }
+  ]
+ },
+ "R-Sig-Howitzer03-Rot": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Sig-Howitzer03-Rot",
+  "name": "Hellstorm: Veteran Crews",
+  "requiredResearch": [
+   "R-Wpn-Howitzer-Accuracy02"
+  ],
+  "researchPoints": 900,
+  "researchPower": 45,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Howitzer03-Rot",
+    "parameter": "HitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Howitzer03-Rot",
+    "parameter": "ShortHitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Howitzer03-Rot",
+    "parameter": "FirePause",
+    "value": -20
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Howitzer03-Rot",
+    "parameter": "ReloadTime",
+    "value": -20
+   }
+  ]
+ },
+ "R-Sig-Howitzer105Mk1": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Sig-Howitzer105Mk1",
+  "name": "Howitzer: Veteran Crews",
+  "requiredResearch": [
+   "R-Wpn-Howitzer-Accuracy02"
+  ],
+  "researchPoints": 900,
+  "researchPower": 45,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Howitzer105Mk1",
+    "parameter": "HitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Howitzer105Mk1",
+    "parameter": "ShortHitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Howitzer105Mk1",
+    "parameter": "FirePause",
+    "value": -20
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Howitzer105Mk1",
+    "parameter": "ReloadTime",
+    "value": -20
+   }
+  ]
+ },
+ "R-Sig-Howitzer150Mk1": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Sig-Howitzer150Mk1",
+  "name": "Ground Shaker: Veteran Crews",
+  "requiredResearch": [
+   "R-Wpn-Howitzer-Accuracy02"
+  ],
+  "researchPoints": 900,
+  "researchPower": 45,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Howitzer150Mk1",
+    "parameter": "HitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Howitzer150Mk1",
+    "parameter": "ShortHitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Howitzer150Mk1",
+    "parameter": "FirePause",
+    "value": -20
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Howitzer150Mk1",
+    "parameter": "ReloadTime",
+    "value": -20
+   }
+  ]
+ },
+ "R-Sig-Laser2PULSEMk1": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Sig-Laser2PULSEMk1",
+  "name": "Pulse Laser: Veteran Crews",
+  "requiredResearch": [
+   "R-Wpn-Laser-Accuracy02"
+  ],
+  "researchPoints": 900,
+  "researchPower": 45,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Laser2PULSEMk1",
+    "parameter": "HitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Laser2PULSEMk1",
+    "parameter": "ShortHitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Laser2PULSEMk1",
+    "parameter": "FirePause",
+    "value": -20
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Laser2PULSEMk1",
+    "parameter": "ReloadTime",
+    "value": -20
+   }
+  ]
+ },
+ "R-Sig-Laser3BEAMMk1": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Sig-Laser3BEAMMk1",
+  "name": "Flashlight: Veteran Crews",
+  "requiredResearch": [
+   "R-Wpn-Laser-Accuracy02"
+  ],
+  "researchPoints": 900,
+  "researchPower": 45,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Laser3BEAMMk1",
+    "parameter": "HitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Laser3BEAMMk1",
+    "parameter": "ShortHitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Laser3BEAMMk1",
+    "parameter": "FirePause",
+    "value": -20
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Laser3BEAMMk1",
+    "parameter": "ReloadTime",
+    "value": -20
+   }
+  ]
+ },
+ "R-Sig-Laser4-PlasmaCannon": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Sig-Laser4-PlasmaCannon",
+  "name": "Plasma Cannon: Veteran Crews",
+  "requiredResearch": [
+   "R-Wpn-Cannon-Accuracy02"
+  ],
+  "researchPoints": 900,
+  "researchPower": 45,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Laser4-PlasmaCannon",
+    "parameter": "HitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Laser4-PlasmaCannon",
+    "parameter": "ShortHitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Laser4-PlasmaCannon",
+    "parameter": "FirePause",
+    "value": -20
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Laser4-PlasmaCannon",
+    "parameter": "ReloadTime",
+    "value": -20
+   }
+  ]
+ },
+ "R-Sig-MG1Mk1": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Sig-MG1Mk1",
+  "name": "Machinegun: Veteran Crews",
+  "requiredResearch": [
+   "R-Wpn-MG-Accuracy02"
+  ],
+  "researchPoints": 900,
+  "researchPower": 45,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "MG1Mk1",
+    "parameter": "HitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "MG1Mk1",
+    "parameter": "ShortHitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "MG1Mk1",
+    "parameter": "FirePause",
+    "value": -20
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "MG1Mk1",
+    "parameter": "ReloadTime",
+    "value": -20
+   }
+  ]
+ },
+ "R-Sig-MG2Mk1": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Sig-MG2Mk1",
+  "name": "Twin Machinegun: Veteran Crews",
+  "requiredResearch": [
+   "R-Wpn-MG-Accuracy02"
+  ],
+  "researchPoints": 900,
+  "researchPower": 45,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "MG2Mk1",
+    "parameter": "HitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "MG2Mk1",
+    "parameter": "ShortHitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "MG2Mk1",
+    "parameter": "FirePause",
+    "value": -20
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "MG2Mk1",
+    "parameter": "ReloadTime",
+    "value": -20
+   }
+  ]
+ },
+ "R-Sig-MG3Mk1": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Sig-MG3Mk1",
+  "name": "Heavy Machinegun: Veteran Crews",
+  "requiredResearch": [
+   "R-Wpn-MG-Accuracy02"
+  ],
+  "researchPoints": 900,
+  "researchPower": 45,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "MG3Mk1",
+    "parameter": "HitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "MG3Mk1",
+    "parameter": "ShortHitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "MG3Mk1",
+    "parameter": "FirePause",
+    "value": -20
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "MG3Mk1",
+    "parameter": "ReloadTime",
+    "value": -20
+   }
+  ]
+ },
+ "R-Sig-MG4ROTARYMk1": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Sig-MG4ROTARYMk1",
+  "name": "Assault Gun: Veteran Crews",
+  "requiredResearch": [
+   "R-Wpn-MG-Accuracy02"
+  ],
+  "researchPoints": 900,
+  "researchPower": 45,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "MG4ROTARYMk1",
+    "parameter": "HitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "MG4ROTARYMk1",
+    "parameter": "ShortHitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "MG4ROTARYMk1",
+    "parameter": "FirePause",
+    "value": -20
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "MG4ROTARYMk1",
+    "parameter": "ReloadTime",
+    "value": -20
+   }
+  ]
+ },
+ "R-Sig-MG5TWINROTARY": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Sig-MG5TWINROTARY",
+  "name": "Twin Assault Gun: Veteran Crews",
+  "requiredResearch": [
+   "R-Wpn-MG-Accuracy02"
+  ],
+  "researchPoints": 900,
+  "researchPower": 45,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "MG5TWINROTARY",
+    "parameter": "HitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "MG5TWINROTARY",
+    "parameter": "ShortHitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "MG5TWINROTARY",
+    "parameter": "FirePause",
+    "value": -20
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "MG5TWINROTARY",
+    "parameter": "ReloadTime",
+    "value": -20
+   }
+  ]
+ },
+ "R-Sig-Missile-A-T": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Sig-Missile-A-T",
+  "name": "Scourge Missile: Veteran Crews",
+  "requiredResearch": [
+   "R-Wpn-Missile-Accuracy02"
+  ],
+  "researchPoints": 900,
+  "researchPower": 45,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Missile-A-T",
+    "parameter": "HitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Missile-A-T",
+    "parameter": "ShortHitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Missile-A-T",
+    "parameter": "FirePause",
+    "value": -20
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Missile-A-T",
+    "parameter": "ReloadTime",
+    "value": -20
+   }
+  ]
+ },
+ "R-Sig-Missile-HvyArt": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Sig-Missile-HvyArt",
+  "name": "Archangel Missile: Veteran Crews",
+  "requiredResearch": [
+   "R-Wpn-Missile-Accuracy02"
+  ],
+  "researchPoints": 900,
+  "researchPower": 45,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Missile-HvyArt",
+    "parameter": "HitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Missile-HvyArt",
+    "parameter": "ShortHitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Missile-HvyArt",
+    "parameter": "FirePause",
+    "value": -20
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Missile-HvyArt",
+    "parameter": "ReloadTime",
+    "value": -20
+   }
+  ]
+ },
+ "R-Sig-Missile-HvySAM": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Sig-Missile-HvySAM",
+  "name": "Vindicator SAM: Veteran Crews",
+  "requiredResearch": [
+   "R-Wpn-Missile-Accuracy02"
+  ],
+  "researchPoints": 900,
+  "researchPower": 45,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Missile-HvySAM",
+    "parameter": "HitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Missile-HvySAM",
+    "parameter": "ShortHitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Missile-HvySAM",
+    "parameter": "FirePause",
+    "value": -20
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Missile-HvySAM",
+    "parameter": "ReloadTime",
+    "value": -20
+   }
+  ]
+ },
+ "R-Sig-Missile-LtSAM": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Sig-Missile-LtSAM",
+  "name": "Avenger SAM: Veteran Crews",
+  "requiredResearch": [
+   "R-Wpn-Missile-Accuracy02"
+  ],
+  "researchPoints": 900,
+  "researchPower": 45,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Missile-LtSAM",
+    "parameter": "HitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Missile-LtSAM",
+    "parameter": "ShortHitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Missile-LtSAM",
+    "parameter": "FirePause",
+    "value": -20
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Missile-LtSAM",
+    "parameter": "ReloadTime",
+    "value": -20
+   }
+  ]
+ },
+ "R-Sig-Missile-MdArt": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Sig-Missile-MdArt",
+  "name": "Seraph Missile Array: Veteran Crews",
+  "requiredResearch": [
+   "R-Wpn-Missile-Accuracy02"
+  ],
+  "researchPoints": 900,
+  "researchPower": 45,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Missile-MdArt",
+    "parameter": "HitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Missile-MdArt",
+    "parameter": "ShortHitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Missile-MdArt",
+    "parameter": "FirePause",
+    "value": -20
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Missile-MdArt",
+    "parameter": "ReloadTime",
+    "value": -20
+   }
+  ]
+ },
+ "R-Sig-Mortar-Incendiary": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Sig-Mortar-Incendiary",
+  "name": "Incendiary Mortar: Veteran Crews",
+  "requiredResearch": [
+   "R-Wpn-Mortar-Accuracy02"
+  ],
+  "researchPoints": 900,
+  "researchPower": 45,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Mortar-Incendiary",
+    "parameter": "HitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Mortar-Incendiary",
+    "parameter": "ShortHitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Mortar-Incendiary",
+    "parameter": "FirePause",
+    "value": -20
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Mortar-Incendiary",
+    "parameter": "ReloadTime",
+    "value": -20
+   }
+  ]
+ },
+ "R-Sig-Mortar1Mk1": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Sig-Mortar1Mk1",
+  "name": "Mortar: Veteran Crews",
+  "requiredResearch": [
+   "R-Wpn-Mortar-Accuracy02"
+  ],
+  "researchPoints": 900,
+  "researchPower": 45,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Mortar1Mk1",
+    "parameter": "HitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Mortar1Mk1",
+    "parameter": "ShortHitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Mortar1Mk1",
+    "parameter": "FirePause",
+    "value": -20
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Mortar1Mk1",
+    "parameter": "ReloadTime",
+    "value": -20
+   }
+  ]
+ },
+ "R-Sig-Mortar2Mk1": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Sig-Mortar2Mk1",
+  "name": "Bombard: Veteran Crews",
+  "requiredResearch": [
+   "R-Wpn-Mortar-Accuracy02"
+  ],
+  "researchPoints": 900,
+  "researchPower": 45,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Mortar2Mk1",
+    "parameter": "HitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Mortar2Mk1",
+    "parameter": "ShortHitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Mortar2Mk1",
+    "parameter": "FirePause",
+    "value": -20
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Mortar2Mk1",
+    "parameter": "ReloadTime",
+    "value": -20
+   }
+  ]
+ },
+ "R-Sig-Mortar3ROTARYMk1": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Sig-Mortar3ROTARYMk1",
+  "name": "Pepperpot: Veteran Crews",
+  "requiredResearch": [
+   "R-Wpn-Mortar-Accuracy02"
+  ],
+  "researchPoints": 900,
+  "researchPower": 45,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Mortar3ROTARYMk1",
+    "parameter": "HitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Mortar3ROTARYMk1",
+    "parameter": "ShortHitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Mortar3ROTARYMk1",
+    "parameter": "FirePause",
+    "value": -20
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Mortar3ROTARYMk1",
+    "parameter": "ReloadTime",
+    "value": -20
+   }
+  ]
+ },
+ "R-Sig-MortarEMP": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Sig-MortarEMP",
+  "name": "EMP Mortar: Veteran Crews",
+  "requiredResearch": [
+   "R-Wpn-EMP-Accuracy02"
+  ],
+  "researchPoints": 900,
+  "researchPower": 45,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "MortarEMP",
+    "parameter": "HitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "MortarEMP",
+    "parameter": "ShortHitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "MortarEMP",
+    "parameter": "FirePause",
+    "value": -20
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "MortarEMP",
+    "parameter": "ReloadTime",
+    "value": -20
+   }
+  ]
+ },
+ "R-Sig-PlasmaHeavy": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Sig-PlasmaHeavy",
+  "name": "Heavy Plasma Launcher: Veteran Crews",
+  "requiredResearch": [
+   "R-Wpn-Flamer-Accuracy02"
+  ],
+  "researchPoints": 900,
+  "researchPower": 45,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "PlasmaHeavy",
+    "parameter": "HitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "PlasmaHeavy",
+    "parameter": "ShortHitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "PlasmaHeavy",
+    "parameter": "FirePause",
+    "value": -20
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "PlasmaHeavy",
+    "parameter": "ReloadTime",
+    "value": -20
+   }
+  ]
+ },
+ "R-Sig-PlasmiteFlamer": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Sig-PlasmiteFlamer",
+  "name": "Plasmite Flamer: Veteran Crews",
+  "requiredResearch": [
+   "R-Wpn-Flamer-Accuracy02"
+  ],
+  "researchPoints": 900,
+  "researchPower": 45,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "PlasmiteFlamer",
+    "parameter": "HitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "PlasmiteFlamer",
+    "parameter": "ShortHitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "PlasmiteFlamer",
+    "parameter": "FirePause",
+    "value": -20
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "PlasmiteFlamer",
+    "parameter": "ReloadTime",
+    "value": -20
+   }
+  ]
+ },
+ "R-Sig-RailGun1Mk1": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Sig-RailGun1Mk1",
+  "name": "Needle Gun: Veteran Crews",
+  "requiredResearch": [
+   "R-Wpn-Rail-Accuracy02"
+  ],
+  "researchPoints": 900,
+  "researchPower": 45,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "RailGun1Mk1",
+    "parameter": "HitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "RailGun1Mk1",
+    "parameter": "ShortHitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "RailGun1Mk1",
+    "parameter": "FirePause",
+    "value": -20
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "RailGun1Mk1",
+    "parameter": "ReloadTime",
+    "value": -20
+   }
+  ]
+ },
+ "R-Sig-RailGun2Mk1": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Sig-RailGun2Mk1",
+  "name": "Rail Gun: Veteran Crews",
+  "requiredResearch": [
+   "R-Wpn-Rail-Accuracy02"
+  ],
+  "researchPoints": 900,
+  "researchPower": 45,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "RailGun2Mk1",
+    "parameter": "HitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "RailGun2Mk1",
+    "parameter": "ShortHitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "RailGun2Mk1",
+    "parameter": "FirePause",
+    "value": -20
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "RailGun2Mk1",
+    "parameter": "ReloadTime",
+    "value": -20
+   }
+  ]
+ },
+ "R-Sig-RailGun3Mk1": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Sig-RailGun3Mk1",
+  "name": "Gauss Cannon: Veteran Crews",
+  "requiredResearch": [
+   "R-Wpn-Rail-Accuracy02"
+  ],
+  "researchPoints": 900,
+  "researchPower": 45,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "RailGun3Mk1",
+    "parameter": "HitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "RailGun3Mk1",
+    "parameter": "ShortHitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "RailGun3Mk1",
+    "parameter": "FirePause",
+    "value": -20
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "RailGun3Mk1",
+    "parameter": "ReloadTime",
+    "value": -20
+   }
+  ]
+ },
+ "R-Sig-Rocket-BB": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Sig-Rocket-BB",
+  "name": "Bunker Buster: Veteran Crews",
+  "requiredResearch": [
+   "R-Wpn-Rocket-Accuracy02"
+  ],
+  "researchPoints": 900,
+  "researchPower": 45,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Rocket-BB",
+    "parameter": "HitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Rocket-BB",
+    "parameter": "ShortHitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Rocket-BB",
+    "parameter": "FirePause",
+    "value": -20
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Rocket-BB",
+    "parameter": "ReloadTime",
+    "value": -20
+   }
+  ]
+ },
+ "R-Sig-Rocket-HvyA-T": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Sig-Rocket-HvyA-T",
+  "name": "Tank Killer: Veteran Crews",
+  "requiredResearch": [
+   "R-Wpn-Rocket-Accuracy02"
+  ],
+  "researchPoints": 900,
+  "researchPower": 45,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Rocket-HvyA-T",
+    "parameter": "HitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Rocket-HvyA-T",
+    "parameter": "ShortHitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Rocket-HvyA-T",
+    "parameter": "FirePause",
+    "value": -20
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Rocket-HvyA-T",
+    "parameter": "ReloadTime",
+    "value": -20
+   }
+  ]
+ },
+ "R-Sig-Rocket-IDF": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Sig-Rocket-IDF",
+  "name": "Ripple Rockets: Veteran Crews",
+  "requiredResearch": [
+   "R-Wpn-Rocket-Accuracy02"
+  ],
+  "researchPoints": 900,
+  "researchPower": 45,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Rocket-IDF",
+    "parameter": "HitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Rocket-IDF",
+    "parameter": "ShortHitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Rocket-IDF",
+    "parameter": "FirePause",
+    "value": -20
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Rocket-IDF",
+    "parameter": "ReloadTime",
+    "value": -20
+   }
+  ]
+ },
+ "R-Sig-Rocket-LtA-T": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Sig-Rocket-LtA-T",
+  "name": "Lancer: Veteran Crews",
+  "requiredResearch": [
+   "R-Wpn-Rocket-Accuracy02"
+  ],
+  "researchPoints": 900,
+  "researchPower": 45,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Rocket-LtA-T",
+    "parameter": "HitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Rocket-LtA-T",
+    "parameter": "ShortHitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Rocket-LtA-T",
+    "parameter": "FirePause",
+    "value": -20
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Rocket-LtA-T",
+    "parameter": "ReloadTime",
+    "value": -20
+   }
+  ]
+ },
+ "R-Sig-Rocket-MRL": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Sig-Rocket-MRL",
+  "name": "Mini-Rocket Array: Veteran Crews",
+  "requiredResearch": [
+   "R-Wpn-Rocket-Accuracy02"
+  ],
+  "researchPoints": 900,
+  "researchPower": 45,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Rocket-MRL",
+    "parameter": "HitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Rocket-MRL",
+    "parameter": "ShortHitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Rocket-MRL",
+    "parameter": "FirePause",
+    "value": -20
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Rocket-MRL",
+    "parameter": "ReloadTime",
+    "value": -20
+   }
+  ]
+ },
+ "R-Sig-Rocket-MRL-Hvy": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Sig-Rocket-MRL-Hvy",
+  "name": "Heavy Rocket Array: Veteran Crews",
+  "requiredResearch": [
+   "R-Wpn-Rocket-Accuracy02"
+  ],
+  "researchPoints": 900,
+  "researchPower": 45,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Rocket-MRL-Hvy",
+    "parameter": "HitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Rocket-MRL-Hvy",
+    "parameter": "ShortHitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Rocket-MRL-Hvy",
+    "parameter": "FirePause",
+    "value": -20
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Rocket-MRL-Hvy",
+    "parameter": "ReloadTime",
+    "value": -20
+   }
+  ]
+ },
+ "R-Sig-Rocket-Pod": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Sig-Rocket-Pod",
+  "name": "Mini-Rocket Pod: Veteran Crews",
+  "requiredResearch": [
+   "R-Wpn-Rocket-Accuracy02"
+  ],
+  "researchPoints": 900,
+  "researchPower": 45,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Rocket-Pod",
+    "parameter": "HitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Rocket-Pod",
+    "parameter": "ShortHitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Rocket-Pod",
+    "parameter": "FirePause",
+    "value": -20
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Rocket-Pod",
+    "parameter": "ReloadTime",
+    "value": -20
+   }
+  ]
+ },
+ "R-Sig-Rocket-Sunburst": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Sig-Rocket-Sunburst",
+  "name": "Sunburst AA: Veteran Crews",
+  "requiredResearch": [
+   "R-Wpn-Rocket-Accuracy02"
+  ],
+  "researchPoints": 900,
+  "researchPower": 45,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Rocket-Sunburst",
+    "parameter": "HitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Rocket-Sunburst",
+    "parameter": "ShortHitChance",
+    "value": 15
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Rocket-Sunburst",
+    "parameter": "FirePause",
+    "value": -20
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "Id",
+    "filterValue": "Rocket-Sunburst",
+    "parameter": "ReloadTime",
+    "value": -20
+   }
+  ]
+ },
+ "R-Struc-CommandRelay": {
+  "iconID": "IMAGE_RES_COMPUTERTECH",
+  "id": "R-Struc-CommandRelay",
+  "name": "Command Relay Post",
+  "requiredResearch": [
+   "R-Sys-Sensor-Tower01"
+  ],
+  "researchPoints": 900,
+  "researchPower": 25,
+  "resultStructures": [
+   "A0ComDroidControl"
+  ]
+ },
+ "R-Struc-Factory-Upgrade01": {
+  "iconID": "IMAGE_RES_COMPUTERTECH",
+  "id": "R-Struc-Factory-Upgrade01",
+  "name": "Automated Manufacturing",
+  "requiredResearch": [
+   "R-Cred-Breadth03"
+  ],
+  "researchPoints": 3600,
+  "researchPower": 110,
+  "results": [
+   {
+    "class": "Building",
+    "parameter": "ProductionPoints",
+    "value": 30
+   }
+  ]
+ },
+ "R-Struc-Limit-Labs": {
+  "iconID": "IMAGE_RES_COMPUTERTECH",
+  "id": "R-Struc-Limit-Labs",
+  "name": "Distributed Research Network",
+  "requiredResearch": [
+   "R-Cred-Breadth05"
+  ],
+  "researchPoints": 14000,
+  "researchPower": 420,
+  "results": [
+   {
+    "class": "Building",
+    "filterParameter": "Id",
+    "filterValue": "A0ResearchFacility",
+    "parameter": "Limit",
+    "value": 40
+   }
+  ]
+ },
+ "R-Struc-Power-Upgrade01": {
+  "iconID": "IMAGE_RES_COMPUTERTECH",
+  "id": "R-Struc-Power-Upgrade01",
+  "name": "Gas Turbine Generator",
+  "requiredResearch": [
+   "R-Cred-Breadth02"
+  ],
+  "researchPoints": 3000,
+  "researchPower": 90,
+  "results": [
+   {
+    "class": "Building",
+    "parameter": "PowerPoints",
+    "value": 25
+   }
+  ]
+ },
+ "R-Struc-Research-Upgrade01": {
+  "iconID": "IMAGE_RES_COMPUTERTECH",
+  "id": "R-Struc-Research-Upgrade01",
+  "name": "Synaptic Link Data Analysis",
+  "requiredResearch": [
+   "R-Cred-Breadth02"
+  ],
+  "researchPoints": 2400,
+  "researchPower": 75,
+  "results": [
+   {
+    "class": "Building",
+    "parameter": "ResearchPoints",
+    "value": 30
+   }
+  ]
+ },
+ "R-Struc-Research-Upgrade02": {
+  "iconID": "IMAGE_RES_COMPUTERTECH",
+  "id": "R-Struc-Research-Upgrade02",
+  "name": "Dedicated Synaptic Link",
+  "requiredResearch": [
+   "R-Cred-Breadth03"
+  ],
+  "researchPoints": 6000,
+  "researchPower": 190,
+  "results": [
+   {
+    "class": "Building",
+    "parameter": "ResearchPoints",
+    "value": 30
+   }
+  ]
+ },
+ "R-Struc-Research-Upgrade03": {
+  "iconID": "IMAGE_RES_COMPUTERTECH",
+  "id": "R-Struc-Research-Upgrade03",
+  "name": "Neural Synapse Research Brain",
+  "requiredResearch": [
+   "R-Cred-Breadth04"
+  ],
+  "researchPoints": 12000,
+  "researchPower": 380,
+  "results": [
+   {
+    "class": "Building",
+    "parameter": "ResearchPoints",
+    "value": 30
+   },
+   {
+    "class": "Building",
+    "parameter": "ModuleResearchPoints",
+    "value": 30
+   }
+  ]
+ },
+ "R-Sys-Autorepair-General": {
+  "iconID": "IMAGE_RES_COMPUTERTECH",
+  "id": "R-Sys-Autorepair-General",
+  "name": "Auto-Repair",
+  "requiredResearch": [
+   "R-Cred-Breadth04"
+  ],
+  "researchPoints": 9000,
+  "researchPower": 300
+ },
+ "R-Sys-DataCore": {
+  "iconID": "IMAGE_RES_COMPUTERTECH",
+  "id": "R-Sys-DataCore",
+  "name": "Hardened Data Core",
+  "requiredResearch": [
+   "R-Sys-Debrief02"
+  ],
+  "researchPoints": 6000,
+  "researchPower": 200
+ },
+ "R-Sys-Debrief01": {
+  "iconID": "IMAGE_RES_COMPUTERTECH",
+  "id": "R-Sys-Debrief01",
+  "name": "Field Debriefing Protocol",
+  "requiredResearch": [
+   "R-Comp-CommandTurret01"
+  ],
+  "researchPoints": 1200,
+  "researchPower": 40
+ },
+ "R-Sys-Debrief02": {
+  "iconID": "IMAGE_RES_COMPUTERTECH",
+  "id": "R-Sys-Debrief02",
+  "name": "Structured After-Action Review",
+  "requiredResearch": [
+   "R-Comp-CommandTurret02"
+  ],
+  "researchPoints": 4000,
+  "researchPower": 140
+ },
+ "R-Sys-Telemetry": {
+  "iconID": "IMAGE_RES_COMPUTERTECH",
+  "id": "R-Sys-Telemetry",
+  "name": "Combat Telemetry Uplink",
+  "requiredResearch": [
+   "R-Comp-CommandTurret03",
+   "R-Sys-Sensor-UpLink"
+  ],
+  "researchPoints": 16000,
+  "researchPower": 450
+ },
+ "R-Vehicle-Metals01": {
+  "iconID": "IMAGE_RES_COMPUTERTECH",
+  "id": "R-Vehicle-Metals01",
+  "name": "Composite Alloys",
+  "requiredResearch": [
+   "R-Cred-Breadth03"
+  ],
+  "researchPoints": 4800,
+  "researchPower": 150,
+  "results": [
+   {
+    "class": "Body",
+    "filterParameter": "BodyClass",
+    "filterValue": "Droids",
+    "parameter": "Armour",
+    "value": 30
+   },
+   {
+    "class": "Body",
+    "filterParameter": "BodyClass",
+    "filterValue": "Droids",
+    "parameter": "HitPointPct",
+    "value": 30
+   }
+  ]
+ },
+ "R-Wpn-AA-Accuracy01": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-AA-Accuracy01",
+  "name": "AA Gun Gunnery I",
+  "requiredResearch": [
+   "R-Sys-Debrief01"
+  ],
+  "researchPoints": 900,
+  "researchPower": 30,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "A-A GUN",
+    "parameter": "HitChance",
+    "value": 10
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "A-A GUN",
+    "parameter": "ShortHitChance",
+    "value": 10
+   }
+  ]
+ },
+ "R-Wpn-AA-Accuracy02": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-AA-Accuracy02",
+  "name": "AA Gun Gunnery II",
+  "requiredResearch": [
+   "R-Wpn-AA-Accuracy01",
+   "R-Cred-AA-Tier2"
+  ],
+  "researchPoints": 2400,
+  "researchPower": 85,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "A-A GUN",
+    "parameter": "HitChance",
+    "value": 11
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "A-A GUN",
+    "parameter": "ShortHitChance",
+    "value": 11
+   }
+  ]
+ },
+ "R-Wpn-AA-Accuracy03": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-AA-Accuracy03",
+  "name": "AA Gun Gunnery III",
+  "requiredResearch": [
+   "R-Wpn-AA-Accuracy02",
+   "R-Cred-AA-Tier3"
+  ],
+  "researchPoints": 5200,
+  "researchPower": 190,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "A-A GUN",
+    "parameter": "HitChance",
+    "value": 12
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "A-A GUN",
+    "parameter": "ShortHitChance",
+    "value": 12
+   }
+  ]
+ },
+ "R-Wpn-AA-Accuracy04": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-AA-Accuracy04",
+  "name": "AA Gun Gunnery IV",
+  "requiredResearch": [
+   "R-Wpn-AA-Accuracy03",
+   "R-Cred-AA-Tier4"
+  ],
+  "researchPoints": 10000,
+  "researchPower": 360,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "A-A GUN",
+    "parameter": "HitChance",
+    "value": 13
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "A-A GUN",
+    "parameter": "ShortHitChance",
+    "value": 13
+   }
+  ]
+ },
+ "R-Wpn-AA-Damage01": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-AA-Damage01",
+  "name": "AA Gun Warhead I",
+  "requiredResearch": [
+   "R-Sys-Debrief01"
+  ],
+  "researchPoints": 900,
+  "researchPower": 30,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "A-A GUN",
+    "parameter": "Damage",
+    "value": 25
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "A-A GUN",
+    "parameter": "RadiusDamage",
+    "value": 25
+   }
+  ]
+ },
+ "R-Wpn-AA-Damage02": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-AA-Damage02",
+  "name": "AA Gun Warhead II",
+  "requiredResearch": [
+   "R-Wpn-AA-Damage01",
+   "R-Cred-AA-Tier2"
+  ],
+  "researchPoints": 2400,
+  "researchPower": 85,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "A-A GUN",
+    "parameter": "Damage",
+    "value": 31
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "A-A GUN",
+    "parameter": "RadiusDamage",
+    "value": 31
+   }
+  ]
+ },
+ "R-Wpn-AA-Damage03": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-AA-Damage03",
+  "name": "AA Gun Warhead III",
+  "requiredResearch": [
+   "R-Wpn-AA-Damage02",
+   "R-Cred-AA-Tier3"
+  ],
+  "researchPoints": 5200,
+  "researchPower": 190,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "A-A GUN",
+    "parameter": "Damage",
+    "value": 39
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "A-A GUN",
+    "parameter": "RadiusDamage",
+    "value": 39
+   }
+  ]
+ },
+ "R-Wpn-AA-Damage04": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-AA-Damage04",
+  "name": "AA Gun Warhead IV",
+  "requiredResearch": [
+   "R-Wpn-AA-Damage03",
+   "R-Cred-AA-Tier4"
+  ],
+  "researchPoints": 10000,
+  "researchPower": 360,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "A-A GUN",
+    "parameter": "Damage",
+    "value": 49
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "A-A GUN",
+    "parameter": "RadiusDamage",
+    "value": 49
+   }
+  ]
+ },
+ "R-Wpn-AA-Range01": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-AA-Range01",
+  "name": "AA Gun Fire Control I",
+  "requiredResearch": [
+   "R-Sys-Debrief01"
+  ],
+  "researchPoints": 900,
+  "researchPower": 30,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "A-A GUN",
+    "parameter": "MaxRange",
+    "value": 7
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "A-A GUN",
+    "parameter": "ShortRange",
+    "value": 7
+   }
+  ]
+ },
+ "R-Wpn-AA-Range02": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-AA-Range02",
+  "name": "AA Gun Fire Control II",
+  "requiredResearch": [
+   "R-Wpn-AA-Range01",
+   "R-Cred-AA-Tier2"
+  ],
+  "researchPoints": 2400,
+  "researchPower": 85,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "A-A GUN",
+    "parameter": "MaxRange",
+    "value": 7
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "A-A GUN",
+    "parameter": "ShortRange",
+    "value": 7
+   }
+  ]
+ },
+ "R-Wpn-AA-Range03": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-AA-Range03",
+  "name": "AA Gun Fire Control III",
+  "requiredResearch": [
+   "R-Wpn-AA-Range02",
+   "R-Cred-AA-Tier3"
+  ],
+  "researchPoints": 5200,
+  "researchPower": 190,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "A-A GUN",
+    "parameter": "MaxRange",
+    "value": 8
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "A-A GUN",
+    "parameter": "ShortRange",
+    "value": 8
+   }
+  ]
+ },
+ "R-Wpn-AA-Range04": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-AA-Range04",
+  "name": "AA Gun Fire Control IV",
+  "requiredResearch": [
+   "R-Wpn-AA-Range03",
+   "R-Cred-AA-Tier4"
+  ],
+  "researchPoints": 10000,
+  "researchPower": 360,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "A-A GUN",
+    "parameter": "MaxRange",
+    "value": 9
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "A-A GUN",
+    "parameter": "ShortRange",
+    "value": 9
+   }
+  ]
+ },
+ "R-Wpn-AA-Reload01": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-AA-Reload01",
+  "name": "AA Gun Loading Drill I",
+  "requiredResearch": [
+   "R-Sys-Debrief01"
+  ],
+  "researchPoints": 900,
+  "researchPower": 30,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "A-A GUN",
+    "parameter": "FirePause",
+    "value": -10
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "A-A GUN",
+    "parameter": "ReloadTime",
+    "value": -10
+   }
+  ]
+ },
+ "R-Wpn-AA-Reload02": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-AA-Reload02",
+  "name": "AA Gun Loading Drill II",
+  "requiredResearch": [
+   "R-Wpn-AA-Reload01",
+   "R-Cred-AA-Tier2"
+  ],
+  "researchPoints": 2400,
+  "researchPower": 85,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "A-A GUN",
+    "parameter": "FirePause",
+    "value": -11
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "A-A GUN",
+    "parameter": "ReloadTime",
+    "value": -11
+   }
+  ]
+ },
+ "R-Wpn-AA-Reload03": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-AA-Reload03",
+  "name": "AA Gun Loading Drill III",
+  "requiredResearch": [
+   "R-Wpn-AA-Reload02",
+   "R-Cred-AA-Tier3"
+  ],
+  "researchPoints": 5200,
+  "researchPower": 190,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "A-A GUN",
+    "parameter": "FirePause",
+    "value": -12
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "A-A GUN",
+    "parameter": "ReloadTime",
+    "value": -12
+   }
+  ]
+ },
+ "R-Wpn-AA-Reload04": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-AA-Reload04",
+  "name": "AA Gun Loading Drill IV",
+  "requiredResearch": [
+   "R-Wpn-AA-Reload03",
+   "R-Cred-AA-Tier4"
+  ],
+  "researchPoints": 10000,
+  "researchPower": 360,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "A-A GUN",
+    "parameter": "FirePause",
+    "value": -13
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "A-A GUN",
+    "parameter": "ReloadTime",
+    "value": -13
+   }
+  ]
+ },
+ "R-Wpn-AAGun01": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-AAGun01",
+  "name": "AA Cyclone Flak Cannon",
+  "requiredResearch": [
+   "R-Wpn-Cannon4AMk1"
+  ],
+  "researchPoints": 6000,
+  "researchPower": 187,
+  "resultComponents": [
+   "AAGun2Mk1"
+  ]
+ },
+ "R-Wpn-AAGun02": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-AAGun02",
+  "name": "AA Tornado Flak Cannon",
+  "requiredResearch": [
+   "R-Wpn-AAGun01",
+   "R-Wpn-Cannon3Mk1",
+   "R-Struc-Research-Upgrade07"
+  ],
+  "researchPoints": 10000,
+  "researchPower": 312,
+  "resultComponents": [
+   "AAGun2Mk1Quad"
+  ]
+ },
+ "R-Wpn-AAGun03": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-AAGun03",
+  "name": "Hurricane AA Turret",
+  "requiredResearch": [
+   "R-Wpn-MG-Reload03"
+  ],
+  "researchPoints": 3600,
+  "researchPower": 112,
+  "resultComponents": [
+   "QuadMg1AAGun"
+  ]
+ },
+ "R-Wpn-AAGun04": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-AAGun04",
+  "name": "Whirlwind AA Turret",
+  "requiredResearch": [
+   "R-Wpn-MG-Reload04",
+   "R-Wpn-AAGun03",
+   "R-Struc-Research-Upgrade06"
+  ],
+  "researchPoints": 10800,
+  "researchPower": 337,
+  "resultComponents": [
+   "QuadRotAAGun"
+  ]
+ },
+ "R-Wpn-AALaser": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-AALaser",
+  "name": "Stormbringer AA Laser",
+  "requiredResearch": [
+   "R-Wpn-Laser-Reload02"
+  ],
+  "researchPoints": 28800,
+  "researchPower": 450,
+  "resultComponents": [
+   "AAGunLaser"
+  ]
+ },
+ "R-Wpn-Bomb06": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Bomb06",
+  "name": "EMP Missile Launcher",
+  "requiredResearch": [
+   "R-Comp-CommandTurret02",
+   "R-Wpn-Bomb-Damage03"
+  ],
+  "researchPoints": 8000,
+  "researchPower": 250,
+  "resultComponents": [
+   "Bomb6-VTOL-EMP"
+  ]
+ },
+ "R-Wpn-Cannon-Accuracy01": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Cannon-Accuracy01",
+  "name": "Cannon Gunnery I",
+  "requiredResearch": [
+   "R-Sys-Debrief01"
+  ],
+  "researchPoints": 900,
+  "researchPower": 30,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "CANNON",
+    "parameter": "HitChance",
+    "value": 10
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "CANNON",
+    "parameter": "ShortHitChance",
+    "value": 10
+   }
+  ]
+ },
+ "R-Wpn-Cannon-Accuracy02": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Cannon-Accuracy02",
+  "name": "Cannon Gunnery II",
+  "requiredResearch": [
+   "R-Wpn-Cannon-Accuracy01",
+   "R-Cred-Cannon-Tier2"
+  ],
+  "researchPoints": 2400,
+  "researchPower": 85,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "CANNON",
+    "parameter": "HitChance",
+    "value": 11
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "CANNON",
+    "parameter": "ShortHitChance",
+    "value": 11
+   }
+  ]
+ },
+ "R-Wpn-Cannon-Accuracy03": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Cannon-Accuracy03",
+  "name": "Cannon Gunnery III",
+  "requiredResearch": [
+   "R-Wpn-Cannon-Accuracy02",
+   "R-Cred-Cannon-Tier3"
+  ],
+  "researchPoints": 5200,
+  "researchPower": 190,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "CANNON",
+    "parameter": "HitChance",
+    "value": 12
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "CANNON",
+    "parameter": "ShortHitChance",
+    "value": 12
+   }
+  ]
+ },
+ "R-Wpn-Cannon-Accuracy04": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Cannon-Accuracy04",
+  "name": "Cannon Gunnery IV",
+  "requiredResearch": [
+   "R-Wpn-Cannon-Accuracy03",
+   "R-Cred-Cannon-Tier4"
+  ],
+  "researchPoints": 10000,
+  "researchPower": 360,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "CANNON",
+    "parameter": "HitChance",
+    "value": 13
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "CANNON",
+    "parameter": "ShortHitChance",
+    "value": 13
+   }
+  ]
+ },
+ "R-Wpn-Cannon-Damage01": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Cannon-Damage01",
+  "name": "Cannon Warhead I",
+  "requiredResearch": [
+   "R-Sys-Debrief01"
+  ],
+  "researchPoints": 900,
+  "researchPower": 30,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "CANNON",
+    "parameter": "Damage",
+    "value": 25
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "CANNON",
+    "parameter": "RadiusDamage",
+    "value": 25
+   }
+  ]
+ },
+ "R-Wpn-Cannon-Damage02": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Cannon-Damage02",
+  "name": "Cannon Warhead II",
+  "requiredResearch": [
+   "R-Wpn-Cannon-Damage01",
+   "R-Cred-Cannon-Tier2"
+  ],
+  "researchPoints": 2400,
+  "researchPower": 85,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "CANNON",
+    "parameter": "Damage",
+    "value": 31
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "CANNON",
+    "parameter": "RadiusDamage",
+    "value": 31
+   }
+  ]
+ },
+ "R-Wpn-Cannon-Damage03": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Cannon-Damage03",
+  "name": "Cannon Warhead III",
+  "requiredResearch": [
+   "R-Wpn-Cannon-Damage02",
+   "R-Cred-Cannon-Tier3"
+  ],
+  "researchPoints": 5200,
+  "researchPower": 190,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "CANNON",
+    "parameter": "Damage",
+    "value": 39
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "CANNON",
+    "parameter": "RadiusDamage",
+    "value": 39
+   }
+  ]
+ },
+ "R-Wpn-Cannon-Damage04": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Cannon-Damage04",
+  "name": "Cannon Warhead IV",
+  "requiredResearch": [
+   "R-Wpn-Cannon-Damage03",
+   "R-Cred-Cannon-Tier4"
+  ],
+  "researchPoints": 10000,
+  "researchPower": 360,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "CANNON",
+    "parameter": "Damage",
+    "value": 49
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "CANNON",
+    "parameter": "RadiusDamage",
+    "value": 49
+   }
+  ]
+ },
+ "R-Wpn-Cannon-Penet01": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Cannon-Penet01",
+  "name": "Cannon Armour-Piercing I",
+  "requiredResearch": [
+   "R-Wpn-Cannon-Damage03"
+  ],
+  "researchPoints": 6000,
+  "researchPower": 200,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "CANNON",
+    "parameter": "MinimumDamage",
+    "value": 20
+   }
+  ]
+ },
+ "R-Wpn-Cannon-Penet02": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Cannon-Penet02",
+  "name": "Cannon Armour-Piercing II",
+  "requiredResearch": [
+   "R-Wpn-Cannon-Penet01",
+   "R-Wpn-Cannon-Damage04"
+  ],
+  "researchPoints": 14000,
+  "researchPower": 400,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "CANNON",
+    "parameter": "MinimumDamage",
+    "value": 25
+   }
+  ]
+ },
+ "R-Wpn-Cannon-Range01": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Cannon-Range01",
+  "name": "Cannon Fire Control I",
+  "requiredResearch": [
+   "R-Sys-Debrief01"
+  ],
+  "researchPoints": 900,
+  "researchPower": 30,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "CANNON",
+    "parameter": "MaxRange",
+    "value": 7
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "CANNON",
+    "parameter": "ShortRange",
+    "value": 7
+   }
+  ]
+ },
+ "R-Wpn-Cannon-Range02": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Cannon-Range02",
+  "name": "Cannon Fire Control II",
+  "requiredResearch": [
+   "R-Wpn-Cannon-Range01",
+   "R-Cred-Cannon-Tier2"
+  ],
+  "researchPoints": 2400,
+  "researchPower": 85,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "CANNON",
+    "parameter": "MaxRange",
+    "value": 7
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "CANNON",
+    "parameter": "ShortRange",
+    "value": 7
+   }
+  ]
+ },
+ "R-Wpn-Cannon-Range03": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Cannon-Range03",
+  "name": "Cannon Fire Control III",
+  "requiredResearch": [
+   "R-Wpn-Cannon-Range02",
+   "R-Cred-Cannon-Tier3"
+  ],
+  "researchPoints": 5200,
+  "researchPower": 190,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "CANNON",
+    "parameter": "MaxRange",
+    "value": 8
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "CANNON",
+    "parameter": "ShortRange",
+    "value": 8
+   }
+  ]
+ },
+ "R-Wpn-Cannon-Range04": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Cannon-Range04",
+  "name": "Cannon Fire Control IV",
+  "requiredResearch": [
+   "R-Wpn-Cannon-Range03",
+   "R-Cred-Cannon-Tier4"
+  ],
+  "researchPoints": 10000,
+  "researchPower": 360,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "CANNON",
+    "parameter": "MaxRange",
+    "value": 9
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "CANNON",
+    "parameter": "ShortRange",
+    "value": 9
+   }
+  ]
+ },
+ "R-Wpn-Cannon-Reload01": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Cannon-Reload01",
+  "name": "Cannon Loading Drill I",
+  "requiredResearch": [
+   "R-Sys-Debrief01"
+  ],
+  "researchPoints": 900,
+  "researchPower": 30,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "CANNON",
+    "parameter": "FirePause",
+    "value": -10
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "CANNON",
+    "parameter": "ReloadTime",
+    "value": -10
+   }
+  ]
+ },
+ "R-Wpn-Cannon-Reload02": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Cannon-Reload02",
+  "name": "Cannon Loading Drill II",
+  "requiredResearch": [
+   "R-Wpn-Cannon-Reload01",
+   "R-Cred-Cannon-Tier2"
+  ],
+  "researchPoints": 2400,
+  "researchPower": 85,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "CANNON",
+    "parameter": "FirePause",
+    "value": -11
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "CANNON",
+    "parameter": "ReloadTime",
+    "value": -11
+   }
+  ]
+ },
+ "R-Wpn-Cannon-Reload03": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Cannon-Reload03",
+  "name": "Cannon Loading Drill III",
+  "requiredResearch": [
+   "R-Wpn-Cannon-Reload02",
+   "R-Cred-Cannon-Tier3"
+  ],
+  "researchPoints": 5200,
+  "researchPower": 190,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "CANNON",
+    "parameter": "FirePause",
+    "value": -12
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "CANNON",
+    "parameter": "ReloadTime",
+    "value": -12
+   }
+  ]
+ },
+ "R-Wpn-Cannon-Reload04": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Cannon-Reload04",
+  "name": "Cannon Loading Drill IV",
+  "requiredResearch": [
+   "R-Wpn-Cannon-Reload03",
+   "R-Cred-Cannon-Tier4"
+  ],
+  "researchPoints": 10000,
+  "researchPower": 360,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "CANNON",
+    "parameter": "FirePause",
+    "value": -13
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "CANNON",
+    "parameter": "ReloadTime",
+    "value": -13
+   }
+  ]
+ },
+ "R-Wpn-Cannon1Mk1": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Cannon1Mk1",
+  "name": "Light Cannon",
+  "requiredResearch": [
+   "R-Wpn-MG-Damage01"
+  ],
+  "researchPoints": 1800,
+  "researchPower": 56,
+  "resultComponents": [
+   "Cannon1-VTOL",
+   "Cannon1Mk1",
+   "CyborgCannon"
+  ]
+ },
+ "R-Wpn-Cannon2Mk1": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Cannon2Mk1",
+  "name": "Medium Cannon",
+  "requiredResearch": [
+   "R-Struc-Factory-Module",
+   "R-Wpn-Cannon-Damage01"
+  ],
+  "researchPoints": 3600,
+  "researchPower": 112,
+  "resultComponents": [
+   "Cannon2A-TMk1"
+  ]
+ },
+ "R-Wpn-Cannon3Mk1": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Cannon3Mk1",
+  "name": "Heavy Cannon",
+  "requiredResearch": [
+   "R-Wpn-Cannon-Damage03",
+   "R-Vehicle-Metals03",
+   "R-Wpn-Cannon2Mk1"
+  ],
+  "researchPoints": 8800,
+  "researchPower": 275,
+  "resultComponents": [
+   "Cannon375mmMk1"
+  ]
+ },
+ "R-Wpn-Cannon4AMk1": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Cannon4AMk1",
+  "name": "Hyper Velocity Cannon",
+  "requiredResearch": [
+   "R-Wpn-Cannon-Accuracy02"
+  ],
+  "researchPoints": 4800,
+  "researchPower": 150,
+  "resultComponents": [
+   "Cannon4AUTO-VTOL",
+   "Cannon4AUTOMk1"
+  ]
+ },
+ "R-Wpn-Cannon5": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Cannon5",
+  "name": "Assault Cannon",
+  "requiredResearch": [
+   "R-Wpn-Cannon-Reload01"
+  ],
+  "researchPoints": 4800,
+  "researchPower": 150,
+  "resultComponents": [
+   "Cannon5VulcanMk1",
+   "Cannon5Vulcan-VTOL"
+  ]
+ },
+ "R-Wpn-Cannon6TwinAslt": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Cannon6TwinAslt",
+  "name": "Twin Assault Cannon",
+  "requiredResearch": [
+   "R-Wpn-Cannon5",
+   "R-Struc-Research-Upgrade06"
+  ],
+  "researchPoints": 7050,
+  "researchPower": 225,
+  "resultComponents": [
+   "Cannon6TwinAslt"
+  ]
+ },
+ "R-Wpn-EMP-Accuracy01": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-EMP-Accuracy01",
+  "name": "EMP Gunnery I",
+  "requiredResearch": [
+   "R-Sys-Debrief01"
+  ],
+  "researchPoints": 900,
+  "researchPower": 30,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "EMP",
+    "parameter": "HitChance",
+    "value": 10
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "EMP",
+    "parameter": "ShortHitChance",
+    "value": 10
+   }
+  ]
+ },
+ "R-Wpn-EMP-Accuracy02": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-EMP-Accuracy02",
+  "name": "EMP Gunnery II",
+  "requiredResearch": [
+   "R-Wpn-EMP-Accuracy01",
+   "R-Cred-EMP-Tier2"
+  ],
+  "researchPoints": 2400,
+  "researchPower": 85,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "EMP",
+    "parameter": "HitChance",
+    "value": 11
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "EMP",
+    "parameter": "ShortHitChance",
+    "value": 11
+   }
+  ]
+ },
+ "R-Wpn-EMP-Accuracy03": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-EMP-Accuracy03",
+  "name": "EMP Gunnery III",
+  "requiredResearch": [
+   "R-Wpn-EMP-Accuracy02",
+   "R-Cred-EMP-Tier3"
+  ],
+  "researchPoints": 5200,
+  "researchPower": 190,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "EMP",
+    "parameter": "HitChance",
+    "value": 12
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "EMP",
+    "parameter": "ShortHitChance",
+    "value": 12
+   }
+  ]
+ },
+ "R-Wpn-EMP-Accuracy04": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-EMP-Accuracy04",
+  "name": "EMP Gunnery IV",
+  "requiredResearch": [
+   "R-Wpn-EMP-Accuracy03",
+   "R-Cred-EMP-Tier4"
+  ],
+  "researchPoints": 10000,
+  "researchPower": 360,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "EMP",
+    "parameter": "HitChance",
+    "value": 13
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "EMP",
+    "parameter": "ShortHitChance",
+    "value": 13
+   }
+  ]
+ },
+ "R-Wpn-EMP-Damage01": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-EMP-Damage01",
+  "name": "EMP Warhead I",
+  "requiredResearch": [
+   "R-Sys-Debrief01"
+  ],
+  "researchPoints": 900,
+  "researchPower": 30,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "EMP",
+    "parameter": "Damage",
+    "value": 25
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "EMP",
+    "parameter": "RadiusDamage",
+    "value": 25
+   }
+  ]
+ },
+ "R-Wpn-EMP-Damage02": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-EMP-Damage02",
+  "name": "EMP Warhead II",
+  "requiredResearch": [
+   "R-Wpn-EMP-Damage01",
+   "R-Cred-EMP-Tier2"
+  ],
+  "researchPoints": 2400,
+  "researchPower": 85,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "EMP",
+    "parameter": "Damage",
+    "value": 31
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "EMP",
+    "parameter": "RadiusDamage",
+    "value": 31
+   }
+  ]
+ },
+ "R-Wpn-EMP-Damage03": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-EMP-Damage03",
+  "name": "EMP Warhead III",
+  "requiredResearch": [
+   "R-Wpn-EMP-Damage02",
+   "R-Cred-EMP-Tier3"
+  ],
+  "researchPoints": 5200,
+  "researchPower": 190,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "EMP",
+    "parameter": "Damage",
+    "value": 39
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "EMP",
+    "parameter": "RadiusDamage",
+    "value": 39
+   }
+  ]
+ },
+ "R-Wpn-EMP-Damage04": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-EMP-Damage04",
+  "name": "EMP Warhead IV",
+  "requiredResearch": [
+   "R-Wpn-EMP-Damage03",
+   "R-Cred-EMP-Tier4"
+  ],
+  "researchPoints": 10000,
+  "researchPower": 360,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "EMP",
+    "parameter": "Damage",
+    "value": 49
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "EMP",
+    "parameter": "RadiusDamage",
+    "value": 49
+   }
+  ]
+ },
+ "R-Wpn-EMP-Range01": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-EMP-Range01",
+  "name": "EMP Fire Control I",
+  "requiredResearch": [
+   "R-Sys-Debrief01"
+  ],
+  "researchPoints": 900,
+  "researchPower": 30,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "EMP",
+    "parameter": "MaxRange",
+    "value": 7
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "EMP",
+    "parameter": "ShortRange",
+    "value": 7
+   }
+  ]
+ },
+ "R-Wpn-EMP-Range02": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-EMP-Range02",
+  "name": "EMP Fire Control II",
+  "requiredResearch": [
+   "R-Wpn-EMP-Range01",
+   "R-Cred-EMP-Tier2"
+  ],
+  "researchPoints": 2400,
+  "researchPower": 85,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "EMP",
+    "parameter": "MaxRange",
+    "value": 7
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "EMP",
+    "parameter": "ShortRange",
+    "value": 7
+   }
+  ]
+ },
+ "R-Wpn-EMP-Range03": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-EMP-Range03",
+  "name": "EMP Fire Control III",
+  "requiredResearch": [
+   "R-Wpn-EMP-Range02",
+   "R-Cred-EMP-Tier3"
+  ],
+  "researchPoints": 5200,
+  "researchPower": 190,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "EMP",
+    "parameter": "MaxRange",
+    "value": 8
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "EMP",
+    "parameter": "ShortRange",
+    "value": 8
+   }
+  ]
+ },
+ "R-Wpn-EMP-Range04": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-EMP-Range04",
+  "name": "EMP Fire Control IV",
+  "requiredResearch": [
+   "R-Wpn-EMP-Range03",
+   "R-Cred-EMP-Tier4"
+  ],
+  "researchPoints": 10000,
+  "researchPower": 360,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "EMP",
+    "parameter": "MaxRange",
+    "value": 9
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "EMP",
+    "parameter": "ShortRange",
+    "value": 9
+   }
+  ]
+ },
+ "R-Wpn-EMP-Reload01": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-EMP-Reload01",
+  "name": "EMP Loading Drill I",
+  "requiredResearch": [
+   "R-Sys-Debrief01"
+  ],
+  "researchPoints": 900,
+  "researchPower": 30,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "EMP",
+    "parameter": "FirePause",
+    "value": -10
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "EMP",
+    "parameter": "ReloadTime",
+    "value": -10
+   }
+  ]
+ },
+ "R-Wpn-EMP-Reload02": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-EMP-Reload02",
+  "name": "EMP Loading Drill II",
+  "requiredResearch": [
+   "R-Wpn-EMP-Reload01",
+   "R-Cred-EMP-Tier2"
+  ],
+  "researchPoints": 2400,
+  "researchPower": 85,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "EMP",
+    "parameter": "FirePause",
+    "value": -11
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "EMP",
+    "parameter": "ReloadTime",
+    "value": -11
+   }
+  ]
+ },
+ "R-Wpn-EMP-Reload03": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-EMP-Reload03",
+  "name": "EMP Loading Drill III",
+  "requiredResearch": [
+   "R-Wpn-EMP-Reload02",
+   "R-Cred-EMP-Tier3"
+  ],
+  "researchPoints": 5200,
+  "researchPower": 190,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "EMP",
+    "parameter": "FirePause",
+    "value": -12
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "EMP",
+    "parameter": "ReloadTime",
+    "value": -12
+   }
+  ]
+ },
+ "R-Wpn-EMP-Reload04": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-EMP-Reload04",
+  "name": "EMP Loading Drill IV",
+  "requiredResearch": [
+   "R-Wpn-EMP-Reload03",
+   "R-Cred-EMP-Tier4"
+  ],
+  "researchPoints": 10000,
+  "researchPower": 360,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "EMP",
+    "parameter": "FirePause",
+    "value": -13
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "EMP",
+    "parameter": "ReloadTime",
+    "value": -13
+   }
+  ]
+ },
+ "R-Wpn-EMPCannon": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-EMPCannon",
+  "name": "EMP Cannon",
+  "requiredResearch": [
+   "R-Comp-CommandTurret02",
+   "R-Struc-Research-Upgrade08"
+  ],
+  "researchPoints": 14400,
+  "researchPower": 450,
+  "resultComponents": [
+   "EMP-Cannon"
+  ]
+ },
+ "R-Wpn-Flame2": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Flame2",
+  "name": "Heavy Flamer - Inferno",
+  "requiredResearch": [
+   "R-Wpn-Flamer-Damage02"
+  ],
+  "researchPoints": 7200,
+  "researchPower": 225,
+  "resultComponents": [
+   "Cyb-Wpn-Thermite",
+   "Flame2"
+  ]
+ },
+ "R-Wpn-Flamer-Accuracy01": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Flamer-Accuracy01",
+  "name": "Flamer Gunnery I",
+  "requiredResearch": [
+   "R-Sys-Debrief01"
+  ],
+  "researchPoints": 900,
+  "researchPower": 30,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "FLAME",
+    "parameter": "HitChance",
+    "value": 10
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "FLAME",
+    "parameter": "ShortHitChance",
+    "value": 10
+   }
+  ]
+ },
+ "R-Wpn-Flamer-Accuracy02": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Flamer-Accuracy02",
+  "name": "Flamer Gunnery II",
+  "requiredResearch": [
+   "R-Wpn-Flamer-Accuracy01",
+   "R-Cred-Flamer-Tier2"
+  ],
+  "researchPoints": 2400,
+  "researchPower": 85,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "FLAME",
+    "parameter": "HitChance",
+    "value": 11
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "FLAME",
+    "parameter": "ShortHitChance",
+    "value": 11
+   }
+  ]
+ },
+ "R-Wpn-Flamer-Accuracy03": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Flamer-Accuracy03",
+  "name": "Flamer Gunnery III",
+  "requiredResearch": [
+   "R-Wpn-Flamer-Accuracy02",
+   "R-Cred-Flamer-Tier3"
+  ],
+  "researchPoints": 5200,
+  "researchPower": 190,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "FLAME",
+    "parameter": "HitChance",
+    "value": 12
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "FLAME",
+    "parameter": "ShortHitChance",
+    "value": 12
+   }
+  ]
+ },
+ "R-Wpn-Flamer-Accuracy04": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Flamer-Accuracy04",
+  "name": "Flamer Gunnery IV",
+  "requiredResearch": [
+   "R-Wpn-Flamer-Accuracy03",
+   "R-Cred-Flamer-Tier4"
+  ],
+  "researchPoints": 10000,
+  "researchPower": 360,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "FLAME",
+    "parameter": "HitChance",
+    "value": 13
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "FLAME",
+    "parameter": "ShortHitChance",
+    "value": 13
+   }
+  ]
+ },
+ "R-Wpn-Flamer-Damage01": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Flamer-Damage01",
+  "name": "Flamer Warhead I",
+  "requiredResearch": [
+   "R-Sys-Debrief01"
+  ],
+  "researchPoints": 900,
+  "researchPower": 30,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "FLAME",
+    "parameter": "Damage",
+    "value": 25
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "FLAME",
+    "parameter": "RadiusDamage",
+    "value": 25
+   }
+  ]
+ },
+ "R-Wpn-Flamer-Damage02": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Flamer-Damage02",
+  "name": "Flamer Warhead II",
+  "requiredResearch": [
+   "R-Wpn-Flamer-Damage01",
+   "R-Cred-Flamer-Tier2"
+  ],
+  "researchPoints": 2400,
+  "researchPower": 85,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "FLAME",
+    "parameter": "Damage",
+    "value": 31
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "FLAME",
+    "parameter": "RadiusDamage",
+    "value": 31
+   }
+  ]
+ },
+ "R-Wpn-Flamer-Damage03": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Flamer-Damage03",
+  "name": "Flamer Warhead III",
+  "requiredResearch": [
+   "R-Wpn-Flamer-Damage02",
+   "R-Cred-Flamer-Tier3"
+  ],
+  "researchPoints": 5200,
+  "researchPower": 190,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "FLAME",
+    "parameter": "Damage",
+    "value": 39
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "FLAME",
+    "parameter": "RadiusDamage",
+    "value": 39
+   }
+  ]
+ },
+ "R-Wpn-Flamer-Damage04": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Flamer-Damage04",
+  "name": "Flamer Warhead IV",
+  "requiredResearch": [
+   "R-Wpn-Flamer-Damage03",
+   "R-Cred-Flamer-Tier4"
+  ],
+  "researchPoints": 10000,
+  "researchPower": 360,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "FLAME",
+    "parameter": "Damage",
+    "value": 49
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "FLAME",
+    "parameter": "RadiusDamage",
+    "value": 49
+   }
+  ]
+ },
+ "R-Wpn-Flamer-Range01": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Flamer-Range01",
+  "name": "Flamer Fire Control I",
+  "requiredResearch": [
+   "R-Sys-Debrief01"
+  ],
+  "researchPoints": 900,
+  "researchPower": 30,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "FLAME",
+    "parameter": "MaxRange",
+    "value": 7
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "FLAME",
+    "parameter": "ShortRange",
+    "value": 7
+   }
+  ]
+ },
+ "R-Wpn-Flamer-Range02": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Flamer-Range02",
+  "name": "Flamer Fire Control II",
+  "requiredResearch": [
+   "R-Wpn-Flamer-Range01",
+   "R-Cred-Flamer-Tier2"
+  ],
+  "researchPoints": 2400,
+  "researchPower": 85,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "FLAME",
+    "parameter": "MaxRange",
+    "value": 7
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "FLAME",
+    "parameter": "ShortRange",
+    "value": 7
+   }
+  ]
+ },
+ "R-Wpn-Flamer-Range03": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Flamer-Range03",
+  "name": "Flamer Fire Control III",
+  "requiredResearch": [
+   "R-Wpn-Flamer-Range02",
+   "R-Cred-Flamer-Tier3"
+  ],
+  "researchPoints": 5200,
+  "researchPower": 190,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "FLAME",
+    "parameter": "MaxRange",
+    "value": 8
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "FLAME",
+    "parameter": "ShortRange",
+    "value": 8
+   }
+  ]
+ },
+ "R-Wpn-Flamer-Range04": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Flamer-Range04",
+  "name": "Flamer Fire Control IV",
+  "requiredResearch": [
+   "R-Wpn-Flamer-Range03",
+   "R-Cred-Flamer-Tier4"
+  ],
+  "researchPoints": 10000,
+  "researchPower": 360,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "FLAME",
+    "parameter": "MaxRange",
+    "value": 9
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "FLAME",
+    "parameter": "ShortRange",
+    "value": 9
+   }
+  ]
+ },
+ "R-Wpn-Flamer-Reload01": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Flamer-Reload01",
+  "name": "Flamer Loading Drill I",
+  "requiredResearch": [
+   "R-Sys-Debrief01"
+  ],
+  "researchPoints": 900,
+  "researchPower": 30,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "FLAME",
+    "parameter": "FirePause",
+    "value": -10
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "FLAME",
+    "parameter": "ReloadTime",
+    "value": -10
+   }
+  ]
+ },
+ "R-Wpn-Flamer-Reload02": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Flamer-Reload02",
+  "name": "Flamer Loading Drill II",
+  "requiredResearch": [
+   "R-Wpn-Flamer-Reload01",
+   "R-Cred-Flamer-Tier2"
+  ],
+  "researchPoints": 2400,
+  "researchPower": 85,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "FLAME",
+    "parameter": "FirePause",
+    "value": -11
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "FLAME",
+    "parameter": "ReloadTime",
+    "value": -11
+   }
+  ]
+ },
+ "R-Wpn-Flamer-Reload03": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Flamer-Reload03",
+  "name": "Flamer Loading Drill III",
+  "requiredResearch": [
+   "R-Wpn-Flamer-Reload02",
+   "R-Cred-Flamer-Tier3"
+  ],
+  "researchPoints": 5200,
+  "researchPower": 190,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "FLAME",
+    "parameter": "FirePause",
+    "value": -12
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "FLAME",
+    "parameter": "ReloadTime",
+    "value": -12
+   }
+  ]
+ },
+ "R-Wpn-Flamer-Reload04": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Flamer-Reload04",
+  "name": "Flamer Loading Drill IV",
+  "requiredResearch": [
+   "R-Wpn-Flamer-Reload03",
+   "R-Cred-Flamer-Tier4"
+  ],
+  "researchPoints": 10000,
+  "researchPower": 360,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "FLAME",
+    "parameter": "FirePause",
+    "value": -13
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "FLAME",
+    "parameter": "ReloadTime",
+    "value": -13
+   }
+  ]
+ },
+ "R-Wpn-Flamer01Mk1": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Flamer01Mk1",
+  "name": "Flamer",
+  "requiredResearch": [
+   "R-Sys-Engineering01"
+  ],
+  "researchPoints": 600,
+  "researchPower": 18,
+  "resultComponents": [
+   "CyborgFlamer01",
+   "Flame1Mk1"
+  ]
+ },
+ "R-Wpn-HeavyPlasmaLauncher": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-HeavyPlasmaLauncher",
+  "name": "Heavy Plasma Launcher",
+  "requiredResearch": [
+   "R-Wpn-Flamer-Damage04",
+   "R-Wpn-PlasmaCannon"
+  ],
+  "researchPoints": 28800,
+  "researchPower": 450,
+  "resultComponents": [
+   "PlasmaHeavy"
+  ]
+ },
+ "R-Wpn-Howitzer-Accuracy01": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Howitzer-Accuracy01",
+  "name": "Howitzer Gunnery I",
+  "requiredResearch": [
+   "R-Sys-Debrief01"
+  ],
+  "researchPoints": 900,
+  "researchPower": 30,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "HOWITZERS",
+    "parameter": "HitChance",
+    "value": 10
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "HOWITZERS",
+    "parameter": "ShortHitChance",
+    "value": 10
+   }
+  ]
+ },
+ "R-Wpn-Howitzer-Accuracy02": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Howitzer-Accuracy02",
+  "name": "Howitzer Gunnery II",
+  "requiredResearch": [
+   "R-Wpn-Howitzer-Accuracy01",
+   "R-Cred-Howitzer-Tier2"
+  ],
+  "researchPoints": 2400,
+  "researchPower": 85,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "HOWITZERS",
+    "parameter": "HitChance",
+    "value": 11
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "HOWITZERS",
+    "parameter": "ShortHitChance",
+    "value": 11
+   }
+  ]
+ },
+ "R-Wpn-Howitzer-Accuracy03": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Howitzer-Accuracy03",
+  "name": "Howitzer Gunnery III",
+  "requiredResearch": [
+   "R-Wpn-Howitzer-Accuracy02",
+   "R-Cred-Howitzer-Tier3"
+  ],
+  "researchPoints": 5200,
+  "researchPower": 190,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "HOWITZERS",
+    "parameter": "HitChance",
+    "value": 12
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "HOWITZERS",
+    "parameter": "ShortHitChance",
+    "value": 12
+   }
+  ]
+ },
+ "R-Wpn-Howitzer-Accuracy04": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Howitzer-Accuracy04",
+  "name": "Howitzer Gunnery IV",
+  "requiredResearch": [
+   "R-Wpn-Howitzer-Accuracy03",
+   "R-Cred-Howitzer-Tier4"
+  ],
+  "researchPoints": 10000,
+  "researchPower": 360,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "HOWITZERS",
+    "parameter": "HitChance",
+    "value": 13
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "HOWITZERS",
+    "parameter": "ShortHitChance",
+    "value": 13
+   }
+  ]
+ },
+ "R-Wpn-Howitzer-Damage01": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Howitzer-Damage01",
+  "name": "Howitzer Warhead I",
+  "requiredResearch": [
+   "R-Sys-Debrief01"
+  ],
+  "researchPoints": 900,
+  "researchPower": 30,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "HOWITZERS",
+    "parameter": "Damage",
+    "value": 25
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "HOWITZERS",
+    "parameter": "RadiusDamage",
+    "value": 25
+   }
+  ]
+ },
+ "R-Wpn-Howitzer-Damage02": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Howitzer-Damage02",
+  "name": "Howitzer Warhead II",
+  "requiredResearch": [
+   "R-Wpn-Howitzer-Damage01",
+   "R-Cred-Howitzer-Tier2"
+  ],
+  "researchPoints": 2400,
+  "researchPower": 85,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "HOWITZERS",
+    "parameter": "Damage",
+    "value": 31
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "HOWITZERS",
+    "parameter": "RadiusDamage",
+    "value": 31
+   }
+  ]
+ },
+ "R-Wpn-Howitzer-Damage03": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Howitzer-Damage03",
+  "name": "Howitzer Warhead III",
+  "requiredResearch": [
+   "R-Wpn-Howitzer-Damage02",
+   "R-Cred-Howitzer-Tier3"
+  ],
+  "researchPoints": 5200,
+  "researchPower": 190,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "HOWITZERS",
+    "parameter": "Damage",
+    "value": 39
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "HOWITZERS",
+    "parameter": "RadiusDamage",
+    "value": 39
+   }
+  ]
+ },
+ "R-Wpn-Howitzer-Damage04": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Howitzer-Damage04",
+  "name": "Howitzer Warhead IV",
+  "requiredResearch": [
+   "R-Wpn-Howitzer-Damage03",
+   "R-Cred-Howitzer-Tier4"
+  ],
+  "researchPoints": 10000,
+  "researchPower": 360,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "HOWITZERS",
+    "parameter": "Damage",
+    "value": 49
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "HOWITZERS",
+    "parameter": "RadiusDamage",
+    "value": 49
+   }
+  ]
+ },
+ "R-Wpn-Howitzer-Incendiary": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Howitzer-Incendiary",
+  "name": "Incendiary Howitzer",
+  "requiredResearch": [
+   "R-Wpn-Mortar-Incendiary",
+   "R-Wpn-HowitzerMk1"
+  ],
+  "researchPoints": 10000,
+  "researchPower": 312,
+  "resultComponents": [
+   "Howitzer-Incendiary"
+  ]
+ },
+ "R-Wpn-Howitzer-Range01": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Howitzer-Range01",
+  "name": "Howitzer Fire Control I",
+  "requiredResearch": [
+   "R-Sys-Debrief01"
+  ],
+  "researchPoints": 900,
+  "researchPower": 30,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "HOWITZERS",
+    "parameter": "MaxRange",
+    "value": 7
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "HOWITZERS",
+    "parameter": "ShortRange",
+    "value": 7
+   }
+  ]
+ },
+ "R-Wpn-Howitzer-Range02": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Howitzer-Range02",
+  "name": "Howitzer Fire Control II",
+  "requiredResearch": [
+   "R-Wpn-Howitzer-Range01",
+   "R-Cred-Howitzer-Tier2"
+  ],
+  "researchPoints": 2400,
+  "researchPower": 85,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "HOWITZERS",
+    "parameter": "MaxRange",
+    "value": 7
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "HOWITZERS",
+    "parameter": "ShortRange",
+    "value": 7
+   }
+  ]
+ },
+ "R-Wpn-Howitzer-Range03": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Howitzer-Range03",
+  "name": "Howitzer Fire Control III",
+  "requiredResearch": [
+   "R-Wpn-Howitzer-Range02",
+   "R-Cred-Howitzer-Tier3"
+  ],
+  "researchPoints": 5200,
+  "researchPower": 190,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "HOWITZERS",
+    "parameter": "MaxRange",
+    "value": 8
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "HOWITZERS",
+    "parameter": "ShortRange",
+    "value": 8
+   }
+  ]
+ },
+ "R-Wpn-Howitzer-Range04": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Howitzer-Range04",
+  "name": "Howitzer Fire Control IV",
+  "requiredResearch": [
+   "R-Wpn-Howitzer-Range03",
+   "R-Cred-Howitzer-Tier4"
+  ],
+  "researchPoints": 10000,
+  "researchPower": 360,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "HOWITZERS",
+    "parameter": "MaxRange",
+    "value": 9
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "HOWITZERS",
+    "parameter": "ShortRange",
+    "value": 9
+   }
+  ]
+ },
+ "R-Wpn-Howitzer-Reload01": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Howitzer-Reload01",
+  "name": "Howitzer Loading Drill I",
+  "requiredResearch": [
+   "R-Sys-Debrief01"
+  ],
+  "researchPoints": 900,
+  "researchPower": 30,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "HOWITZERS",
+    "parameter": "FirePause",
+    "value": -10
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "HOWITZERS",
+    "parameter": "ReloadTime",
+    "value": -10
+   }
+  ]
+ },
+ "R-Wpn-Howitzer-Reload02": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Howitzer-Reload02",
+  "name": "Howitzer Loading Drill II",
+  "requiredResearch": [
+   "R-Wpn-Howitzer-Reload01",
+   "R-Cred-Howitzer-Tier2"
+  ],
+  "researchPoints": 2400,
+  "researchPower": 85,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "HOWITZERS",
+    "parameter": "FirePause",
+    "value": -11
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "HOWITZERS",
+    "parameter": "ReloadTime",
+    "value": -11
+   }
+  ]
+ },
+ "R-Wpn-Howitzer-Reload03": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Howitzer-Reload03",
+  "name": "Howitzer Loading Drill III",
+  "requiredResearch": [
+   "R-Wpn-Howitzer-Reload02",
+   "R-Cred-Howitzer-Tier3"
+  ],
+  "researchPoints": 5200,
+  "researchPower": 190,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "HOWITZERS",
+    "parameter": "FirePause",
+    "value": -12
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "HOWITZERS",
+    "parameter": "ReloadTime",
+    "value": -12
+   }
+  ]
+ },
+ "R-Wpn-Howitzer-Reload04": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Howitzer-Reload04",
+  "name": "Howitzer Loading Drill IV",
+  "requiredResearch": [
+   "R-Wpn-Howitzer-Reload03",
+   "R-Cred-Howitzer-Tier4"
+  ],
+  "researchPoints": 10000,
+  "researchPower": 360,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "HOWITZERS",
+    "parameter": "FirePause",
+    "value": -13
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "HOWITZERS",
+    "parameter": "ReloadTime",
+    "value": -13
+   }
+  ]
+ },
+ "R-Wpn-Howitzer03-Rot": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Howitzer03-Rot",
+  "name": "Rotary Howitzer - Hellstorm",
+  "requiredResearch": [
+   "R-Wpn-HowitzerMk1",
+   "R-Wpn-Mortar3"
+  ],
+  "researchPoints": 10000,
+  "researchPower": 312,
+  "resultComponents": [
+   "Howitzer03-Rot"
+  ]
+ },
+ "R-Wpn-HowitzerMk1": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-HowitzerMk1",
+  "name": "Howitzer",
+  "requiredResearch": [
+   "R-Wpn-Mortar-Damage03",
+   "R-Sys-Sensor-Upgrade01",
+   "R-Struc-Research-Upgrade06"
+  ],
+  "researchPoints": 9640,
+  "researchPower": 300,
+  "resultComponents": [
+   "Howitzer105Mk1"
+  ]
+ },
+ "R-Wpn-HvArtMissile": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-HvArtMissile",
+  "name": "Archangel Missile",
+  "requiredResearch": [
+   "R-Wpn-MdArtMissile",
+   "R-Wpn-Missile-Damage03",
+   "R-Wpn-Rocket06-IDF"
+  ],
+  "researchPoints": 28800,
+  "researchPower": 450,
+  "resultComponents": [
+   "Missile-HvyArt"
+  ]
+ },
+ "R-Wpn-HvyHowitzer": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-HvyHowitzer",
+  "name": "Heavy Howitzer - Ground Shaker",
+  "requiredResearch": [
+   "R-Wpn-Howitzer-Damage02",
+   "R-Wpn-Mortar02Hvy"
+  ],
+  "researchPoints": 14400,
+  "researchPower": 450,
+  "resultComponents": [
+   "Howitzer150Mk1"
+  ]
+ },
+ "R-Wpn-HvyLaser": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-HvyLaser",
+  "name": "Heavy Laser",
+  "requiredResearch": [
+   "R-Wpn-Laser02"
+  ],
+  "researchPoints": 36000,
+  "researchPower": 450,
+  "resultComponents": [
+   "HeavyLaser",
+   "HeavyLaser-VTOL"
+  ]
+ },
+ "R-Wpn-Laser-Accuracy01": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Laser-Accuracy01",
+  "name": "Energy Gunnery I",
+  "requiredResearch": [
+   "R-Sys-Debrief01"
+  ],
+  "researchPoints": 900,
+  "researchPower": 30,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "ENERGY",
+    "parameter": "HitChance",
+    "value": 10
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "ENERGY",
+    "parameter": "ShortHitChance",
+    "value": 10
+   }
+  ]
+ },
+ "R-Wpn-Laser-Accuracy02": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Laser-Accuracy02",
+  "name": "Energy Gunnery II",
+  "requiredResearch": [
+   "R-Wpn-Laser-Accuracy01",
+   "R-Cred-Laser-Tier2"
+  ],
+  "researchPoints": 2400,
+  "researchPower": 85,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "ENERGY",
+    "parameter": "HitChance",
+    "value": 11
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "ENERGY",
+    "parameter": "ShortHitChance",
+    "value": 11
+   }
+  ]
+ },
+ "R-Wpn-Laser-Accuracy03": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Laser-Accuracy03",
+  "name": "Energy Gunnery III",
+  "requiredResearch": [
+   "R-Wpn-Laser-Accuracy02",
+   "R-Cred-Laser-Tier3"
+  ],
+  "researchPoints": 5200,
+  "researchPower": 190,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "ENERGY",
+    "parameter": "HitChance",
+    "value": 12
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "ENERGY",
+    "parameter": "ShortHitChance",
+    "value": 12
+   }
+  ]
+ },
+ "R-Wpn-Laser-Accuracy04": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Laser-Accuracy04",
+  "name": "Energy Gunnery IV",
+  "requiredResearch": [
+   "R-Wpn-Laser-Accuracy03",
+   "R-Cred-Laser-Tier4"
+  ],
+  "researchPoints": 10000,
+  "researchPower": 360,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "ENERGY",
+    "parameter": "HitChance",
+    "value": 13
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "ENERGY",
+    "parameter": "ShortHitChance",
+    "value": 13
+   }
+  ]
+ },
+ "R-Wpn-Laser-Damage01": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Laser-Damage01",
+  "name": "Energy Warhead I",
+  "requiredResearch": [
+   "R-Sys-Debrief01"
+  ],
+  "researchPoints": 900,
+  "researchPower": 30,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "ENERGY",
+    "parameter": "Damage",
+    "value": 25
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "ENERGY",
+    "parameter": "RadiusDamage",
+    "value": 25
+   }
+  ]
+ },
+ "R-Wpn-Laser-Damage02": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Laser-Damage02",
+  "name": "Energy Warhead II",
+  "requiredResearch": [
+   "R-Wpn-Laser-Damage01",
+   "R-Cred-Laser-Tier2"
+  ],
+  "researchPoints": 2400,
+  "researchPower": 85,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "ENERGY",
+    "parameter": "Damage",
+    "value": 31
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "ENERGY",
+    "parameter": "RadiusDamage",
+    "value": 31
+   }
+  ]
+ },
+ "R-Wpn-Laser-Damage03": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Laser-Damage03",
+  "name": "Energy Warhead III",
+  "requiredResearch": [
+   "R-Wpn-Laser-Damage02",
+   "R-Cred-Laser-Tier3"
+  ],
+  "researchPoints": 5200,
+  "researchPower": 190,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "ENERGY",
+    "parameter": "Damage",
+    "value": 39
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "ENERGY",
+    "parameter": "RadiusDamage",
+    "value": 39
+   }
+  ]
+ },
+ "R-Wpn-Laser-Damage04": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Laser-Damage04",
+  "name": "Energy Warhead IV",
+  "requiredResearch": [
+   "R-Wpn-Laser-Damage03",
+   "R-Cred-Laser-Tier4"
+  ],
+  "researchPoints": 10000,
+  "researchPower": 360,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "ENERGY",
+    "parameter": "Damage",
+    "value": 49
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "ENERGY",
+    "parameter": "RadiusDamage",
+    "value": 49
+   }
+  ]
+ },
+ "R-Wpn-Laser-Penet01": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Laser-Penet01",
+  "name": "Energy Armour-Piercing I",
+  "requiredResearch": [
+   "R-Wpn-Laser-Damage03"
+  ],
+  "researchPoints": 6000,
+  "researchPower": 200,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "ENERGY",
+    "parameter": "MinimumDamage",
+    "value": 20
+   }
+  ]
+ },
+ "R-Wpn-Laser-Penet02": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Laser-Penet02",
+  "name": "Energy Armour-Piercing II",
+  "requiredResearch": [
+   "R-Wpn-Laser-Penet01",
+   "R-Wpn-Laser-Damage04"
+  ],
+  "researchPoints": 14000,
+  "researchPower": 400,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "ENERGY",
+    "parameter": "MinimumDamage",
+    "value": 25
+   }
+  ]
+ },
+ "R-Wpn-Laser-Range01": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Laser-Range01",
+  "name": "Energy Fire Control I",
+  "requiredResearch": [
+   "R-Sys-Debrief01"
+  ],
+  "researchPoints": 900,
+  "researchPower": 30,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "ENERGY",
+    "parameter": "MaxRange",
+    "value": 7
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "ENERGY",
+    "parameter": "ShortRange",
+    "value": 7
+   }
+  ]
+ },
+ "R-Wpn-Laser-Range02": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Laser-Range02",
+  "name": "Energy Fire Control II",
+  "requiredResearch": [
+   "R-Wpn-Laser-Range01",
+   "R-Cred-Laser-Tier2"
+  ],
+  "researchPoints": 2400,
+  "researchPower": 85,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "ENERGY",
+    "parameter": "MaxRange",
+    "value": 7
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "ENERGY",
+    "parameter": "ShortRange",
+    "value": 7
+   }
+  ]
+ },
+ "R-Wpn-Laser-Range03": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Laser-Range03",
+  "name": "Energy Fire Control III",
+  "requiredResearch": [
+   "R-Wpn-Laser-Range02",
+   "R-Cred-Laser-Tier3"
+  ],
+  "researchPoints": 5200,
+  "researchPower": 190,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "ENERGY",
+    "parameter": "MaxRange",
+    "value": 8
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "ENERGY",
+    "parameter": "ShortRange",
+    "value": 8
+   }
+  ]
+ },
+ "R-Wpn-Laser-Range04": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Laser-Range04",
+  "name": "Energy Fire Control IV",
+  "requiredResearch": [
+   "R-Wpn-Laser-Range03",
+   "R-Cred-Laser-Tier4"
+  ],
+  "researchPoints": 10000,
+  "researchPower": 360,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "ENERGY",
+    "parameter": "MaxRange",
+    "value": 9
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "ENERGY",
+    "parameter": "ShortRange",
+    "value": 9
+   }
+  ]
+ },
+ "R-Wpn-Laser-Reload01": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Laser-Reload01",
+  "name": "Energy Loading Drill I",
+  "requiredResearch": [
+   "R-Sys-Debrief01"
+  ],
+  "researchPoints": 900,
+  "researchPower": 30,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "ENERGY",
+    "parameter": "FirePause",
+    "value": -10
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "ENERGY",
+    "parameter": "ReloadTime",
+    "value": -10
+   }
+  ]
+ },
+ "R-Wpn-Laser-Reload02": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Laser-Reload02",
+  "name": "Energy Loading Drill II",
+  "requiredResearch": [
+   "R-Wpn-Laser-Reload01",
+   "R-Cred-Laser-Tier2"
+  ],
+  "researchPoints": 2400,
+  "researchPower": 85,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "ENERGY",
+    "parameter": "FirePause",
+    "value": -11
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "ENERGY",
+    "parameter": "ReloadTime",
+    "value": -11
+   }
+  ]
+ },
+ "R-Wpn-Laser-Reload03": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Laser-Reload03",
+  "name": "Energy Loading Drill III",
+  "requiredResearch": [
+   "R-Wpn-Laser-Reload02",
+   "R-Cred-Laser-Tier3"
+  ],
+  "researchPoints": 5200,
+  "researchPower": 190,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "ENERGY",
+    "parameter": "FirePause",
+    "value": -12
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "ENERGY",
+    "parameter": "ReloadTime",
+    "value": -12
+   }
+  ]
+ },
+ "R-Wpn-Laser-Reload04": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Laser-Reload04",
+  "name": "Energy Loading Drill IV",
+  "requiredResearch": [
+   "R-Wpn-Laser-Reload03",
+   "R-Cred-Laser-Tier4"
+  ],
+  "researchPoints": 10000,
+  "researchPower": 360,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "ENERGY",
+    "parameter": "FirePause",
+    "value": -13
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "ENERGY",
+    "parameter": "ReloadTime",
+    "value": -13
+   }
+  ]
+ },
+ "R-Wpn-Laser01": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Laser01",
+  "name": "Laser - Flashlight",
+  "requiredResearch": [
+   "R-Struc-Research-Upgrade07",
+   "R-Sys-Sensor-Upgrade02"
+  ],
+  "researchPoints": 14400,
+  "researchPower": 450,
+  "resultComponents": [
+   "Cyb-Wpn-Laser",
+   "Laser3BEAM-VTOL",
+   "Laser3BEAMMk1"
+  ]
+ },
+ "R-Wpn-Laser02": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Laser02",
+  "name": "Pulse Laser",
+  "requiredResearch": [
+   "R-Wpn-Laser01"
+  ],
+  "researchPoints": 28800,
+  "researchPower": 450,
+  "resultComponents": [
+   "Laser2PULSE-VTOL",
+   "Laser2PULSEMk1"
+  ]
+ },
+ "R-Wpn-MG-Accuracy01": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-MG-Accuracy01",
+  "name": "Machinegun Gunnery I",
+  "requiredResearch": [
+   "R-Sys-Debrief01"
+  ],
+  "researchPoints": 900,
+  "researchPower": 30,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MACHINE GUN",
+    "parameter": "HitChance",
+    "value": 10
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MACHINE GUN",
+    "parameter": "ShortHitChance",
+    "value": 10
+   }
+  ]
+ },
+ "R-Wpn-MG-Accuracy02": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-MG-Accuracy02",
+  "name": "Machinegun Gunnery II",
+  "requiredResearch": [
+   "R-Wpn-MG-Accuracy01",
+   "R-Cred-MG-Tier2"
+  ],
+  "researchPoints": 2400,
+  "researchPower": 85,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MACHINE GUN",
+    "parameter": "HitChance",
+    "value": 11
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MACHINE GUN",
+    "parameter": "ShortHitChance",
+    "value": 11
+   }
+  ]
+ },
+ "R-Wpn-MG-Accuracy03": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-MG-Accuracy03",
+  "name": "Machinegun Gunnery III",
+  "requiredResearch": [
+   "R-Wpn-MG-Accuracy02",
+   "R-Cred-MG-Tier3"
+  ],
+  "researchPoints": 5200,
+  "researchPower": 190,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MACHINE GUN",
+    "parameter": "HitChance",
+    "value": 12
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MACHINE GUN",
+    "parameter": "ShortHitChance",
+    "value": 12
+   }
+  ]
+ },
+ "R-Wpn-MG-Accuracy04": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-MG-Accuracy04",
+  "name": "Machinegun Gunnery IV",
+  "requiredResearch": [
+   "R-Wpn-MG-Accuracy03",
+   "R-Cred-MG-Tier4"
+  ],
+  "researchPoints": 10000,
+  "researchPower": 360,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MACHINE GUN",
+    "parameter": "HitChance",
+    "value": 13
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MACHINE GUN",
+    "parameter": "ShortHitChance",
+    "value": 13
+   }
+  ]
+ },
+ "R-Wpn-MG-Damage01": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-MG-Damage01",
+  "name": "Machinegun Warhead I",
+  "requiredResearch": [
+   "R-Sys-Debrief01"
+  ],
+  "researchPoints": 900,
+  "researchPower": 30,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MACHINE GUN",
+    "parameter": "Damage",
+    "value": 25
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MACHINE GUN",
+    "parameter": "RadiusDamage",
+    "value": 25
+   }
+  ]
+ },
+ "R-Wpn-MG-Damage02": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-MG-Damage02",
+  "name": "Machinegun Warhead II",
+  "requiredResearch": [
+   "R-Wpn-MG-Damage01",
+   "R-Cred-MG-Tier2"
+  ],
+  "researchPoints": 2400,
+  "researchPower": 85,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MACHINE GUN",
+    "parameter": "Damage",
+    "value": 31
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MACHINE GUN",
+    "parameter": "RadiusDamage",
+    "value": 31
+   }
+  ]
+ },
+ "R-Wpn-MG-Damage03": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-MG-Damage03",
+  "name": "Machinegun Warhead III",
+  "requiredResearch": [
+   "R-Wpn-MG-Damage02",
+   "R-Cred-MG-Tier3"
+  ],
+  "researchPoints": 5200,
+  "researchPower": 190,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MACHINE GUN",
+    "parameter": "Damage",
+    "value": 39
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MACHINE GUN",
+    "parameter": "RadiusDamage",
+    "value": 39
+   }
+  ]
+ },
+ "R-Wpn-MG-Damage04": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-MG-Damage04",
+  "name": "Machinegun Warhead IV",
+  "requiredResearch": [
+   "R-Wpn-MG-Damage03",
+   "R-Cred-MG-Tier4"
+  ],
+  "researchPoints": 10000,
+  "researchPower": 360,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MACHINE GUN",
+    "parameter": "Damage",
+    "value": 49
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MACHINE GUN",
+    "parameter": "RadiusDamage",
+    "value": 49
+   }
+  ]
+ },
+ "R-Wpn-MG-Range01": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-MG-Range01",
+  "name": "Machinegun Fire Control I",
+  "requiredResearch": [
+   "R-Sys-Debrief01"
+  ],
+  "researchPoints": 900,
+  "researchPower": 30,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MACHINE GUN",
+    "parameter": "MaxRange",
+    "value": 7
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MACHINE GUN",
+    "parameter": "ShortRange",
+    "value": 7
+   }
+  ]
+ },
+ "R-Wpn-MG-Range02": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-MG-Range02",
+  "name": "Machinegun Fire Control II",
+  "requiredResearch": [
+   "R-Wpn-MG-Range01",
+   "R-Cred-MG-Tier2"
+  ],
+  "researchPoints": 2400,
+  "researchPower": 85,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MACHINE GUN",
+    "parameter": "MaxRange",
+    "value": 7
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MACHINE GUN",
+    "parameter": "ShortRange",
+    "value": 7
+   }
+  ]
+ },
+ "R-Wpn-MG-Range03": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-MG-Range03",
+  "name": "Machinegun Fire Control III",
+  "requiredResearch": [
+   "R-Wpn-MG-Range02",
+   "R-Cred-MG-Tier3"
+  ],
+  "researchPoints": 5200,
+  "researchPower": 190,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MACHINE GUN",
+    "parameter": "MaxRange",
+    "value": 8
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MACHINE GUN",
+    "parameter": "ShortRange",
+    "value": 8
+   }
+  ]
+ },
+ "R-Wpn-MG-Range04": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-MG-Range04",
+  "name": "Machinegun Fire Control IV",
+  "requiredResearch": [
+   "R-Wpn-MG-Range03",
+   "R-Cred-MG-Tier4"
+  ],
+  "researchPoints": 10000,
+  "researchPower": 360,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MACHINE GUN",
+    "parameter": "MaxRange",
+    "value": 9
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MACHINE GUN",
+    "parameter": "ShortRange",
+    "value": 9
+   }
+  ]
+ },
+ "R-Wpn-MG-Reload01": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-MG-Reload01",
+  "name": "Machinegun Loading Drill I",
+  "requiredResearch": [
+   "R-Sys-Debrief01"
+  ],
+  "researchPoints": 900,
+  "researchPower": 30,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MACHINE GUN",
+    "parameter": "FirePause",
+    "value": -10
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MACHINE GUN",
+    "parameter": "ReloadTime",
+    "value": -10
+   }
+  ]
+ },
+ "R-Wpn-MG-Reload02": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-MG-Reload02",
+  "name": "Machinegun Loading Drill II",
+  "requiredResearch": [
+   "R-Wpn-MG-Reload01",
+   "R-Cred-MG-Tier2"
+  ],
+  "researchPoints": 2400,
+  "researchPower": 85,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MACHINE GUN",
+    "parameter": "FirePause",
+    "value": -11
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MACHINE GUN",
+    "parameter": "ReloadTime",
+    "value": -11
+   }
+  ]
+ },
+ "R-Wpn-MG-Reload03": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-MG-Reload03",
+  "name": "Machinegun Loading Drill III",
+  "requiredResearch": [
+   "R-Wpn-MG-Reload02",
+   "R-Cred-MG-Tier3"
+  ],
+  "researchPoints": 5200,
+  "researchPower": 190,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MACHINE GUN",
+    "parameter": "FirePause",
+    "value": -12
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MACHINE GUN",
+    "parameter": "ReloadTime",
+    "value": -12
+   }
+  ]
+ },
+ "R-Wpn-MG-Reload04": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-MG-Reload04",
+  "name": "Machinegun Loading Drill IV",
+  "requiredResearch": [
+   "R-Wpn-MG-Reload03",
+   "R-Cred-MG-Tier4"
+  ],
+  "researchPoints": 10000,
+  "researchPower": 360,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MACHINE GUN",
+    "parameter": "FirePause",
+    "value": -13
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MACHINE GUN",
+    "parameter": "ReloadTime",
+    "value": -13
+   }
+  ]
+ },
+ "R-Wpn-MG1Mk1": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-MG1Mk1",
+  "name": "Machinegun",
+  "researchPoints": 60,
+  "researchPower": 1,
+  "resultComponents": [
+   "CyborgChaingun",
+   "MG1-VTOL",
+   "MG1Mk1"
+  ]
+ },
+ "R-Wpn-MG2Mk1": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-MG2Mk1",
+  "name": "Twin Machinegun",
+  "requiredResearch": [
+   "R-Wpn-MG-Damage01"
+  ],
+  "researchPoints": 1200,
+  "researchPower": 37,
+  "resultComponents": [
+   "MG2-VTOL",
+   "MG2Mk1"
+  ]
+ },
+ "R-Wpn-MG3Mk1": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-MG3Mk1",
+  "name": "Heavy Machinegun",
+  "requiredResearch": [
+   "R-Wpn-MG-Damage02"
+  ],
+  "researchPoints": 1200,
+  "researchPower": 37,
+  "resultComponents": [
+   "MG3-VTOL",
+   "MG3Mk1"
+  ]
+ },
+ "R-Wpn-MG4": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-MG4",
+  "name": "Assault Gun",
+  "requiredResearch": [
+   "R-Wpn-MG3Mk1",
+   "R-Wpn-MG-Reload03"
+  ],
+  "researchPoints": 6000,
+  "researchPower": 187,
+  "resultComponents": [
+   "CyborgRotMG",
+   "MG4ROTARY-VTOL",
+   "MG4ROTARYMk1"
+  ]
+ },
+ "R-Wpn-MG5": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-MG5",
+  "name": "Twin Assault Gun",
+  "requiredResearch": [
+   "R-Struc-Research-Upgrade06",
+   "R-Wpn-MG4"
+  ],
+  "researchPoints": 7200,
+  "researchPower": 225,
+  "resultComponents": [
+   "MG5TWINROTARY"
+  ]
+ },
+ "R-Wpn-MdArtMissile": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-MdArtMissile",
+  "name": "Seraph Missile Array",
+  "requiredResearch": [
+   "R-Wpn-Missile2A-T",
+   "R-Wpn-Rocket02-MRL"
+  ],
+  "researchPoints": 28800,
+  "researchPower": 450,
+  "resultComponents": [
+   "Missile-MdArt"
+  ]
+ },
+ "R-Wpn-Missile-Accuracy01": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Missile-Accuracy01",
+  "name": "Missile Gunnery I",
+  "requiredResearch": [
+   "R-Sys-Debrief01"
+  ],
+  "researchPoints": 900,
+  "researchPower": 30,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MISSILE",
+    "parameter": "HitChance",
+    "value": 10
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MISSILE",
+    "parameter": "ShortHitChance",
+    "value": 10
+   }
+  ]
+ },
+ "R-Wpn-Missile-Accuracy02": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Missile-Accuracy02",
+  "name": "Missile Gunnery II",
+  "requiredResearch": [
+   "R-Wpn-Missile-Accuracy01",
+   "R-Cred-Missile-Tier2"
+  ],
+  "researchPoints": 2400,
+  "researchPower": 85,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MISSILE",
+    "parameter": "HitChance",
+    "value": 11
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MISSILE",
+    "parameter": "ShortHitChance",
+    "value": 11
+   }
+  ]
+ },
+ "R-Wpn-Missile-Accuracy03": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Missile-Accuracy03",
+  "name": "Missile Gunnery III",
+  "requiredResearch": [
+   "R-Wpn-Missile-Accuracy02",
+   "R-Cred-Missile-Tier3"
+  ],
+  "researchPoints": 5200,
+  "researchPower": 190,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MISSILE",
+    "parameter": "HitChance",
+    "value": 12
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MISSILE",
+    "parameter": "ShortHitChance",
+    "value": 12
+   }
+  ]
+ },
+ "R-Wpn-Missile-Accuracy04": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Missile-Accuracy04",
+  "name": "Missile Gunnery IV",
+  "requiredResearch": [
+   "R-Wpn-Missile-Accuracy03",
+   "R-Cred-Missile-Tier4"
+  ],
+  "researchPoints": 10000,
+  "researchPower": 360,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MISSILE",
+    "parameter": "HitChance",
+    "value": 13
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MISSILE",
+    "parameter": "ShortHitChance",
+    "value": 13
+   }
+  ]
+ },
+ "R-Wpn-Missile-Damage01": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Missile-Damage01",
+  "name": "Missile Warhead I",
+  "requiredResearch": [
+   "R-Sys-Debrief01"
+  ],
+  "researchPoints": 900,
+  "researchPower": 30,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MISSILE",
+    "parameter": "Damage",
+    "value": 25
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MISSILE",
+    "parameter": "RadiusDamage",
+    "value": 25
+   }
+  ]
+ },
+ "R-Wpn-Missile-Damage02": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Missile-Damage02",
+  "name": "Missile Warhead II",
+  "requiredResearch": [
+   "R-Wpn-Missile-Damage01",
+   "R-Cred-Missile-Tier2"
+  ],
+  "researchPoints": 2400,
+  "researchPower": 85,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MISSILE",
+    "parameter": "Damage",
+    "value": 31
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MISSILE",
+    "parameter": "RadiusDamage",
+    "value": 31
+   }
+  ]
+ },
+ "R-Wpn-Missile-Damage03": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Missile-Damage03",
+  "name": "Missile Warhead III",
+  "requiredResearch": [
+   "R-Wpn-Missile-Damage02",
+   "R-Cred-Missile-Tier3"
+  ],
+  "researchPoints": 5200,
+  "researchPower": 190,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MISSILE",
+    "parameter": "Damage",
+    "value": 39
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MISSILE",
+    "parameter": "RadiusDamage",
+    "value": 39
+   }
+  ]
+ },
+ "R-Wpn-Missile-Damage04": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Missile-Damage04",
+  "name": "Missile Warhead IV",
+  "requiredResearch": [
+   "R-Wpn-Missile-Damage03",
+   "R-Cred-Missile-Tier4"
+  ],
+  "researchPoints": 10000,
+  "researchPower": 360,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MISSILE",
+    "parameter": "Damage",
+    "value": 49
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MISSILE",
+    "parameter": "RadiusDamage",
+    "value": 49
+   }
+  ]
+ },
+ "R-Wpn-Missile-HvSAM": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Missile-HvSAM",
+  "name": "Vindicator SAM",
+  "requiredResearch": [
+   "R-Wpn-Missile-Damage04",
+   "R-Wpn-Missile-LtSAM"
+  ],
+  "researchPoints": 28800,
+  "researchPower": 450,
+  "resultComponents": [
+   "Missile-HvySAM"
+  ]
+ },
+ "R-Wpn-Missile-LtSAM": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Missile-LtSAM",
+  "name": "Avenger SAM",
+  "requiredResearch": [
+   "R-Sys-Sensor-Upgrade02",
+   "R-Wpn-Missile2A-T"
+  ],
+  "researchPoints": 14400,
+  "researchPower": 450,
+  "resultComponents": [
+   "Missile-LtSAM"
+  ]
+ },
+ "R-Wpn-Missile-Penet01": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Missile-Penet01",
+  "name": "Missile Armour-Piercing I",
+  "requiredResearch": [
+   "R-Wpn-Missile-Damage03"
+  ],
+  "researchPoints": 6000,
+  "researchPower": 200,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MISSILE",
+    "parameter": "MinimumDamage",
+    "value": 20
+   }
+  ]
+ },
+ "R-Wpn-Missile-Penet02": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Missile-Penet02",
+  "name": "Missile Armour-Piercing II",
+  "requiredResearch": [
+   "R-Wpn-Missile-Penet01",
+   "R-Wpn-Missile-Damage04"
+  ],
+  "researchPoints": 14000,
+  "researchPower": 400,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MISSILE",
+    "parameter": "MinimumDamage",
+    "value": 25
+   }
+  ]
+ },
+ "R-Wpn-Missile-Range01": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Missile-Range01",
+  "name": "Missile Fire Control I",
+  "requiredResearch": [
+   "R-Sys-Debrief01"
+  ],
+  "researchPoints": 900,
+  "researchPower": 30,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MISSILE",
+    "parameter": "MaxRange",
+    "value": 7
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MISSILE",
+    "parameter": "ShortRange",
+    "value": 7
+   }
+  ]
+ },
+ "R-Wpn-Missile-Range02": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Missile-Range02",
+  "name": "Missile Fire Control II",
+  "requiredResearch": [
+   "R-Wpn-Missile-Range01",
+   "R-Cred-Missile-Tier2"
+  ],
+  "researchPoints": 2400,
+  "researchPower": 85,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MISSILE",
+    "parameter": "MaxRange",
+    "value": 7
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MISSILE",
+    "parameter": "ShortRange",
+    "value": 7
+   }
+  ]
+ },
+ "R-Wpn-Missile-Range03": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Missile-Range03",
+  "name": "Missile Fire Control III",
+  "requiredResearch": [
+   "R-Wpn-Missile-Range02",
+   "R-Cred-Missile-Tier3"
+  ],
+  "researchPoints": 5200,
+  "researchPower": 190,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MISSILE",
+    "parameter": "MaxRange",
+    "value": 8
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MISSILE",
+    "parameter": "ShortRange",
+    "value": 8
+   }
+  ]
+ },
+ "R-Wpn-Missile-Range04": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Missile-Range04",
+  "name": "Missile Fire Control IV",
+  "requiredResearch": [
+   "R-Wpn-Missile-Range03",
+   "R-Cred-Missile-Tier4"
+  ],
+  "researchPoints": 10000,
+  "researchPower": 360,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MISSILE",
+    "parameter": "MaxRange",
+    "value": 9
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MISSILE",
+    "parameter": "ShortRange",
+    "value": 9
+   }
+  ]
+ },
+ "R-Wpn-Missile-Reload01": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Missile-Reload01",
+  "name": "Missile Loading Drill I",
+  "requiredResearch": [
+   "R-Sys-Debrief01"
+  ],
+  "researchPoints": 900,
+  "researchPower": 30,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MISSILE",
+    "parameter": "FirePause",
+    "value": -10
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MISSILE",
+    "parameter": "ReloadTime",
+    "value": -10
+   }
+  ]
+ },
+ "R-Wpn-Missile-Reload02": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Missile-Reload02",
+  "name": "Missile Loading Drill II",
+  "requiredResearch": [
+   "R-Wpn-Missile-Reload01",
+   "R-Cred-Missile-Tier2"
+  ],
+  "researchPoints": 2400,
+  "researchPower": 85,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MISSILE",
+    "parameter": "FirePause",
+    "value": -11
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MISSILE",
+    "parameter": "ReloadTime",
+    "value": -11
+   }
+  ]
+ },
+ "R-Wpn-Missile-Reload03": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Missile-Reload03",
+  "name": "Missile Loading Drill III",
+  "requiredResearch": [
+   "R-Wpn-Missile-Reload02",
+   "R-Cred-Missile-Tier3"
+  ],
+  "researchPoints": 5200,
+  "researchPower": 190,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MISSILE",
+    "parameter": "FirePause",
+    "value": -12
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MISSILE",
+    "parameter": "ReloadTime",
+    "value": -12
+   }
+  ]
+ },
+ "R-Wpn-Missile-Reload04": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Missile-Reload04",
+  "name": "Missile Loading Drill IV",
+  "requiredResearch": [
+   "R-Wpn-Missile-Reload03",
+   "R-Cred-Missile-Tier4"
+  ],
+  "researchPoints": 10000,
+  "researchPower": 360,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MISSILE",
+    "parameter": "FirePause",
+    "value": -13
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MISSILE",
+    "parameter": "ReloadTime",
+    "value": -13
+   }
+  ]
+ },
+ "R-Wpn-Missile2A-T": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Missile2A-T",
+  "name": "Scourge Missile",
+  "requiredResearch": [
+   "R-Wpn-Rocket07-Tank-Killer",
+   "R-Wpn-Rocket-Accuracy04",
+   "R-Struc-Research-Upgrade07"
+  ],
+  "researchPoints": 16600,
+  "researchPower": 450,
+  "resultComponents": [
+   "Cyb-Wpn-Atmiss",
+   "Missile-A-T",
+   "Missile-VTOL-AT"
+  ]
+ },
+ "R-Wpn-Mortar-Accuracy01": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Mortar-Accuracy01",
+  "name": "Mortar Gunnery I",
+  "requiredResearch": [
+   "R-Sys-Debrief01"
+  ],
+  "researchPoints": 900,
+  "researchPower": 30,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MORTARS",
+    "parameter": "HitChance",
+    "value": 10
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MORTARS",
+    "parameter": "ShortHitChance",
+    "value": 10
+   }
+  ]
+ },
+ "R-Wpn-Mortar-Accuracy02": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Mortar-Accuracy02",
+  "name": "Mortar Gunnery II",
+  "requiredResearch": [
+   "R-Wpn-Mortar-Accuracy01",
+   "R-Cred-Mortar-Tier2"
+  ],
+  "researchPoints": 2400,
+  "researchPower": 85,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MORTARS",
+    "parameter": "HitChance",
+    "value": 11
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MORTARS",
+    "parameter": "ShortHitChance",
+    "value": 11
+   }
+  ]
+ },
+ "R-Wpn-Mortar-Accuracy03": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Mortar-Accuracy03",
+  "name": "Mortar Gunnery III",
+  "requiredResearch": [
+   "R-Wpn-Mortar-Accuracy02",
+   "R-Cred-Mortar-Tier3"
+  ],
+  "researchPoints": 5200,
+  "researchPower": 190,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MORTARS",
+    "parameter": "HitChance",
+    "value": 12
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MORTARS",
+    "parameter": "ShortHitChance",
+    "value": 12
+   }
+  ]
+ },
+ "R-Wpn-Mortar-Accuracy04": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Mortar-Accuracy04",
+  "name": "Mortar Gunnery IV",
+  "requiredResearch": [
+   "R-Wpn-Mortar-Accuracy03",
+   "R-Cred-Mortar-Tier4"
+  ],
+  "researchPoints": 10000,
+  "researchPower": 360,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MORTARS",
+    "parameter": "HitChance",
+    "value": 13
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MORTARS",
+    "parameter": "ShortHitChance",
+    "value": 13
+   }
+  ]
+ },
+ "R-Wpn-Mortar-Damage01": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Mortar-Damage01",
+  "name": "Mortar Warhead I",
+  "requiredResearch": [
+   "R-Sys-Debrief01"
+  ],
+  "researchPoints": 900,
+  "researchPower": 30,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MORTARS",
+    "parameter": "Damage",
+    "value": 25
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MORTARS",
+    "parameter": "RadiusDamage",
+    "value": 25
+   }
+  ]
+ },
+ "R-Wpn-Mortar-Damage02": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Mortar-Damage02",
+  "name": "Mortar Warhead II",
+  "requiredResearch": [
+   "R-Wpn-Mortar-Damage01",
+   "R-Cred-Mortar-Tier2"
+  ],
+  "researchPoints": 2400,
+  "researchPower": 85,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MORTARS",
+    "parameter": "Damage",
+    "value": 31
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MORTARS",
+    "parameter": "RadiusDamage",
+    "value": 31
+   }
+  ]
+ },
+ "R-Wpn-Mortar-Damage03": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Mortar-Damage03",
+  "name": "Mortar Warhead III",
+  "requiredResearch": [
+   "R-Wpn-Mortar-Damage02",
+   "R-Cred-Mortar-Tier3"
+  ],
+  "researchPoints": 5200,
+  "researchPower": 190,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MORTARS",
+    "parameter": "Damage",
+    "value": 39
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MORTARS",
+    "parameter": "RadiusDamage",
+    "value": 39
+   }
+  ]
+ },
+ "R-Wpn-Mortar-Damage04": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Mortar-Damage04",
+  "name": "Mortar Warhead IV",
+  "requiredResearch": [
+   "R-Wpn-Mortar-Damage03",
+   "R-Cred-Mortar-Tier4"
+  ],
+  "researchPoints": 10000,
+  "researchPower": 360,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MORTARS",
+    "parameter": "Damage",
+    "value": 49
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MORTARS",
+    "parameter": "RadiusDamage",
+    "value": 49
+   }
+  ]
+ },
+ "R-Wpn-Mortar-Incendiary": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Mortar-Incendiary",
+  "name": "Incendiary Mortar",
+  "requiredResearch": [
+   "R-Wpn-Mortar-Damage02",
+   "R-Wpn-Flame2"
+  ],
+  "researchPoints": 4800,
+  "researchPower": 150,
+  "resultComponents": [
+   "Mortar-Incendiary"
+  ]
+ },
+ "R-Wpn-Mortar-Range01": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Mortar-Range01",
+  "name": "Mortar Fire Control I",
+  "requiredResearch": [
+   "R-Sys-Debrief01"
+  ],
+  "researchPoints": 900,
+  "researchPower": 30,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MORTARS",
+    "parameter": "MaxRange",
+    "value": 7
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MORTARS",
+    "parameter": "ShortRange",
+    "value": 7
+   }
+  ]
+ },
+ "R-Wpn-Mortar-Range02": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Mortar-Range02",
+  "name": "Mortar Fire Control II",
+  "requiredResearch": [
+   "R-Wpn-Mortar-Range01",
+   "R-Cred-Mortar-Tier2"
+  ],
+  "researchPoints": 2400,
+  "researchPower": 85,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MORTARS",
+    "parameter": "MaxRange",
+    "value": 7
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MORTARS",
+    "parameter": "ShortRange",
+    "value": 7
+   }
+  ]
+ },
+ "R-Wpn-Mortar-Range03": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Mortar-Range03",
+  "name": "Mortar Fire Control III",
+  "requiredResearch": [
+   "R-Wpn-Mortar-Range02",
+   "R-Cred-Mortar-Tier3"
+  ],
+  "researchPoints": 5200,
+  "researchPower": 190,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MORTARS",
+    "parameter": "MaxRange",
+    "value": 8
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MORTARS",
+    "parameter": "ShortRange",
+    "value": 8
+   }
+  ]
+ },
+ "R-Wpn-Mortar-Range04": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Mortar-Range04",
+  "name": "Mortar Fire Control IV",
+  "requiredResearch": [
+   "R-Wpn-Mortar-Range03",
+   "R-Cred-Mortar-Tier4"
+  ],
+  "researchPoints": 10000,
+  "researchPower": 360,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MORTARS",
+    "parameter": "MaxRange",
+    "value": 9
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MORTARS",
+    "parameter": "ShortRange",
+    "value": 9
+   }
+  ]
+ },
+ "R-Wpn-Mortar-Reload01": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Mortar-Reload01",
+  "name": "Mortar Loading Drill I",
+  "requiredResearch": [
+   "R-Sys-Debrief01"
+  ],
+  "researchPoints": 900,
+  "researchPower": 30,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MORTARS",
+    "parameter": "FirePause",
+    "value": -10
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MORTARS",
+    "parameter": "ReloadTime",
+    "value": -10
+   }
+  ]
+ },
+ "R-Wpn-Mortar-Reload02": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Mortar-Reload02",
+  "name": "Mortar Loading Drill II",
+  "requiredResearch": [
+   "R-Wpn-Mortar-Reload01",
+   "R-Cred-Mortar-Tier2"
+  ],
+  "researchPoints": 2400,
+  "researchPower": 85,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MORTARS",
+    "parameter": "FirePause",
+    "value": -11
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MORTARS",
+    "parameter": "ReloadTime",
+    "value": -11
+   }
+  ]
+ },
+ "R-Wpn-Mortar-Reload03": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Mortar-Reload03",
+  "name": "Mortar Loading Drill III",
+  "requiredResearch": [
+   "R-Wpn-Mortar-Reload02",
+   "R-Cred-Mortar-Tier3"
+  ],
+  "researchPoints": 5200,
+  "researchPower": 190,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MORTARS",
+    "parameter": "FirePause",
+    "value": -12
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MORTARS",
+    "parameter": "ReloadTime",
+    "value": -12
+   }
+  ]
+ },
+ "R-Wpn-Mortar-Reload04": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Mortar-Reload04",
+  "name": "Mortar Loading Drill IV",
+  "requiredResearch": [
+   "R-Wpn-Mortar-Reload03",
+   "R-Cred-Mortar-Tier4"
+  ],
+  "researchPoints": 10000,
+  "researchPower": 360,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MORTARS",
+    "parameter": "FirePause",
+    "value": -13
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "MORTARS",
+    "parameter": "ReloadTime",
+    "value": -13
+   }
+  ]
+ },
+ "R-Wpn-Mortar01Lt": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Mortar01Lt",
+  "name": "Mortar",
+  "requiredResearch": [
+   "R-Wpn-Cannon-Damage01"
+  ],
+  "researchPoints": 2400,
+  "researchPower": 75,
+  "resultComponents": [
+   "Cyb-Wpn-Grenade",
+   "Mortar1Mk1"
+  ]
+ },
+ "R-Wpn-Mortar02Hvy": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Mortar02Hvy",
+  "name": "Heavy Mortar - Bombard",
+  "requiredResearch": [
+   "R-Vehicle-Metals01",
+   "R-Wpn-Mortar-Damage02"
+  ],
+  "researchPoints": 7200,
+  "researchPower": 225,
+  "resultComponents": [
+   "Mortar2Mk1"
+  ]
+ },
+ "R-Wpn-Mortar3": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Mortar3",
+  "name": "Rotary Mortar - Pepperpot",
+  "requiredResearch": [
+   "R-Vehicle-Metals01",
+   "R-Wpn-Mortar-Damage02"
+  ],
+  "researchPoints": 7200,
+  "researchPower": 225,
+  "resultComponents": [
+   "Mortar3ROTARYMk1"
+  ]
+ },
+ "R-Wpn-MortarEMP": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-MortarEMP",
+  "name": "EMP Mortar",
+  "requiredResearch": [
+   "R-Comp-CommandTurret02",
+   "R-Sys-Sensor-Upgrade03",
+   "R-Struc-Research-Upgrade09"
+  ],
+  "researchPoints": 14400,
+  "researchPower": 450,
+  "resultComponents": [
+   "MortarEMP"
+  ]
+ },
+ "R-Wpn-PlasmaCannon": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-PlasmaCannon",
+  "name": "Plasma Cannon",
+  "requiredResearch": [
+   "R-Wpn-Cannon4AMk1",
+   "R-Wpn-Flame2",
+   "R-Struc-Research-Upgrade06"
+  ],
+  "researchPoints": 12000,
+  "researchPower": 375,
+  "resultComponents": [
+   "Laser4-PlasmaCannon"
+  ]
+ },
+ "R-Wpn-Plasmite-Flamer": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Plasmite-Flamer",
+  "name": "Plasmite Flamer",
+  "requiredResearch": [
+   "R-Wpn-Flame2",
+   "R-Struc-Research-Upgrade07"
+  ],
+  "researchPoints": 7200,
+  "researchPower": 225,
+  "resultComponents": [
+   "PlasmiteFlamer"
+  ]
+ },
+ "R-Wpn-Rail-Accuracy01": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Rail-Accuracy01",
+  "name": "Rail Gunnery I",
+  "requiredResearch": [
+   "R-Sys-Debrief01"
+  ],
+  "researchPoints": 900,
+  "researchPower": 30,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "GAUSS",
+    "parameter": "HitChance",
+    "value": 10
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "GAUSS",
+    "parameter": "ShortHitChance",
+    "value": 10
+   }
+  ]
+ },
+ "R-Wpn-Rail-Accuracy02": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Rail-Accuracy02",
+  "name": "Rail Gunnery II",
+  "requiredResearch": [
+   "R-Wpn-Rail-Accuracy01",
+   "R-Cred-Rail-Tier2"
+  ],
+  "researchPoints": 2400,
+  "researchPower": 85,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "GAUSS",
+    "parameter": "HitChance",
+    "value": 11
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "GAUSS",
+    "parameter": "ShortHitChance",
+    "value": 11
+   }
+  ]
+ },
+ "R-Wpn-Rail-Accuracy03": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Rail-Accuracy03",
+  "name": "Rail Gunnery III",
+  "requiredResearch": [
+   "R-Wpn-Rail-Accuracy02",
+   "R-Cred-Rail-Tier3"
+  ],
+  "researchPoints": 5200,
+  "researchPower": 190,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "GAUSS",
+    "parameter": "HitChance",
+    "value": 12
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "GAUSS",
+    "parameter": "ShortHitChance",
+    "value": 12
+   }
+  ]
+ },
+ "R-Wpn-Rail-Accuracy04": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Rail-Accuracy04",
+  "name": "Rail Gunnery IV",
+  "requiredResearch": [
+   "R-Wpn-Rail-Accuracy03",
+   "R-Cred-Rail-Tier4"
+  ],
+  "researchPoints": 10000,
+  "researchPower": 360,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "GAUSS",
+    "parameter": "HitChance",
+    "value": 13
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "GAUSS",
+    "parameter": "ShortHitChance",
+    "value": 13
+   }
+  ]
+ },
+ "R-Wpn-Rail-Damage01": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Rail-Damage01",
+  "name": "Rail Warhead I",
+  "requiredResearch": [
+   "R-Sys-Debrief01"
+  ],
+  "researchPoints": 900,
+  "researchPower": 30,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "GAUSS",
+    "parameter": "Damage",
+    "value": 25
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "GAUSS",
+    "parameter": "RadiusDamage",
+    "value": 25
+   }
+  ]
+ },
+ "R-Wpn-Rail-Damage02": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Rail-Damage02",
+  "name": "Rail Warhead II",
+  "requiredResearch": [
+   "R-Wpn-Rail-Damage01",
+   "R-Cred-Rail-Tier2"
+  ],
+  "researchPoints": 2400,
+  "researchPower": 85,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "GAUSS",
+    "parameter": "Damage",
+    "value": 31
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "GAUSS",
+    "parameter": "RadiusDamage",
+    "value": 31
+   }
+  ]
+ },
+ "R-Wpn-Rail-Damage03": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Rail-Damage03",
+  "name": "Rail Warhead III",
+  "requiredResearch": [
+   "R-Wpn-Rail-Damage02",
+   "R-Cred-Rail-Tier3"
+  ],
+  "researchPoints": 5200,
+  "researchPower": 190,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "GAUSS",
+    "parameter": "Damage",
+    "value": 39
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "GAUSS",
+    "parameter": "RadiusDamage",
+    "value": 39
+   }
+  ]
+ },
+ "R-Wpn-Rail-Damage04": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Rail-Damage04",
+  "name": "Rail Warhead IV",
+  "requiredResearch": [
+   "R-Wpn-Rail-Damage03",
+   "R-Cred-Rail-Tier4"
+  ],
+  "researchPoints": 10000,
+  "researchPower": 360,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "GAUSS",
+    "parameter": "Damage",
+    "value": 49
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "GAUSS",
+    "parameter": "RadiusDamage",
+    "value": 49
+   }
+  ]
+ },
+ "R-Wpn-Rail-Penet01": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Rail-Penet01",
+  "name": "Rail Armour-Piercing I",
+  "requiredResearch": [
+   "R-Wpn-Rail-Damage03"
+  ],
+  "researchPoints": 6000,
+  "researchPower": 200,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "GAUSS",
+    "parameter": "MinimumDamage",
+    "value": 20
+   }
+  ]
+ },
+ "R-Wpn-Rail-Penet02": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Rail-Penet02",
+  "name": "Rail Armour-Piercing II",
+  "requiredResearch": [
+   "R-Wpn-Rail-Penet01",
+   "R-Wpn-Rail-Damage04"
+  ],
+  "researchPoints": 14000,
+  "researchPower": 400,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "GAUSS",
+    "parameter": "MinimumDamage",
+    "value": 25
+   }
+  ]
+ },
+ "R-Wpn-Rail-Range01": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Rail-Range01",
+  "name": "Rail Fire Control I",
+  "requiredResearch": [
+   "R-Sys-Debrief01"
+  ],
+  "researchPoints": 900,
+  "researchPower": 30,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "GAUSS",
+    "parameter": "MaxRange",
+    "value": 7
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "GAUSS",
+    "parameter": "ShortRange",
+    "value": 7
+   }
+  ]
+ },
+ "R-Wpn-Rail-Range02": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Rail-Range02",
+  "name": "Rail Fire Control II",
+  "requiredResearch": [
+   "R-Wpn-Rail-Range01",
+   "R-Cred-Rail-Tier2"
+  ],
+  "researchPoints": 2400,
+  "researchPower": 85,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "GAUSS",
+    "parameter": "MaxRange",
+    "value": 7
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "GAUSS",
+    "parameter": "ShortRange",
+    "value": 7
+   }
+  ]
+ },
+ "R-Wpn-Rail-Range03": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Rail-Range03",
+  "name": "Rail Fire Control III",
+  "requiredResearch": [
+   "R-Wpn-Rail-Range02",
+   "R-Cred-Rail-Tier3"
+  ],
+  "researchPoints": 5200,
+  "researchPower": 190,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "GAUSS",
+    "parameter": "MaxRange",
+    "value": 8
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "GAUSS",
+    "parameter": "ShortRange",
+    "value": 8
+   }
+  ]
+ },
+ "R-Wpn-Rail-Range04": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Rail-Range04",
+  "name": "Rail Fire Control IV",
+  "requiredResearch": [
+   "R-Wpn-Rail-Range03",
+   "R-Cred-Rail-Tier4"
+  ],
+  "researchPoints": 10000,
+  "researchPower": 360,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "GAUSS",
+    "parameter": "MaxRange",
+    "value": 9
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "GAUSS",
+    "parameter": "ShortRange",
+    "value": 9
+   }
+  ]
+ },
+ "R-Wpn-Rail-Reload01": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Rail-Reload01",
+  "name": "Rail Loading Drill I",
+  "requiredResearch": [
+   "R-Sys-Debrief01"
+  ],
+  "researchPoints": 900,
+  "researchPower": 30,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "GAUSS",
+    "parameter": "FirePause",
+    "value": -10
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "GAUSS",
+    "parameter": "ReloadTime",
+    "value": -10
+   }
+  ]
+ },
+ "R-Wpn-Rail-Reload02": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Rail-Reload02",
+  "name": "Rail Loading Drill II",
+  "requiredResearch": [
+   "R-Wpn-Rail-Reload01",
+   "R-Cred-Rail-Tier2"
+  ],
+  "researchPoints": 2400,
+  "researchPower": 85,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "GAUSS",
+    "parameter": "FirePause",
+    "value": -11
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "GAUSS",
+    "parameter": "ReloadTime",
+    "value": -11
+   }
+  ]
+ },
+ "R-Wpn-Rail-Reload03": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Rail-Reload03",
+  "name": "Rail Loading Drill III",
+  "requiredResearch": [
+   "R-Wpn-Rail-Reload02",
+   "R-Cred-Rail-Tier3"
+  ],
+  "researchPoints": 5200,
+  "researchPower": 190,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "GAUSS",
+    "parameter": "FirePause",
+    "value": -12
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "GAUSS",
+    "parameter": "ReloadTime",
+    "value": -12
+   }
+  ]
+ },
+ "R-Wpn-Rail-Reload04": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Rail-Reload04",
+  "name": "Rail Loading Drill IV",
+  "requiredResearch": [
+   "R-Wpn-Rail-Reload03",
+   "R-Cred-Rail-Tier4"
+  ],
+  "researchPoints": 10000,
+  "researchPower": 360,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "GAUSS",
+    "parameter": "FirePause",
+    "value": -13
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "GAUSS",
+    "parameter": "ReloadTime",
+    "value": -13
+   }
+  ]
+ },
+ "R-Wpn-RailGun01": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-RailGun01",
+  "name": "Needle Gun",
+  "requiredResearch": [
+   "R-Wpn-Cannon4AMk1",
+   "R-Struc-Research-Upgrade07",
+   "R-Wpn-Cannon-Damage04",
+   "R-Wpn-Cannon-Accuracy04"
+  ],
+  "researchPoints": 14400,
+  "researchPower": 450,
+  "resultComponents": [
+   "Cyb-Wpn-Rail1",
+   "RailGun1-VTOL",
+   "RailGun1Mk1"
+  ]
+ },
+ "R-Wpn-RailGun02": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-RailGun02",
+  "name": "Rail Gun",
+  "requiredResearch": [
+   "R-Wpn-Rail-Damage03"
+  ],
+  "researchPoints": 28800,
+  "researchPower": 450,
+  "resultComponents": [
+   "RailGun2-VTOL",
+   "RailGun2Mk1"
+  ]
+ },
+ "R-Wpn-RailGun03": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-RailGun03",
+  "name": "Gauss Cannon",
+  "requiredResearch": [
+   "R-Wpn-RailGun02"
+  ],
+  "researchPoints": 43200,
+  "researchPower": 450,
+  "resultComponents": [
+   "RailGun3Mk1"
+  ]
+ },
+ "R-Wpn-Rocket-Accuracy01": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Rocket-Accuracy01",
+  "name": "Rocket Gunnery I",
+  "requiredResearch": [
+   "R-Sys-Debrief01"
+  ],
+  "researchPoints": 900,
+  "researchPower": 30,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "ROCKET",
+    "parameter": "HitChance",
+    "value": 10
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "ROCKET",
+    "parameter": "ShortHitChance",
+    "value": 10
+   }
+  ]
+ },
+ "R-Wpn-Rocket-Accuracy02": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Rocket-Accuracy02",
+  "name": "Rocket Gunnery II",
+  "requiredResearch": [
+   "R-Wpn-Rocket-Accuracy01",
+   "R-Cred-Rocket-Tier2"
+  ],
+  "researchPoints": 2400,
+  "researchPower": 85,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "ROCKET",
+    "parameter": "HitChance",
+    "value": 11
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "ROCKET",
+    "parameter": "ShortHitChance",
+    "value": 11
+   }
+  ]
+ },
+ "R-Wpn-Rocket-Accuracy03": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Rocket-Accuracy03",
+  "name": "Rocket Gunnery III",
+  "requiredResearch": [
+   "R-Wpn-Rocket-Accuracy02",
+   "R-Cred-Rocket-Tier3"
+  ],
+  "researchPoints": 5200,
+  "researchPower": 190,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "ROCKET",
+    "parameter": "HitChance",
+    "value": 12
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "ROCKET",
+    "parameter": "ShortHitChance",
+    "value": 12
+   }
+  ]
+ },
+ "R-Wpn-Rocket-Accuracy04": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Rocket-Accuracy04",
+  "name": "Rocket Gunnery IV",
+  "requiredResearch": [
+   "R-Wpn-Rocket-Accuracy03",
+   "R-Cred-Rocket-Tier4"
+  ],
+  "researchPoints": 10000,
+  "researchPower": 360,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "ROCKET",
+    "parameter": "HitChance",
+    "value": 13
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "ROCKET",
+    "parameter": "ShortHitChance",
+    "value": 13
+   }
+  ]
+ },
+ "R-Wpn-Rocket-Damage01": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Rocket-Damage01",
+  "name": "Rocket Warhead I",
+  "requiredResearch": [
+   "R-Sys-Debrief01"
+  ],
+  "researchPoints": 900,
+  "researchPower": 30,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "ROCKET",
+    "parameter": "Damage",
+    "value": 25
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "ROCKET",
+    "parameter": "RadiusDamage",
+    "value": 25
+   }
+  ]
+ },
+ "R-Wpn-Rocket-Damage02": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Rocket-Damage02",
+  "name": "Rocket Warhead II",
+  "requiredResearch": [
+   "R-Wpn-Rocket-Damage01",
+   "R-Cred-Rocket-Tier2"
+  ],
+  "researchPoints": 2400,
+  "researchPower": 85,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "ROCKET",
+    "parameter": "Damage",
+    "value": 31
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "ROCKET",
+    "parameter": "RadiusDamage",
+    "value": 31
+   }
+  ]
+ },
+ "R-Wpn-Rocket-Damage03": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Rocket-Damage03",
+  "name": "Rocket Warhead III",
+  "requiredResearch": [
+   "R-Wpn-Rocket-Damage02",
+   "R-Cred-Rocket-Tier3"
+  ],
+  "researchPoints": 5200,
+  "researchPower": 190,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "ROCKET",
+    "parameter": "Damage",
+    "value": 39
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "ROCKET",
+    "parameter": "RadiusDamage",
+    "value": 39
+   }
+  ]
+ },
+ "R-Wpn-Rocket-Damage04": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Rocket-Damage04",
+  "name": "Rocket Warhead IV",
+  "requiredResearch": [
+   "R-Wpn-Rocket-Damage03",
+   "R-Cred-Rocket-Tier4"
+  ],
+  "researchPoints": 10000,
+  "researchPower": 360,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "ROCKET",
+    "parameter": "Damage",
+    "value": 49
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "ROCKET",
+    "parameter": "RadiusDamage",
+    "value": 49
+   }
+  ]
+ },
+ "R-Wpn-Rocket-Penet01": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Rocket-Penet01",
+  "name": "Rocket Armour-Piercing I",
+  "requiredResearch": [
+   "R-Wpn-Rocket-Damage03"
+  ],
+  "researchPoints": 6000,
+  "researchPower": 200,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "ROCKET",
+    "parameter": "MinimumDamage",
+    "value": 20
+   }
+  ]
+ },
+ "R-Wpn-Rocket-Penet02": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Rocket-Penet02",
+  "name": "Rocket Armour-Piercing II",
+  "requiredResearch": [
+   "R-Wpn-Rocket-Penet01",
+   "R-Wpn-Rocket-Damage04"
+  ],
+  "researchPoints": 14000,
+  "researchPower": 400,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "ROCKET",
+    "parameter": "MinimumDamage",
+    "value": 25
+   }
+  ]
+ },
+ "R-Wpn-Rocket-Range01": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Rocket-Range01",
+  "name": "Rocket Fire Control I",
+  "requiredResearch": [
+   "R-Sys-Debrief01"
+  ],
+  "researchPoints": 900,
+  "researchPower": 30,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "ROCKET",
+    "parameter": "MaxRange",
+    "value": 7
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "ROCKET",
+    "parameter": "ShortRange",
+    "value": 7
+   }
+  ]
+ },
+ "R-Wpn-Rocket-Range02": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Rocket-Range02",
+  "name": "Rocket Fire Control II",
+  "requiredResearch": [
+   "R-Wpn-Rocket-Range01",
+   "R-Cred-Rocket-Tier2"
+  ],
+  "researchPoints": 2400,
+  "researchPower": 85,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "ROCKET",
+    "parameter": "MaxRange",
+    "value": 7
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "ROCKET",
+    "parameter": "ShortRange",
+    "value": 7
+   }
+  ]
+ },
+ "R-Wpn-Rocket-Range03": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Rocket-Range03",
+  "name": "Rocket Fire Control III",
+  "requiredResearch": [
+   "R-Wpn-Rocket-Range02",
+   "R-Cred-Rocket-Tier3"
+  ],
+  "researchPoints": 5200,
+  "researchPower": 190,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "ROCKET",
+    "parameter": "MaxRange",
+    "value": 8
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "ROCKET",
+    "parameter": "ShortRange",
+    "value": 8
+   }
+  ]
+ },
+ "R-Wpn-Rocket-Range04": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Rocket-Range04",
+  "name": "Rocket Fire Control IV",
+  "requiredResearch": [
+   "R-Wpn-Rocket-Range03",
+   "R-Cred-Rocket-Tier4"
+  ],
+  "researchPoints": 10000,
+  "researchPower": 360,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "ROCKET",
+    "parameter": "MaxRange",
+    "value": 9
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "ROCKET",
+    "parameter": "ShortRange",
+    "value": 9
+   }
+  ]
+ },
+ "R-Wpn-Rocket-Reload01": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Rocket-Reload01",
+  "name": "Rocket Loading Drill I",
+  "requiredResearch": [
+   "R-Sys-Debrief01"
+  ],
+  "researchPoints": 900,
+  "researchPower": 30,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "ROCKET",
+    "parameter": "FirePause",
+    "value": -10
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "ROCKET",
+    "parameter": "ReloadTime",
+    "value": -10
+   }
+  ]
+ },
+ "R-Wpn-Rocket-Reload02": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Rocket-Reload02",
+  "name": "Rocket Loading Drill II",
+  "requiredResearch": [
+   "R-Wpn-Rocket-Reload01",
+   "R-Cred-Rocket-Tier2"
+  ],
+  "researchPoints": 2400,
+  "researchPower": 85,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "ROCKET",
+    "parameter": "FirePause",
+    "value": -11
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "ROCKET",
+    "parameter": "ReloadTime",
+    "value": -11
+   }
+  ]
+ },
+ "R-Wpn-Rocket-Reload03": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Rocket-Reload03",
+  "name": "Rocket Loading Drill III",
+  "requiredResearch": [
+   "R-Wpn-Rocket-Reload02",
+   "R-Cred-Rocket-Tier3"
+  ],
+  "researchPoints": 5200,
+  "researchPower": 190,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "ROCKET",
+    "parameter": "FirePause",
+    "value": -12
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "ROCKET",
+    "parameter": "ReloadTime",
+    "value": -12
+   }
+  ]
+ },
+ "R-Wpn-Rocket-Reload04": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Rocket-Reload04",
+  "name": "Rocket Loading Drill IV",
+  "requiredResearch": [
+   "R-Wpn-Rocket-Reload03",
+   "R-Cred-Rocket-Tier4"
+  ],
+  "researchPoints": 10000,
+  "researchPower": 360,
+  "results": [
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "ROCKET",
+    "parameter": "FirePause",
+    "value": -13
+   },
+   {
+    "class": "Weapon",
+    "filterParameter": "ImpactClass",
+    "filterValue": "ROCKET",
+    "parameter": "ReloadTime",
+    "value": -13
+   }
+  ]
+ },
+ "R-Wpn-Rocket01-LtAT": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Rocket01-LtAT",
+  "name": "Lancer AT Rocket",
+  "requiredResearch": [
+   "R-Wpn-Rocket-Damage02"
+  ],
+  "researchPoints": 3600,
+  "researchPower": 112,
+  "resultComponents": [
+   "CyborgRocket",
+   "Rocket-LtA-T",
+   "Rocket-VTOL-LtA-T"
+  ]
+ },
+ "R-Wpn-Rocket02-MRL": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Rocket02-MRL",
+  "name": "Mini-Rocket Array",
+  "requiredResearch": [
+   "R-Wpn-Rocket-Damage01"
+  ],
+  "researchPoints": 2400,
+  "researchPower": 75,
+  "resultComponents": [
+   "Rocket-MRL"
+  ]
+ },
+ "R-Wpn-Rocket02-MRLHvy": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Rocket02-MRLHvy",
+  "name": "Heavy Rocket Array",
+  "requiredResearch": [
+   "R-Wpn-Rocket-Damage03",
+   "R-Wpn-Rocket02-MRL"
+  ],
+  "researchPoints": 6000,
+  "researchPower": 187,
+  "resultComponents": [
+   "Rocket-MRL-Hvy"
+  ]
+ },
+ "R-Wpn-Rocket03-HvAT": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Rocket03-HvAT",
+  "name": "Bunker Buster Rocket",
+  "requiredResearch": [
+   "R-Struc-Research-Upgrade03",
+   "R-Wpn-Rocket01-LtAT"
+  ],
+  "researchPoints": 4800,
+  "researchPower": 150,
+  "resultComponents": [
+   "Rocket-BB",
+   "Rocket-VTOL-BB"
+  ]
+ },
+ "R-Wpn-Rocket05-MiniPod": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Rocket05-MiniPod",
+  "name": "Mini-Rocket Pod",
+  "requiredResearch": [
+   "R-Vehicle-Engine01"
+  ],
+  "researchPoints": 1200,
+  "researchPower": 37,
+  "resultComponents": [
+   "Rocket-Pod",
+   "Rocket-VTOL-Pod"
+  ]
+ },
+ "R-Wpn-Rocket06-IDF": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Rocket06-IDF",
+  "name": "Ripple Rockets",
+  "requiredResearch": [
+   "R-Wpn-Rocket02-MRL",
+   "R-Sys-CBSensor-Turret01"
+  ],
+  "researchPoints": 7200,
+  "researchPower": 225,
+  "resultComponents": [
+   "Rocket-IDF"
+  ]
+ },
+ "R-Wpn-Rocket07-Tank-Killer": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Rocket07-Tank-Killer",
+  "name": "Tank Killer Rocket",
+  "requiredResearch": [
+   "R-Wpn-Rocket-Accuracy02",
+   "R-Wpn-Rocket-Damage03"
+  ],
+  "researchPoints": 6000,
+  "researchPower": 187,
+  "resultComponents": [
+   "Rocket-HvyA-T",
+   "Rocket-VTOL-HvyA-T"
+  ]
+ },
+ "R-Wpn-Sunburst": {
+  "iconID": "IMAGE_RES_WEAPONTECH",
+  "id": "R-Wpn-Sunburst",
+  "name": "Sunburst AA Rocket Array",
+  "requiredResearch": [
+   "R-Wpn-Rocket01-LtAT"
+  ],
+  "researchPoints": 6000,
+  "researchPower": 187,
+  "resultComponents": [
+   "Rocket-Sunburst",
+   "Rocket-VTOL-Sunburst"
+  ]
+ }
+}

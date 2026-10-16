@@ -1,0 +1,13 @@
+# Build outputs — build_mod.py regenerates these from out*/ and the game's mp.wz
+build/staging/
+build-4.7.0/staging/
+build/doctrine.wz
+build-4.7.0/doctrine.wz
+
+# Release output — attached to the GitHub release rather than committed
+dist/
+DOCTRINE-*.zip
+
+# Local scratch
+__pycache__/
+*.pyc
